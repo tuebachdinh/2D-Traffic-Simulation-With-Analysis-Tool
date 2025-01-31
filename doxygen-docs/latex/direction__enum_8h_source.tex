@@ -1,0 +1,26 @@
+\doxysection{direction\+\_\+enum.\+h}
+\hypertarget{direction__enum_8h_source}{}\label{direction__enum_8h_source}\index{src/direction\_enum.h@{src/direction\_enum.h}}
+\mbox{\hyperlink{direction__enum_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ DIRECTIONS\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ DIRECTIONS\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00010\ \textcolor{keyword}{enum}\ \mbox{\hyperlink{direction__enum_8h_a224b9163917ac32fc95a60d8c1eec3aa}{Direction}}\ \{}
+\DoxyCodeLine{00011\ \ \ \ \ \mbox{\hyperlink{direction__enum_8h_a224b9163917ac32fc95a60d8c1eec3aaaaeb9634ef4d4fd4a5297ada06f89c3fe}{North}},\ }
+\DoxyCodeLine{00012\ \ \ \ \ \mbox{\hyperlink{direction__enum_8h_a224b9163917ac32fc95a60d8c1eec3aaa66183dce5a3b8d48fbdfe1f8ede7fcc2}{East}},\ \ }
+\DoxyCodeLine{00013\ \ \ \ \ \mbox{\hyperlink{direction__enum_8h_a224b9163917ac32fc95a60d8c1eec3aaac15660611b40cfc69e36003c8607311a}{South}},\ }
+\DoxyCodeLine{00014\ \ \ \ \ \mbox{\hyperlink{direction__enum_8h_a224b9163917ac32fc95a60d8c1eec3aaaedd15c5b13ad5525c46d5c9650ddde5f}{West}}\ \ \ }
+\DoxyCodeLine{00015\ \};}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00029\ \textcolor{keyword}{inline}\ \mbox{\hyperlink{direction__enum_8h_a224b9163917ac32fc95a60d8c1eec3aa}{Direction}}\ \mbox{\hyperlink{direction__enum_8h_a6b5d85200a3ae7c0b100d3c9d0f8e782}{operator!}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{direction__enum_8h_a224b9163917ac32fc95a60d8c1eec3aa}{Direction}}\&\ other)\ \{}
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keywordflow}{switch}\ (other)\ \{}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{direction__enum_8h_a224b9163917ac32fc95a60d8c1eec3aaaaeb9634ef4d4fd4a5297ada06f89c3fe}{North}}:\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{direction__enum_8h_a224b9163917ac32fc95a60d8c1eec3aaac15660611b40cfc69e36003c8607311a}{South}};}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{direction__enum_8h_a224b9163917ac32fc95a60d8c1eec3aaa66183dce5a3b8d48fbdfe1f8ede7fcc2}{East}}:\ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{direction__enum_8h_a224b9163917ac32fc95a60d8c1eec3aaaedd15c5b13ad5525c46d5c9650ddde5f}{West}};}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{direction__enum_8h_a224b9163917ac32fc95a60d8c1eec3aaac15660611b40cfc69e36003c8607311a}{South}}:\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{direction__enum_8h_a224b9163917ac32fc95a60d8c1eec3aaaaeb9634ef4d4fd4a5297ada06f89c3fe}{North}};}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{default}:\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{direction__enum_8h_a224b9163917ac32fc95a60d8c1eec3aaa66183dce5a3b8d48fbdfe1f8ede7fcc2}{East}};\ }
+\DoxyCodeLine{00035\ \ \ \ \ \}}
+\DoxyCodeLine{00036\ \}}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

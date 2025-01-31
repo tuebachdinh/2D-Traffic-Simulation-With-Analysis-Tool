@@ -1,0 +1,162 @@
+\doxysection{Intersection Class Reference}
+\hypertarget{class_intersection}{}\label{class_intersection}\index{Intersection@{Intersection}}
+
+
+Represents an intersection with roads and coordinates.  
+
+
+
+
+{\ttfamily \#include $<$intersection.\+hpp$>$}
+
+Inheritance diagram for Intersection\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_intersection}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_intersection_a700c3de51c153550f9e9e92dc8015b06}{Intersection}} (int id, \mbox{\hyperlink{struct_coordinate}{Coordinate}} coordinate)
+\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_road}{Road}} $>$ \mbox{\hyperlink{class_intersection_a44612e41042e2b2780215bb1f7affe49}{get\+Road}} (\mbox{\hyperlink{direction__enum_8h_a224b9163917ac32fc95a60d8c1eec3aa}{Direction}} direction) const
+\begin{DoxyCompactList}\small\item\em Retrieves the road associated with the given direction. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_intersection_a8cfbe4d96a4b2b4c9ed5779ca8d2a866}{set\+Road}} (const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_road}{Road}} $>$ \&road, \mbox{\hyperlink{direction__enum_8h_a224b9163917ac32fc95a60d8c1eec3aa}{Direction}} direction)
+\begin{DoxyCompactList}\small\item\em Sets a road for the intersection in the given direction. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_entity}{Entity}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_entity_a042473fab617205e7a7a5abc5f8717a0}{Entity}} (int id=-\/1, \mbox{\hyperlink{struct_coordinate}{Coordinate}} coordinate=\{-\/1,-\/1\})
+\item 
+virtual \mbox{\hyperlink{class_entity_ac479d009ddde62dfb378ca0a70d81307}{\texorpdfstring{$\sim$}{\string~}\+Entity}} ()=default
+\item 
+virtual int \mbox{\hyperlink{class_entity_a33ce509c7e43ea606ac82b6ce06bc2df}{get\+Id}} () const
+\begin{DoxyCompactList}\small\item\em Gets the ID of the entity. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{struct_coordinate}{Coordinate}} \mbox{\hyperlink{class_entity_aa1c0bb2493b6dbec5dd1a6e2df7219fd}{get\+Coordinate}} () const
+\begin{DoxyCompactList}\small\item\em Gets the coordinate of the entity. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::list$<$ std\+::pair$<$ \mbox{\hyperlink{direction__enum_8h_a224b9163917ac32fc95a60d8c1eec3aa}{Direction}}, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_road}{Road}} $>$ $>$ $>$ \mbox{\hyperlink{class_intersection_adc19241230fc7dd1b25ae8b143cfe738}{connected\+Roads\+\_\+}} = \{\}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_intersection_a972d9895fd3ab6faa691e0833f17ebd3}{to\+\_\+json}} (nlohmann\+::json \&j, const \mbox{\hyperlink{class_intersection}{Intersection}} \&i)
+\begin{DoxyCompactList}\small\item\em Serializes an \doxylink{class_intersection}{Intersection} object into a JSON object. \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_intersection}{Intersection}} $>$ \mbox{\hyperlink{class_intersection_a00e5640846ff7cb788a4cf4773adbb46}{from\+\_\+json}} (const nlohmann\+::json \&j)
+\begin{DoxyCompactList}\small\item\em Deserializes a JSON object into an \doxylink{class_intersection}{Intersection} object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_entity}{Entity}}}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_entity_a8042303a7e937e3d760720891a6739e5}{id\+\_\+}}
+\item 
+\mbox{\hyperlink{struct_coordinate}{Coordinate}} \mbox{\hyperlink{class_entity_a5d9ba5b495305e1693c924bfda33d294}{coordinate\+\_\+}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents an intersection with roads and coordinates. 
+
+This class provides functionality to manage an intersection, including associating it with roads in different directions and providing methods to create intersections from JSON data. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_intersection_a700c3de51c153550f9e9e92dc8015b06}\index{Intersection@{Intersection}!Intersection@{Intersection}}
+\index{Intersection@{Intersection}!Intersection@{Intersection}}
+\doxysubsubsection{\texorpdfstring{Intersection()}{Intersection()}}
+{\footnotesize\ttfamily \label{class_intersection_a700c3de51c153550f9e9e92dc8015b06} 
+Intersection\+::\+Intersection (\begin{DoxyParamCaption}\item[{int}]{id}{, }\item[{\mbox{\hyperlink{struct_coordinate}{Coordinate}}}]{coordinate}{}\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_intersection_a44612e41042e2b2780215bb1f7affe49}\index{Intersection@{Intersection}!getRoad@{getRoad}}
+\index{getRoad@{getRoad}!Intersection@{Intersection}}
+\doxysubsubsection{\texorpdfstring{getRoad()}{getRoad()}}
+{\footnotesize\ttfamily \label{class_intersection_a44612e41042e2b2780215bb1f7affe49} 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_road}{Road}} $>$ Intersection\+::get\+Road (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{direction__enum_8h_a224b9163917ac32fc95a60d8c1eec3aa}{Direction}}}]{direction}{}\end{DoxyParamCaption}) const}
+
+
+
+Retrieves the road associated with the given direction. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em direction} & The direction of the road. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A shared pointer to the corresponding road or nullptr if not found. 
+\end{DoxyReturn}
+\Hypertarget{class_intersection_a8cfbe4d96a4b2b4c9ed5779ca8d2a866}\index{Intersection@{Intersection}!setRoad@{setRoad}}
+\index{setRoad@{setRoad}!Intersection@{Intersection}}
+\doxysubsubsection{\texorpdfstring{setRoad()}{setRoad()}}
+{\footnotesize\ttfamily \label{class_intersection_a8cfbe4d96a4b2b4c9ed5779ca8d2a866} 
+void Intersection\+::set\+Road (\begin{DoxyParamCaption}\item[{const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_road}{Road}} $>$ \&}]{road}{, }\item[{\mbox{\hyperlink{direction__enum_8h_a224b9163917ac32fc95a60d8c1eec3aa}{Direction}}}]{direction}{}\end{DoxyParamCaption})}
+
+
+
+Sets a road for the intersection in the given direction. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em road} & A shared pointer to the road to set. \\
+\hline
+{\em direction} & The direction of the road. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Friends And Related Symbol Documentation}
+\Hypertarget{class_intersection_a00e5640846ff7cb788a4cf4773adbb46}\index{Intersection@{Intersection}!from\_json@{from\_json}}
+\index{from\_json@{from\_json}!Intersection@{Intersection}}
+\doxysubsubsection{\texorpdfstring{from\_json}{from\_json}}
+{\footnotesize\ttfamily \label{class_intersection_a00e5640846ff7cb788a4cf4773adbb46} 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_intersection}{Intersection}} $>$ from\+\_\+json (\begin{DoxyParamCaption}\item[{const nlohmann\+::json \&}]{j}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Deserializes a JSON object into an \doxylink{class_intersection}{Intersection} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em j} & The JSON object to deserialize. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A shared pointer to the deserialized \doxylink{class_intersection}{Intersection} object. 
+\end{DoxyReturn}
+\Hypertarget{class_intersection_a972d9895fd3ab6faa691e0833f17ebd3}\index{Intersection@{Intersection}!to\_json@{to\_json}}
+\index{to\_json@{to\_json}!Intersection@{Intersection}}
+\doxysubsubsection{\texorpdfstring{to\_json}{to\_json}}
+{\footnotesize\ttfamily \label{class_intersection_a972d9895fd3ab6faa691e0833f17ebd3} 
+void to\+\_\+json (\begin{DoxyParamCaption}\item[{nlohmann\+::json \&}]{j}{, }\item[{const \mbox{\hyperlink{class_intersection}{Intersection}} \&}]{i}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Serializes an \doxylink{class_intersection}{Intersection} object into a JSON object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em j} & The JSON object to populate. \\
+\hline
+{\em intersection} & The \doxylink{class_intersection}{Intersection} object to serialize. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_intersection_adc19241230fc7dd1b25ae8b143cfe738}\index{Intersection@{Intersection}!connectedRoads\_@{connectedRoads\_}}
+\index{connectedRoads\_@{connectedRoads\_}!Intersection@{Intersection}}
+\doxysubsubsection{\texorpdfstring{connectedRoads\_}{connectedRoads\_}}
+{\footnotesize\ttfamily \label{class_intersection_adc19241230fc7dd1b25ae8b143cfe738} 
+std\+::list$<$std\+::pair$<$\mbox{\hyperlink{direction__enum_8h_a224b9163917ac32fc95a60d8c1eec3aa}{Direction}}, std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{class_road}{Road}}$>$ $>$ $>$ Intersection\+::connected\+Roads\+\_\+ = \{\}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\mbox{\hyperlink{intersection_8hpp}{intersection.\+hpp}}\item 
+src/\mbox{\hyperlink{intersection_8cpp}{intersection.\+cpp}}\end{DoxyCompactItemize}

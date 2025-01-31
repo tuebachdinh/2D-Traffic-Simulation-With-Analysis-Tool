@@ -1,0 +1,154 @@
+\doxysection{src/global.h File Reference}
+\hypertarget{global_8h}{}\label{global_8h}\index{src/global.h@{src/global.h}}
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$memory$>$}\newline
+{\ttfamily \#include "{}road.\+hpp"{}}\newline
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+long \mbox{\hyperlink{global_8h_a9c260e64dba051e11b1f6a8e47ad21d2}{elapse\+Time}}
+\begin{DoxyCompactList}\small\item\em A long variable that tracks the elapsed time in the simulation. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{global_8h_ad4e0bbc0cc0ffb91120206fb4de60261}{tick}}
+\begin{DoxyCompactList}\small\item\em An integer representing the current simulation tick. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{global_8h_a7a829e6fd74e94e0edf10550470d844c}{rate}}
+\begin{DoxyCompactList}\small\item\em An integer representing the rate of change or speed of the simulation. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{global_8h_a6150e0515f7202e2fb518f7206ed97dc}{x}}
+\begin{DoxyCompactList}\small\item\em An integer representing the x-\/coordinate in the simulation. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{global_8h_a0a2f84ed7838f07779ae24c5a9086d33}{y}}
+\begin{DoxyCompactList}\small\item\em An integer representing the y-\/coordinate in the simulation. \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_road}{Road}} $>$ $>$ \mbox{\hyperlink{global_8h_a20a8f218759ccc3596df3b5bcbbf44fa}{global\+Roads}}
+\begin{DoxyCompactList}\small\item\em A vector holding shared pointers to {\ttfamily \doxylink{class_road}{Road}} objects. \end{DoxyCompactList}\item 
+const float \mbox{\hyperlink{global_8h_a7f35e63e299556a4959928206d5b139b}{SCALE}} = 30.\+0f
+\item 
+const float \mbox{\hyperlink{global_8h_a4657f083712c0ea5a0365dceb5ce5c5c}{MAP\+\_\+\+WIDTH}} = 30.\+0f
+\item 
+const float \mbox{\hyperlink{global_8h_afc25a0e1d16fbb3479cfa817aa3d70e8}{MAP\+\_\+\+HEIGHT}} = 20.\+0f
+\item 
+const int \mbox{\hyperlink{global_8h_a8bc9813debf5b343720efc51f14a8b60}{frame\+Width}} = 32
+\item 
+const int \mbox{\hyperlink{global_8h_a501f0ee53c983df6a4f09d92ed610e04}{frame\+Height}} = 32
+\item 
+const int \mbox{\hyperlink{global_8h_a9c1e4867b489be9d70195efd02025c24}{frame\+Count}} = 12
+\item 
+const float \mbox{\hyperlink{global_8h_af818c6537baf997613b15890e7e11de6}{frame\+Duration}} = 0.\+1f
+\item 
+bool \mbox{\hyperlink{global_8h_a70c09c32e02c16ab706d0ca3b0e22aa5}{HIGHLIGHT\+\_\+\+MODE}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{global_8h_a9c260e64dba051e11b1f6a8e47ad21d2}\index{global.h@{global.h}!elapseTime@{elapseTime}}
+\index{elapseTime@{elapseTime}!global.h@{global.h}}
+\doxysubsubsection{\texorpdfstring{elapseTime}{elapseTime}}
+{\footnotesize\ttfamily \label{global_8h_a9c260e64dba051e11b1f6a8e47ad21d2} 
+long elapse\+Time\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+A long variable that tracks the elapsed time in the simulation. 
+
+This variable holds the total time that has passed during the simulation. It is used to manage the progression of time and synchronize various events within the simulation. \Hypertarget{global_8h_a9c1e4867b489be9d70195efd02025c24}\index{global.h@{global.h}!frameCount@{frameCount}}
+\index{frameCount@{frameCount}!global.h@{global.h}}
+\doxysubsubsection{\texorpdfstring{frameCount}{frameCount}}
+{\footnotesize\ttfamily \label{global_8h_a9c1e4867b489be9d70195efd02025c24} 
+const int frame\+Count = 12}
+
+\Hypertarget{global_8h_af818c6537baf997613b15890e7e11de6}\index{global.h@{global.h}!frameDuration@{frameDuration}}
+\index{frameDuration@{frameDuration}!global.h@{global.h}}
+\doxysubsubsection{\texorpdfstring{frameDuration}{frameDuration}}
+{\footnotesize\ttfamily \label{global_8h_af818c6537baf997613b15890e7e11de6} 
+const float frame\+Duration = 0.\+1f}
+
+\Hypertarget{global_8h_a501f0ee53c983df6a4f09d92ed610e04}\index{global.h@{global.h}!frameHeight@{frameHeight}}
+\index{frameHeight@{frameHeight}!global.h@{global.h}}
+\doxysubsubsection{\texorpdfstring{frameHeight}{frameHeight}}
+{\footnotesize\ttfamily \label{global_8h_a501f0ee53c983df6a4f09d92ed610e04} 
+const int frame\+Height = 32}
+
+\Hypertarget{global_8h_a8bc9813debf5b343720efc51f14a8b60}\index{global.h@{global.h}!frameWidth@{frameWidth}}
+\index{frameWidth@{frameWidth}!global.h@{global.h}}
+\doxysubsubsection{\texorpdfstring{frameWidth}{frameWidth}}
+{\footnotesize\ttfamily \label{global_8h_a8bc9813debf5b343720efc51f14a8b60} 
+const int frame\+Width = 32}
+
+\Hypertarget{global_8h_a20a8f218759ccc3596df3b5bcbbf44fa}\index{global.h@{global.h}!globalRoads@{globalRoads}}
+\index{globalRoads@{globalRoads}!global.h@{global.h}}
+\doxysubsubsection{\texorpdfstring{globalRoads}{globalRoads}}
+{\footnotesize\ttfamily \label{global_8h_a20a8f218759ccc3596df3b5bcbbf44fa} 
+std\+::vector$<$std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{class_road}{Road}}$>$ $>$ global\+Roads\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+A vector holding shared pointers to {\ttfamily \doxylink{class_road}{Road}} objects. 
+
+A vector of shared pointers to {\ttfamily \doxylink{class_road}{Road}} objects used in the simulation.
+
+This global variable stores a collection of {\ttfamily \doxylink{class_road}{Road}} objects. The roads are managed as shared pointers to ensure proper memory management and to allow for multiple references to a single {\ttfamily \doxylink{class_road}{Road}} object.
+
+It is used throughout the application to keep track of roads and perform operations on them.
+
+This variable holds a collection of roads represented by {\ttfamily \doxylink{class_road}{Road}} objects, stored as shared pointers to ensure proper memory management. It is used throughout the simulation to manage road data and interact with the roads during the simulation. \Hypertarget{global_8h_a70c09c32e02c16ab706d0ca3b0e22aa5}\index{global.h@{global.h}!HIGHLIGHT\_MODE@{HIGHLIGHT\_MODE}}
+\index{HIGHLIGHT\_MODE@{HIGHLIGHT\_MODE}!global.h@{global.h}}
+\doxysubsubsection{\texorpdfstring{HIGHLIGHT\_MODE}{HIGHLIGHT\_MODE}}
+{\footnotesize\ttfamily \label{global_8h_a70c09c32e02c16ab706d0ca3b0e22aa5} 
+bool HIGHLIGHT\+\_\+\+MODE\hspace{0.3cm}{\ttfamily [extern]}}
+
+\Hypertarget{global_8h_afc25a0e1d16fbb3479cfa817aa3d70e8}\index{global.h@{global.h}!MAP\_HEIGHT@{MAP\_HEIGHT}}
+\index{MAP\_HEIGHT@{MAP\_HEIGHT}!global.h@{global.h}}
+\doxysubsubsection{\texorpdfstring{MAP\_HEIGHT}{MAP\_HEIGHT}}
+{\footnotesize\ttfamily \label{global_8h_afc25a0e1d16fbb3479cfa817aa3d70e8} 
+const float MAP\+\_\+\+HEIGHT = 20.\+0f}
+
+\Hypertarget{global_8h_a4657f083712c0ea5a0365dceb5ce5c5c}\index{global.h@{global.h}!MAP\_WIDTH@{MAP\_WIDTH}}
+\index{MAP\_WIDTH@{MAP\_WIDTH}!global.h@{global.h}}
+\doxysubsubsection{\texorpdfstring{MAP\_WIDTH}{MAP\_WIDTH}}
+{\footnotesize\ttfamily \label{global_8h_a4657f083712c0ea5a0365dceb5ce5c5c} 
+const float MAP\+\_\+\+WIDTH = 30.\+0f}
+
+\Hypertarget{global_8h_a7a829e6fd74e94e0edf10550470d844c}\index{global.h@{global.h}!rate@{rate}}
+\index{rate@{rate}!global.h@{global.h}}
+\doxysubsubsection{\texorpdfstring{rate}{rate}}
+{\footnotesize\ttfamily \label{global_8h_a7a829e6fd74e94e0edf10550470d844c} 
+int rate\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+An integer representing the rate of change or speed of the simulation. 
+
+This variable controls how fast the simulation progresses. A higher value could indicate a faster rate of simulation, while a lower value might slow it down. \Hypertarget{global_8h_a7f35e63e299556a4959928206d5b139b}\index{global.h@{global.h}!SCALE@{SCALE}}
+\index{SCALE@{SCALE}!global.h@{global.h}}
+\doxysubsubsection{\texorpdfstring{SCALE}{SCALE}}
+{\footnotesize\ttfamily \label{global_8h_a7f35e63e299556a4959928206d5b139b} 
+const float SCALE = 30.\+0f}
+
+\Hypertarget{global_8h_ad4e0bbc0cc0ffb91120206fb4de60261}\index{global.h@{global.h}!tick@{tick}}
+\index{tick@{tick}!global.h@{global.h}}
+\doxysubsubsection{\texorpdfstring{tick}{tick}}
+{\footnotesize\ttfamily \label{global_8h_ad4e0bbc0cc0ffb91120206fb4de60261} 
+int tick\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+An integer representing the current simulation tick. 
+
+This variable indicates the current tick in the simulation. It is typically used to control the timing of events or actions within the simulation cycle. \Hypertarget{global_8h_a6150e0515f7202e2fb518f7206ed97dc}\index{global.h@{global.h}!x@{x}}
+\index{x@{x}!global.h@{global.h}}
+\doxysubsubsection{\texorpdfstring{x}{x}}
+{\footnotesize\ttfamily \label{global_8h_a6150e0515f7202e2fb518f7206ed97dc} 
+int x\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+An integer representing the x-\/coordinate in the simulation. 
+
+This variable is used to store the x-\/coordinate in the simulation space. It may be used in various contexts, such as the position of objects or events within the simulation. \Hypertarget{global_8h_a0a2f84ed7838f07779ae24c5a9086d33}\index{global.h@{global.h}!y@{y}}
+\index{y@{y}!global.h@{global.h}}
+\doxysubsubsection{\texorpdfstring{y}{y}}
+{\footnotesize\ttfamily \label{global_8h_a0a2f84ed7838f07779ae24c5a9086d33} 
+int y\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+An integer representing the y-\/coordinate in the simulation. 
+
+This variable stores the y-\/coordinate in the simulation space, used similarly to the {\ttfamily x} variable to track the position of objects or events in the simulation. 

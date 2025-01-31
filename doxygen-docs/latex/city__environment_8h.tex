@@ -1,0 +1,344 @@
+\doxysection{src/city\+\_\+environment.h File Reference}
+\hypertarget{city__environment_8h}{}\label{city__environment_8h}\index{src/city\_environment.h@{src/city\_environment.h}}
+{\ttfamily \#include $<$SFML/\+System.\+hpp$>$}\newline
+{\ttfamily \#include $<$SFML/\+Graphics.\+hpp$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include "{}global.\+h"{}}\newline
+{\ttfamily \#include $<$map$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const std\+::vector$<$ std\+::pair$<$ sf\+::\+Vector2i, std\+::string $>$ $>$ \mbox{\hyperlink{city__environment_8h_a1c27832d2ee397dc50674fedf926a20c}{land}}
+\item 
+const std\+::vector$<$ std\+::pair$<$ sf\+::\+Vector2i, std\+::string $>$ $>$ \mbox{\hyperlink{city__environment_8h_a7a8abd8f6ac3204a14ff67697c6aa2f2}{lake}}
+\item 
+const std\+::vector$<$ sf\+::\+Vector2i $>$ \mbox{\hyperlink{city__environment_8h_acd42764a9a3967b29a99ed21c4a6339a}{tree\+Positions}}
+\item 
+const std\+::vector$<$ sf\+::\+Vector2i $>$ \mbox{\hyperlink{city__environment_8h_a6f28ed875f6959c82b0e43d439284eaf}{forest\+Positions}}
+\item 
+const std\+::vector$<$ sf\+::\+Vector2i $>$ \mbox{\hyperlink{city__environment_8h_a79e7177f3a751e28a473d415e40f1ce1}{fake\+Road\+Horizontal\+Positions}}
+\item 
+const std\+::vector$<$ sf\+::\+Vector2i $>$ \mbox{\hyperlink{city__environment_8h_a305725a5cce6a87677fffb0b689a8156}{fake\+Road\+Vertical\+Positions}}
+\item 
+const std\+::vector$<$ sf\+::\+Vector2i $>$ \mbox{\hyperlink{city__environment_8h_a5affec5ff4798068182c9d16f08c21e3}{flower\+Positions}}
+\item 
+const std\+::vector$<$ sf\+::\+Vector2f $>$ \mbox{\hyperlink{city__environment_8h_a0259c201040def1c828fa7c07d499b7b}{street\+Light\+Positions}}
+\item 
+const std\+::vector$<$ sf\+::\+Vector2i $>$ \mbox{\hyperlink{city__environment_8h_a569c634e20c7b6bc0c7a97ad365bf9ab}{rock\+Positions}}
+\item 
+const std\+::vector$<$ sf\+::\+Vector2i $>$ \mbox{\hyperlink{city__environment_8h_a96c5b30fcb75831b726cb5d456578109}{mushroom\+Positions}}
+\item 
+const std\+::vector$<$ sf\+::\+Vector2i $>$ \mbox{\hyperlink{city__environment_8h_a0d927370ca9709ce03c41f454643b2ce}{bush\+Positions}}
+\item 
+const std\+::vector$<$ sf\+::\+Vector2i $>$ \mbox{\hyperlink{city__environment_8h_a09114c0fce748df15e56c91196b34f52}{ship\+Positions}}
+\item 
+const std\+::vector$<$ sf\+::\+Vector2i $>$ \mbox{\hyperlink{city__environment_8h_adb04cb5ecddaf5a98fa97c40ea4d4896}{plane\+Positions}}
+\item 
+const std\+::vector$<$ std\+::pair$<$ sf\+::\+Vector2i, char $>$ $>$ \mbox{\hyperlink{city__environment_8h_a9c64188ad5530c8ac51bb7c004a76f3f}{fake\+Building\+Positions}}
+\item 
+const std\+::vector$<$ sf\+::\+Vector2f $>$ \mbox{\hyperlink{city__environment_8h_a4f9337f48401e1d437fac7b3a247801d}{Blue\+Positions}}
+\item 
+const std\+::vector$<$ sf\+::\+Vector2f $>$ \mbox{\hyperlink{city__environment_8h_a274448f8742207e770669e19221691ab}{Pink\+Positions}}
+\item 
+const std\+::vector$<$ sf\+::\+Vector2f $>$ \mbox{\hyperlink{city__environment_8h_a6038f4b31dd97bd2ee49b2f8fdbfc21f}{Yellow\+Positions}}
+\item 
+const std\+::vector$<$ sf\+::\+Vector2f $>$ \mbox{\hyperlink{city__environment_8h_a11ae9a0f7644225bb47d8c96ee65f29f}{Frog\+Positions}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{city__environment_8h_a4f9337f48401e1d437fac7b3a247801d}\index{city\_environment.h@{city\_environment.h}!BluePositions@{BluePositions}}
+\index{BluePositions@{BluePositions}!city\_environment.h@{city\_environment.h}}
+\doxysubsubsection{\texorpdfstring{BluePositions}{BluePositions}}
+{\footnotesize\ttfamily \label{city__environment_8h_a4f9337f48401e1d437fac7b3a247801d} 
+const std\+::vector$<$sf\+::\+Vector2f$>$ Blue\+Positions}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ \{}
+\DoxyCodeLine{\ \ \ \ \{14\ *\ \mbox{\hyperlink{global_8h_a7f35e63e299556a4959928206d5b139b}{SCALE}},\ 18\ *\ \mbox{\hyperlink{global_8h_a7f35e63e299556a4959928206d5b139b}{SCALE}}\ -\/\ 8\},}
+\DoxyCodeLine{\ \ \ \ \{15\ *\ \mbox{\hyperlink{global_8h_a7f35e63e299556a4959928206d5b139b}{SCALE}},\ 18\ *\ \mbox{\hyperlink{global_8h_a7f35e63e299556a4959928206d5b139b}{SCALE}}\}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\Hypertarget{city__environment_8h_a0d927370ca9709ce03c41f454643b2ce}\index{city\_environment.h@{city\_environment.h}!bushPositions@{bushPositions}}
+\index{bushPositions@{bushPositions}!city\_environment.h@{city\_environment.h}}
+\doxysubsubsection{\texorpdfstring{bushPositions}{bushPositions}}
+{\footnotesize\ttfamily \label{city__environment_8h_a0d927370ca9709ce03c41f454643b2ce} 
+const std\+::vector$<$sf\+::\+Vector2i$>$ bush\+Positions}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ \{}
+\DoxyCodeLine{\ \ \ \ \{2,15\},\ \{2,18\},\ \{8,15\},\ \{8,18\},\ \{18,10\}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\Hypertarget{city__environment_8h_a9c64188ad5530c8ac51bb7c004a76f3f}\index{city\_environment.h@{city\_environment.h}!fakeBuildingPositions@{fakeBuildingPositions}}
+\index{fakeBuildingPositions@{fakeBuildingPositions}!city\_environment.h@{city\_environment.h}}
+\doxysubsubsection{\texorpdfstring{fakeBuildingPositions}{fakeBuildingPositions}}
+{\footnotesize\ttfamily \label{city__environment_8h_a9c64188ad5530c8ac51bb7c004a76f3f} 
+const std\+::vector$<$std\+::pair$<$sf\+::\+Vector2i, char$>$ $>$ fake\+Building\+Positions}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ \{}
+\DoxyCodeLine{\ \ \ \ \{\{5,\ 4\},\ \textcolor{charliteral}{'C'}\},\{\{5,\ 7\},\ \textcolor{charliteral}{'C'}\},\{\{5,\ 6\},\ \textcolor{charliteral}{'C'}\},\ \{\{7,\ 4\},\ \textcolor{charliteral}{'C'}\},\{\{7,\ 7\},\ \textcolor{charliteral}{'C'}\},\{\{7,\ 6\},\ \textcolor{charliteral}{'C'}\},}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \{\{4,\ 13\},\ \textcolor{charliteral}{'F'}\},\{\{5,\ 13\},\ \textcolor{charliteral}{'F'}\},\{\{6,\ 13\},\ \textcolor{charliteral}{'F'}\},\{\{8,\ 13\},\ \textcolor{charliteral}{'F'}\},\{\{4,\ 15\},\ \textcolor{charliteral}{'F'}\},\{\{6,\ 15\},\ \textcolor{charliteral}{'F'}\},\{\{7,\ 15\},\ \textcolor{charliteral}{'F'}\},\{\{8,\ 15\},\ \textcolor{charliteral}{'F'}\},\{\{4,\ 18\},\ \textcolor{charliteral}{'F'}\},\{\{5,\ 18\},\ \textcolor{charliteral}{'F'}\},\{\{7,\ 18\},\ \textcolor{charliteral}{'F'}\},\{\{8,\ 18\},\ \textcolor{charliteral}{'F'}\},}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \{\{15,\ 7\},\ \textcolor{charliteral}{'G'}\},\{\{15,\ 6\},\ \textcolor{charliteral}{'G'}\},\{\{16,\ 6\},\ \textcolor{charliteral}{'G'}\},\{\{17,\ 6\},\ \textcolor{charliteral}{'G'}\},\{\{17,\ 5\},\ \textcolor{charliteral}{'G'}\},\{\{17,\ 4\},\ \textcolor{charliteral}{'G'}\},\{\{17,\ 3\},\ \textcolor{charliteral}{'G'}\},\{\{15,\ 8\},\ \textcolor{charliteral}{'G'}\},}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \{\{22,\ 5\},\ \textcolor{charliteral}{'H'}\},\ \{\{23,\ 5\},\ \textcolor{charliteral}{'H'}\},\ \{\{26,\ 5\},\ \textcolor{charliteral}{'H'}\},\ \{\{27,\ 5\},\ \textcolor{charliteral}{'H'}\},\ \{\{21,\ 6\},\ \textcolor{charliteral}{'H'}\},\ \{\{23,\ 6\},\ \textcolor{charliteral}{'H'}\},\ \{\{25,\ 6\},\ \textcolor{charliteral}{'H'}\},\ }
+\DoxyCodeLine{\ \ \ \ \{\{27,\ 6\},\ \textcolor{charliteral}{'H'}\},\ \{\{21,\ 7\},\ \textcolor{charliteral}{'H'}\},\ \{\{23,\ 7\},\ \textcolor{charliteral}{'H'}\},\ \{\{25,\ 7\},\ \textcolor{charliteral}{'H'}\},\ \{\{27,\ 7\},\ \textcolor{charliteral}{'H'}\},\ \{\{21,\ 8\},\ \textcolor{charliteral}{'H'}\},\ \{\{22,\ 8\},\ \textcolor{charliteral}{'H'}\},\ }
+\DoxyCodeLine{\ \ \ \ \{\{25,\ 8\},\ \textcolor{charliteral}{'H'}\},\ \{\{26,\ 8\},\ \textcolor{charliteral}{'H'}\},\ \{\{22,\ 10\},\ \textcolor{charliteral}{'H'}\},\ \{\{23,\ 10\},\ \textcolor{charliteral}{'H'}\},\ \{\{26,\ 10\},\ \textcolor{charliteral}{'H'}\},\ \{\{27,\ 10\},\ \textcolor{charliteral}{'H'}\},\ \{\{21,\ 11\},\ \textcolor{charliteral}{'H'}\},\ }
+\DoxyCodeLine{\ \ \ \ \{\{23,\ 11\},\ \textcolor{charliteral}{'H'}\},\ \{\{25,\ 11\},\ \textcolor{charliteral}{'H'}\},\ \{\{27,\ 11\},\ \textcolor{charliteral}{'H'}\},\ \{\{21,\ 12\},\ \textcolor{charliteral}{'H'}\},\ \{\{23,\ 12\},\ \textcolor{charliteral}{'H'}\},\ \{\{25,\ 12\},\ \textcolor{charliteral}{'H'}\},\ \{\{27,\ 12\},\ \textcolor{charliteral}{'H'}\},\ }
+\DoxyCodeLine{\ \ \ \ \{\{21,\ 13\},\ \textcolor{charliteral}{'H'}\},\ \{\{22,\ 13\},\ \textcolor{charliteral}{'H'}\},\ \{\{25,\ 13\},\ \textcolor{charliteral}{'H'}\},\ \{\{26,\ 13\},\ \textcolor{charliteral}{'H'}\},\ \{\{22,\ 15\},\ \textcolor{charliteral}{'H'}\},\ \{\{23,\ 15\},\ \textcolor{charliteral}{'H'}\},\ \{\{26,\ 15\},\ \textcolor{charliteral}{'H'}\},\ }
+\DoxyCodeLine{\ \ \ \ \{\{27,\ 15\},\ \textcolor{charliteral}{'H'}\},\ \{\{21,\ 16\},\ \textcolor{charliteral}{'H'}\},\ \{\{23,\ 16\},\ \textcolor{charliteral}{'H'}\},\ \{\{25,\ 16\},\ \textcolor{charliteral}{'H'}\},\ \{\{27,\ 16\},\ \textcolor{charliteral}{'H'}\},\ \{\{21,\ 17\},\ \textcolor{charliteral}{'H'}\},\ \{\{23,\ 17\},\ \textcolor{charliteral}{'H'}\},\ }
+\DoxyCodeLine{\ \ \ \ \{\{25,\ 17\},\ \textcolor{charliteral}{'H'}\},\ \{\{27,\ 17\},\ \textcolor{charliteral}{'H'}\},\ \{\{21,\ 18\},\ \textcolor{charliteral}{'H'}\},\ \{\{22,\ 18\},\ \textcolor{charliteral}{'H'}\},\ \{\{25,\ 18\},\ \textcolor{charliteral}{'H'}\},\ \{\{26,\ 18\},\ \textcolor{charliteral}{'H'}\},}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \{\{15,\ 4\},\ \textcolor{charliteral}{'M'}\},\{\{14,\ 4\},\ \textcolor{charliteral}{'M'}\},\{\{13,\ 4\},\ \textcolor{charliteral}{'M'}\},\{\{13,\ 5\},\ \textcolor{charliteral}{'M'}\},\{\{13,\ 7\},\ \textcolor{charliteral}{'M'}\},\{\{13,\ 8\},\ \textcolor{charliteral}{'M'}\},\{\{15,\ 3\},\ \textcolor{charliteral}{'M'}\},}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\Hypertarget{city__environment_8h_a79e7177f3a751e28a473d415e40f1ce1}\index{city\_environment.h@{city\_environment.h}!fakeRoadHorizontalPositions@{fakeRoadHorizontalPositions}}
+\index{fakeRoadHorizontalPositions@{fakeRoadHorizontalPositions}!city\_environment.h@{city\_environment.h}}
+\doxysubsubsection{\texorpdfstring{fakeRoadHorizontalPositions}{fakeRoadHorizontalPositions}}
+{\footnotesize\ttfamily \label{city__environment_8h_a79e7177f3a751e28a473d415e40f1ce1} 
+const std\+::vector$<$sf\+::\+Vector2i$>$ fake\+Road\+Horizontal\+Positions}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ \{}
+\DoxyCodeLine{\ \ \ \ \{28,\ 4\},\ \{29,\ 4\},\ \{30,\ 4\},\ \{31,\ 4\},\ \{32,\ 4\},\ \{33,\ 4\},\ \{34,\ 4\},\ \{35,\ 4\},\ \{36,\ 4\},\ \{37,\ 4\},\ \{38,\ 4\},}
+\DoxyCodeLine{\ \ \ \ \{28,\ 9\},\ \{29,\ 9\},\ \{30,\ 9\},\ \{31,\ 9\},\ \{32,\ 9\},\ \{33,\ 9\},\ \{34,\ 9\},\ \{35,\ 9\},\ \{36,\ 9\},\ \{37,\ 9\},\ \{38,\ 9\},}
+\DoxyCodeLine{\ \ \ \ \{28,\ 14\},\ \{29,\ 14\},\ \{30,\ 14\},\ \{31,\ 14\},\ \{32,\ 14\},\ \{33,\ 14\},\ \{34,\ 14\},\ \{35,\ 14\},\ \{36,\ 14\},\ \{37,\ 14\},\ \{38,\ 14\},}
+\DoxyCodeLine{\ \ \ \ \{28,\ 19\},\ \{29,\ 19\},\ \{30,\ 19\},\ \{31,\ 19\},\ \{32,\ 19\},\ \{33,\ 19\},\ \{34,\ 19\},\ \{35,\ 19\},\ \{36,\ 19\},\ \{37,\ 19\},\ \{38,\ 19\},}
+\DoxyCodeLine{\ \ \ \ \{-\/8,\ 9\},\ \{-\/7,\ 9\},\ \{-\/6,\ 9\},\ \{-\/5,\ 9\},\ \{-\/4,\ 9\},\ \{-\/3,\ 9\},\ \{-\/2,\ 9\},\ \{-\/1,\ 9\},\ \{0,\ 9\},\ \{1,\ 9\},\ \{2,\ 9\},}
+\DoxyCodeLine{\ \ \ \ \{-\/8,\ 19\},\ \{-\/7,\ 19\},\ \{-\/6,\ 19\},\ \{-\/5,\ 19\},\ \{-\/4,\ 19\},\ \{-\/3,\ 19\},\ \{-\/2,\ 19\},\ \{-\/1,\ 19\},\ \{0,\ 19\},\ \{1,\ 19\},\ \{2,\ 19\},}
+\DoxyCodeLine{\ \ \ \ \{-\/8,\ 14\},\ \{-\/7,\ 14\},\ \{-\/6,\ 14\},\ \{-\/5,\ 14\},\ \{-\/4,\ 14\},\ \{-\/3,\ 14\},\ \{-\/2,\ 14\},\ \{-\/1,\ 14\},\ \{0,\ 14\},\ \{1,\ 14\},\ \{2,\ 14\},}
+\DoxyCodeLine{\ \ \ \ \{-\/8,\ 2\},\ \{-\/7,\ 2\},\ \{-\/6,\ 2\},\ \{-\/5,\ 2\},\ \{-\/4,\ 2\},\ \{-\/3,\ 2\},\ \{-\/2,\ 2\},\ \{-\/1,\ 2\},\ \{0,\ 2\},\ \{1,\ 2\},\ \{2,\ 2\}}
+\DoxyCodeLine{}
+\DoxyCodeLine{}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\Hypertarget{city__environment_8h_a305725a5cce6a87677fffb0b689a8156}\index{city\_environment.h@{city\_environment.h}!fakeRoadVerticalPositions@{fakeRoadVerticalPositions}}
+\index{fakeRoadVerticalPositions@{fakeRoadVerticalPositions}!city\_environment.h@{city\_environment.h}}
+\doxysubsubsection{\texorpdfstring{fakeRoadVerticalPositions}{fakeRoadVerticalPositions}}
+{\footnotesize\ttfamily \label{city__environment_8h_a305725a5cce6a87677fffb0b689a8156} 
+const std\+::vector$<$sf\+::\+Vector2i$>$ fake\+Road\+Vertical\+Positions}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ \{}
+\DoxyCodeLine{\ \ \ \ \{10,\ -\/5\},\ \{10,\ -\/4\},\ \{10,\ -\/3\},\ \{10,\ -\/2\},\ \{10,\ -\/1\},\ \{10,\ 0\},\ \{10,\ 1\},\ \{10,\ 2\},}
+\DoxyCodeLine{\ \ \ \ \{16,\ -\/5\},\ \{16,\ -\/4\},\ \{16,\ -\/3\},\ \{16,\ -\/2\},\ \{16,\ -\/1\},\ \{16,\ 0\},\ \{16,\ 1\},\ \{16,\ 2\},}
+\DoxyCodeLine{\ \ \ \ \{20,\ -\/5\},\ \{20,\ -\/4\},\ \{20,\ -\/3\},\ \{20,\ -\/2\},\ \{20,\ -\/1\},\ \{20,\ 0\},\ \{20,\ 1\},\ \{20,\ 2\},}
+\DoxyCodeLine{\ \ \ \ \{6,\ -\/5\},\ \{6,\ -\/4\},\ \{6,\ -\/3\},\ \{6,\ -\/2\},\ \{6,\ -\/1\},\ \{6,\ 0\},\ \{6,\ 1\},\ \{6,\ 2\},}
+\DoxyCodeLine{\ \ \ \ \{2,\ -\/5\},\ \{2,\ -\/4\},\ \{2,\ -\/3\},\ \{2,\ -\/2\},\ \{2,\ -\/1\},\ \{2,\ 0\},\ \{2,\ 1\},\ \{2,\ 2\},}
+\DoxyCodeLine{\ \ \ \ \{28,\ -\/5\},\ \{28,\ -\/4\},\ \{28,\ -\/3\},\ \{28,\ -\/2\},\ \{28,\ -\/1\},\ \{28,\ 0\},\ \{28,\ 1\},\ \{28,\ 2\},\ \{28,\ 3\},\ \{28,\ 4\},}
+\DoxyCodeLine{\ \ \ \ \{24,\ -\/5\},\ \{24,\ -\/4\},\ \{24,\ -\/3\},\ \{24,\ -\/2\},\ \{24,\ -\/1\},\ \{24,\ 0\},\ \{24,\ 1\},\ \{24,\ 2\},\ \{24,\ 3\},\ \{24,\ 4\},}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \{2,\ 19\},\ \{2,\ 20\},\ \{2,\ 21\},\ \{2,\ 22\},\ \{2,\ 23\},\ \{2,\ 24\},\ \{2,\ 25\},\ \{2,\ 26\},}
+\DoxyCodeLine{\ \ \ \ \{10,\ 19\},\ \{10,\ 20\},\ \{10,\ 21\},\ \{10,\ 22\},\ \{10,\ 23\},\ \{10,\ 24\},\ \{10,\ 25\},\ \{10,\ 26\},}
+\DoxyCodeLine{\ \ \ \ \{20,\ 19\},\ \{20,\ 20\},\ \{20,\ 21\},\ \{20,\ 22\},\ \{20,\ 23\},\ \{20,\ 24\},\ \{20,\ 25\},\ \{20,\ 26\},}
+\DoxyCodeLine{\ \ \ \ \{24,\ 19\},\ \{24,\ 20\},\ \{24,\ 21\},\ \{24,\ 22\},\ \{24,\ 23\},\ \{24,\ 24\},\ \{24,\ 25\},\ \{24,\ 26\},}
+\DoxyCodeLine{\ \ \ \ \{28,\ 19\},\ \{28,\ 20\},\ \{28,\ 21\},\ \{28,\ 22\},\ \{28,\ 23\},\ \{28,\ 24\},\ \{28,\ 25\},\ \{28,\ 26\},}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\Hypertarget{city__environment_8h_a5affec5ff4798068182c9d16f08c21e3}\index{city\_environment.h@{city\_environment.h}!flowerPositions@{flowerPositions}}
+\index{flowerPositions@{flowerPositions}!city\_environment.h@{city\_environment.h}}
+\doxysubsubsection{\texorpdfstring{flowerPositions}{flowerPositions}}
+{\footnotesize\ttfamily \label{city__environment_8h_a5affec5ff4798068182c9d16f08c21e3} 
+const std\+::vector$<$sf\+::\+Vector2i$>$ flower\+Positions}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ \{}
+\DoxyCodeLine{\ \ \ \ \{21,\ 6\},\ \{21,\ 7\},\{21,\ 11\},\{21,\ 12\},\{21,\ 16\},\{21,\ 17\},}
+\DoxyCodeLine{\ \ \ \ \{25,\ 6\},\ \{25,\ 7\},\{25,\ 11\},\{25,\ 12\},\{25,\ 16\},\{25,\ 17\}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\Hypertarget{city__environment_8h_a6f28ed875f6959c82b0e43d439284eaf}\index{city\_environment.h@{city\_environment.h}!forestPositions@{forestPositions}}
+\index{forestPositions@{forestPositions}!city\_environment.h@{city\_environment.h}}
+\doxysubsubsection{\texorpdfstring{forestPositions}{forestPositions}}
+{\footnotesize\ttfamily \label{city__environment_8h_a6f28ed875f6959c82b0e43d439284eaf} 
+const std\+::vector$<$sf\+::\+Vector2i$>$ forest\+Positions}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ \{}
+\DoxyCodeLine{\ \ \ \ \{0,\ 1\},\ \{1,\ 1\},\ \{2,\ 1\},\ \{3,\ 1\},\ \{4,\ 1\},\ \{5,\ 1\},\ \{6,\ 1\},\ \{7,\ 1\},\ \{8,\ 1\},\ \{9,\ 1\},\ \{10,\ 1\},\ \{11,\ 1\},\ \{12,\ 1\},\ \{13,\ 1\},\ \{14,\ 1\},\ \{15,\ 1\},\ \{16,\ 1\},\ \{17,\ 1\},\ \{18,\ 1\},\ \{19,\ 1\},\ \{20,\ 1\},}
+\DoxyCodeLine{\ \ \ \ \{0,\ 2\},\ \{0,\ 3\},\ \{0,\ 4\},\ \{0,\ 5\},\ \{0,\ 6\},\ \{0,\ 7\},\ \{0,\ 8\},\ \{0,\ 9\},\ \{0,\ 10\},\ \{0,\ 11\},\ \{0,\ 12\},\ \{0,\ 13\},\ \{0,\ 14\},\ \{0,\ 15\},\ \{0,\ 16\},\ \{0,\ 17\},\ \{0,\ 18\},\ \{0,\ 19\},\ \{0,\ 20\},}
+\DoxyCodeLine{\ \ \ \ \{1,\ 20\},\ \{2,\ 20\},\ \{3,\ 20\},\ \{4,\ 20\},\ \{5,\ 20\},\ \{6,\ 20\},\ \{7,\ 20\},\ \{8,\ 20\},\ \{9,\ 20\},\ \{10,\ 20\},\ \{11,\ 20\},\ \{12,\ 20\},\ \{13,\ 20\},\ \{15,\ 20\},\ \{16,\ 20\},\ \{17,\ 20\},\ \{18,\ 20\},\ \{19,\ 20\},\ \{20,\ 20\},\ \{21,\ 20\},\ \{22,\ 20\},\ \{23,\ 20\},\ \{24,\ 20\},\ \{25,\ 20\},\ \{26,\ 20\},\ \{27,\ 20\},\ \{28,\ 20\},}
+\DoxyCodeLine{\ \ \ \ \{28,\ 3\},\ \{28,\ 4\},\ \{28,\ 5\},\ \{28,\ 6\},\ \{28,\ 7\},\ \{28,\ 8\},\ \{28,\ 9\},\ \{28,\ 10\},\ \{28,\ 12\},\ \{28,\ 13\},\ \{28,\ 14\},\ \{28,\ 15\},\ \{28,\ 16\},\ \{28,\ 17\},\ \{28,\ 18\},\ \{28,\ 19\},\ \{28,\ 20\},\ \{20,\ 2\},}
+\DoxyCodeLine{\ \ \ \ \{20,\ 3\},\ \{21,\ 3\},\ \{22,\ 3\},\ \{23,\ 3\},\ \{24,\ 3\},\ \{25,\ 3\},\ \{26,\ 3\},\ \{27,\ 3\},\ \{28,\ 3\}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\Hypertarget{city__environment_8h_a11ae9a0f7644225bb47d8c96ee65f29f}\index{city\_environment.h@{city\_environment.h}!FrogPositions@{FrogPositions}}
+\index{FrogPositions@{FrogPositions}!city\_environment.h@{city\_environment.h}}
+\doxysubsubsection{\texorpdfstring{FrogPositions}{FrogPositions}}
+{\footnotesize\ttfamily \label{city__environment_8h_a11ae9a0f7644225bb47d8c96ee65f29f} 
+const std\+::vector$<$sf\+::\+Vector2f$>$ Frog\+Positions}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ \{}
+\DoxyCodeLine{\ \ \ \ \{12\ *\ \mbox{\hyperlink{global_8h_a7f35e63e299556a4959928206d5b139b}{SCALE}}\ -\/\ 15,\ 18\ *\ \mbox{\hyperlink{global_8h_a7f35e63e299556a4959928206d5b139b}{SCALE}}-\/\ 15\},}
+\DoxyCodeLine{\ \ \ \ \{13\ *\ \mbox{\hyperlink{global_8h_a7f35e63e299556a4959928206d5b139b}{SCALE}}\ +\ 15,\ 18\ *\ \mbox{\hyperlink{global_8h_a7f35e63e299556a4959928206d5b139b}{SCALE}}\ +\ 15\}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\Hypertarget{city__environment_8h_a7a8abd8f6ac3204a14ff67697c6aa2f2}\index{city\_environment.h@{city\_environment.h}!lake@{lake}}
+\index{lake@{lake}!city\_environment.h@{city\_environment.h}}
+\doxysubsubsection{\texorpdfstring{lake}{lake}}
+{\footnotesize\ttfamily \label{city__environment_8h_a7a8abd8f6ac3204a14ff67697c6aa2f2} 
+const std\+::vector$<$std\+::pair$<$sf\+::\+Vector2i, std\+::string$>$ $>$ lake}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ \{}
+\DoxyCodeLine{\ \ \ \ \{\{12,\ 12\},\ \textcolor{stringliteral}{"{}1.png"{}}\},\{\{13,\ 12\},\ \textcolor{stringliteral}{"{}2.png"{}}\},\{\{14,\ 12\},\ \textcolor{stringliteral}{"{}3.png"{}}\},}
+\DoxyCodeLine{\ \ \ \ \{\{12,\ 13\},\ \textcolor{stringliteral}{"{}4.png"{}}\},\{\{13,\ 13\},\ \textcolor{stringliteral}{"{}5.png"{}}\},\{\{14,\ 13\},\ \textcolor{stringliteral}{"{}6.png"{}}\},\{\{15,\ 13\},\ \textcolor{stringliteral}{"{}7.png"{}}\},\{\{16,\ 13\},\ \textcolor{stringliteral}{"{}8.png"{}}\},}
+\DoxyCodeLine{\ \ \ \ \{\{12,\ 14\},\ \textcolor{stringliteral}{"{}9.png"{}}\},\{\{13,\ 14\},\ \textcolor{stringliteral}{"{}10.png"{}}\},\{\{14,\ 14\},\ \textcolor{stringliteral}{"{}11.png"{}}\},\{\{15,\ 14\},\ \textcolor{stringliteral}{"{}12.png"{}}\},\{\{16,\ 14\},\ \textcolor{stringliteral}{"{}13.png"{}}\},}
+\DoxyCodeLine{\ \ \ \ \{\{12,\ 15\},\ \textcolor{stringliteral}{"{}14.png"{}}\},\{\{13,\ 15\},\ \textcolor{stringliteral}{"{}15.png"{}}\},\{\{14,\ 15\},\ \textcolor{stringliteral}{"{}16.png"{}}\},\{\{15,\ 15\},\ \textcolor{stringliteral}{"{}17.png"{}}\},\{\{16,\ 15\},\ \textcolor{stringliteral}{"{}18.png"{}}\}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\Hypertarget{city__environment_8h_a1c27832d2ee397dc50674fedf926a20c}\index{city\_environment.h@{city\_environment.h}!land@{land}}
+\index{land@{land}!city\_environment.h@{city\_environment.h}}
+\doxysubsubsection{\texorpdfstring{land}{land}}
+{\footnotesize\ttfamily \label{city__environment_8h_a1c27832d2ee397dc50674fedf926a20c} 
+const std\+::vector$<$std\+::pair$<$sf\+::\+Vector2i, std\+::string$>$ $>$ land}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ \{}
+\DoxyCodeLine{\ \ \ \ \{\{12,\ 17\},\ \textcolor{stringliteral}{"{}1.png"{}}\},\{\{13,\ 17\},\ \textcolor{stringliteral}{"{}2.png"{}}\},\{\{14,\ 17\},\ \textcolor{stringliteral}{"{}3.png"{}}\},\{\{15,\ 17\},\ \textcolor{stringliteral}{"{}4.png"{}}\},\{\{16,\ 17\},\ \textcolor{stringliteral}{"{}5.png"{}}\},}
+\DoxyCodeLine{\ \ \ \ \{\{12,\ 18\},\ \textcolor{stringliteral}{"{}6.png"{}}\},\{\{13,\ 18\},\ \textcolor{stringliteral}{"{}7.png"{}}\},\{\{14,\ 18\},\ \textcolor{stringliteral}{"{}8.png"{}}\},\{\{15,\ 18\},\ \textcolor{stringliteral}{"{}9.png"{}}\},\{\{16,\ 18\},\ \textcolor{stringliteral}{"{}10.png"{}}\}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\Hypertarget{city__environment_8h_a96c5b30fcb75831b726cb5d456578109}\index{city\_environment.h@{city\_environment.h}!mushroomPositions@{mushroomPositions}}
+\index{mushroomPositions@{mushroomPositions}!city\_environment.h@{city\_environment.h}}
+\doxysubsubsection{\texorpdfstring{mushroomPositions}{mushroomPositions}}
+{\footnotesize\ttfamily \label{city__environment_8h_a96c5b30fcb75831b726cb5d456578109} 
+const std\+::vector$<$sf\+::\+Vector2i$>$ mushroom\+Positions}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ \{}
+\DoxyCodeLine{\ \ \ \ \{4,12\},\ \{6,11\},\ \{16,7\},\ \{10,6\}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\Hypertarget{city__environment_8h_a274448f8742207e770669e19221691ab}\index{city\_environment.h@{city\_environment.h}!PinkPositions@{PinkPositions}}
+\index{PinkPositions@{PinkPositions}!city\_environment.h@{city\_environment.h}}
+\doxysubsubsection{\texorpdfstring{PinkPositions}{PinkPositions}}
+{\footnotesize\ttfamily \label{city__environment_8h_a274448f8742207e770669e19221691ab} 
+const std\+::vector$<$sf\+::\+Vector2f$>$ Pink\+Positions}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ \{}
+\DoxyCodeLine{\ \ \ \ \{12\ *\ \mbox{\hyperlink{global_8h_a7f35e63e299556a4959928206d5b139b}{SCALE}},\ 18\ *\ \mbox{\hyperlink{global_8h_a7f35e63e299556a4959928206d5b139b}{SCALE}}+\ 10\},}
+\DoxyCodeLine{\ \ \ \ \{13\ *\ \mbox{\hyperlink{global_8h_a7f35e63e299556a4959928206d5b139b}{SCALE}},\ 18\ *\ \mbox{\hyperlink{global_8h_a7f35e63e299556a4959928206d5b139b}{SCALE}}\}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\Hypertarget{city__environment_8h_adb04cb5ecddaf5a98fa97c40ea4d4896}\index{city\_environment.h@{city\_environment.h}!planePositions@{planePositions}}
+\index{planePositions@{planePositions}!city\_environment.h@{city\_environment.h}}
+\doxysubsubsection{\texorpdfstring{planePositions}{planePositions}}
+{\footnotesize\ttfamily \label{city__environment_8h_adb04cb5ecddaf5a98fa97c40ea4d4896} 
+const std\+::vector$<$sf\+::\+Vector2i$>$ plane\+Positions}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ \{}
+\DoxyCodeLine{\ \ \ \ \{29,6\},\ \{29,17\}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\Hypertarget{city__environment_8h_a569c634e20c7b6bc0c7a97ad365bf9ab}\index{city\_environment.h@{city\_environment.h}!rockPositions@{rockPositions}}
+\index{rockPositions@{rockPositions}!city\_environment.h@{city\_environment.h}}
+\doxysubsubsection{\texorpdfstring{rockPositions}{rockPositions}}
+{\footnotesize\ttfamily \label{city__environment_8h_a569c634e20c7b6bc0c7a97ad365bf9ab} 
+const std\+::vector$<$sf\+::\+Vector2i$>$ rock\+Positions}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ \{}
+\DoxyCodeLine{\ \ \ \ \{10,8\},\ \{18,8\},\ \{10,3\},\ \{18,3\},\ \{4,3\},\ \{4,8\},\ \{6,3\},\ \{6,8\}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\Hypertarget{city__environment_8h_a09114c0fce748df15e56c91196b34f52}\index{city\_environment.h@{city\_environment.h}!shipPositions@{shipPositions}}
+\index{shipPositions@{shipPositions}!city\_environment.h@{city\_environment.h}}
+\doxysubsubsection{\texorpdfstring{shipPositions}{shipPositions}}
+{\footnotesize\ttfamily \label{city__environment_8h_a09114c0fce748df15e56c91196b34f52} 
+const std\+::vector$<$sf\+::\+Vector2i$>$ ship\+Positions}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ \{}
+\DoxyCodeLine{\ \ \ \ \{13,14\}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\Hypertarget{city__environment_8h_a0259c201040def1c828fa7c07d499b7b}\index{city\_environment.h@{city\_environment.h}!streetLightPositions@{streetLightPositions}}
+\index{streetLightPositions@{streetLightPositions}!city\_environment.h@{city\_environment.h}}
+\doxysubsubsection{\texorpdfstring{streetLightPositions}{streetLightPositions}}
+{\footnotesize\ttfamily \label{city__environment_8h_a0259c201040def1c828fa7c07d499b7b} 
+const std\+::vector$<$sf\+::\+Vector2f$>$ street\+Light\+Positions}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \{60.0f,\ 200.0f\},\ \{30.0f,\ 200.0f\},\{60.0f,\ 240.0f\},\ \{30.0f,\ 240.0f\},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \{60.0f,\ 320.0f\},\ \{30.0f,\ 320.0f\},\{60.0f,\ 360.0f\},\ \{30.0f,\ 360.0f\},\{60.0f,\ 400.0f\},\ \{30.0f,\ 400.0f\},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \{60.0f,\ 480.0f\},\ \{60.0f,\ 520.0f\},\ \{60.0f,\ 560.0f\},\ \{60.0f,\ 600.0f\},\ \{60.0f,\ 160.0f\},\ \{60.0f,\ 120.0f\},\ \{60.0f,\ 40.0f\},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \{30.0f,\ 480.0f\},\ \{30.0f,\ 520.0f\},\ \{30.0f,\ 560.0f\},\ \{30.0f,\ 600.0f\},\ \{30.0f,\ 160.0f\},\ \{30.0f,\ 120.0f\},\ \{30.0f,\ 40.0f\},}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \{270.0f,\ 200.0f\},\ \{300.0f,\ 200.0f\},\{270.0f,\ 240.0f\},\ \{300.0f,\ 240.0f\},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \{270.0f,\ 320.0f\},\ \{300.0f,\ 320.0f\},\{270.0f,\ 360.0f\},\ \{300.0f,\ 360.0f\},\{270.0f,\ 400.0f\},\ \{300.0f,\ 400.0f\},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \{270.0f,\ 480.0f\},\ \{270.0f,\ 520.0f\},\ \{270.0f,\ 560.0f\},\ \{270.0f,\ 600.0f\},\ \{270.0f,\ 160.0f\},\ \{270.0f,\ 120.0f\},\ \{270.0f,\ 40.0f\},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \{300.0f,\ 480.0f\},\ \{300.0f,\ 520.0f\},\ \{300.0f,\ 560.0f\},\ \{300.0f,\ 600.0f\},\ \{300.0f,\ 160.0f\},\ \{300.0f,\ 120.0f\},\ \{300.0f,\ 40.0f\}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\Hypertarget{city__environment_8h_acd42764a9a3967b29a99ed21c4a6339a}\index{city\_environment.h@{city\_environment.h}!treePositions@{treePositions}}
+\index{treePositions@{treePositions}!city\_environment.h@{city\_environment.h}}
+\doxysubsubsection{\texorpdfstring{treePositions}{treePositions}}
+{\footnotesize\ttfamily \label{city__environment_8h_acd42764a9a3967b29a99ed21c4a6339a} 
+const std\+::vector$<$sf\+::\+Vector2i$>$ tree\+Positions}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ \{}
+\DoxyCodeLine{\ \ \ \ \{11,11\},\ \{11,\ 12\},\ \{11,\ 13\},\ \{11,\ 14\},\ \{11,\ 15\},\ \{11,\ 16\},\ \{12,16\},\ \{13,16\},\ \{14,16\},\ \{15,16\},\ \{16,16\},\ \{17,16\},}
+\DoxyCodeLine{\ \ \ \ \{17,15\},\ \{17,14\},\ \{17,13\},\ \{17,12\},\ \{16,12\},\ \{15,12\},\ \{15,11\},\{14,11\},\ \{13,11\},\ \{12,11\},}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\Hypertarget{city__environment_8h_a6038f4b31dd97bd2ee49b2f8fdbfc21f}\index{city\_environment.h@{city\_environment.h}!YellowPositions@{YellowPositions}}
+\index{YellowPositions@{YellowPositions}!city\_environment.h@{city\_environment.h}}
+\doxysubsubsection{\texorpdfstring{YellowPositions}{YellowPositions}}
+{\footnotesize\ttfamily \label{city__environment_8h_a6038f4b31dd97bd2ee49b2f8fdbfc21f} 
+const std\+::vector$<$sf\+::\+Vector2f$>$ Yellow\+Positions}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ \{}
+\DoxyCodeLine{\ \ \ \ \{14\ *\ \mbox{\hyperlink{global_8h_a7f35e63e299556a4959928206d5b139b}{SCALE}}\ -\/\ 15,\ 18\ *\ \mbox{\hyperlink{global_8h_a7f35e63e299556a4959928206d5b139b}{SCALE}}\},}
+\DoxyCodeLine{\ \ \ \ \{15\ *\ \mbox{\hyperlink{global_8h_a7f35e63e299556a4959928206d5b139b}{SCALE}}\ +\ 15,\ 18\ *\ \mbox{\hyperlink{global_8h_a7f35e63e299556a4959928206d5b139b}{SCALE}}\ -\/\ 10\}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}

@@ -1,0 +1,183 @@
+\doxysection{src/main.cpp File Reference}
+\hypertarget{main_8cpp}{}\label{main_8cpp}\index{src/main.cpp@{src/main.cpp}}
+{\ttfamily \#include "{}coordinate.\+h"{}}\newline
+{\ttfamily \#include "{}city.\+hpp"{}}\newline
+{\ttfamily \#include "{}building.\+hpp"{}}\newline
+{\ttfamily \#include "{}car.\+hpp"{}}\newline
+{\ttfamily \#include "{}intersection.\+hpp"{}}\newline
+{\ttfamily \#include "{}road.\+hpp"{}}\newline
+{\ttfamily \#include "{}person.\+hpp"{}}\newline
+{\ttfamily \#include "{}global.\+h"{}}\newline
+{\ttfamily \#include "{}city\+\_\+environment.\+h"{}}\newline
+{\ttfamily \#include $<$SFML/\+Graphics.\+hpp$>$}\newline
+{\ttfamily \#include $<$SFML/\+System.\+hpp$>$}\newline
+{\ttfamily \#include $<$sstream$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$fstream$>$}\newline
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_animated_sprite}{Animated\+Sprite}}
+\item 
+struct \mbox{\hyperlink{struct_street_light}{Street\+Light}}
+\begin{DoxyCompactList}\small\item\em Represents a streetlight with dynamic lighting frames based on the time of day. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{main_8cpp_a34b04bd23b07b485921a728ad0805ac4}{MAIN}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{main_8cpp_a0bc08f641f4658d1eadb7302120b3f89}{draw\+Elements}} (sf\+::\+Render\+Window \&window, const std\+::vector$<$ sf\+::\+Vector2i $>$ \&positions, const sf\+::\+Texture \&texture, float scale, const sf\+::\+Color \&color)
+\item 
+void \mbox{\hyperlink{main_8cpp_a64e0255d6c3ff76fa6eb63ba6fbe04e4}{display\+Bar\+Chart}} (std\+::vector$<$ int $>$ raw\+Data, const std\+::string \&day, long hours\+Elapsed)
+\item 
+sf\+::\+Color \mbox{\hyperlink{main_8cpp_aa26f0febb24fe9c5770e40537e721a40}{interpolate\+Color}} (const sf\+::\+Color \&color1, const sf\+::\+Color \&color2, float factor)
+\item 
+std\+::vector$<$ \mbox{\hyperlink{struct_animated_sprite}{Animated\+Sprite}} $>$ \mbox{\hyperlink{main_8cpp_a7c7da4e1bdcf0afca2f9efdfa37587fa}{initialize\+Animated\+Sprites}} (sf\+::\+Texture \&sprite\+Sheet, const std\+::vector$<$ sf\+::\+Vector2f $>$ \&positions, float \mbox{\hyperlink{global_8h_a8bc9813debf5b343720efc51f14a8b60}{frame\+Width}}, float \mbox{\hyperlink{global_8h_a501f0ee53c983df6a4f09d92ed610e04}{frame\+Height}})
+\item 
+void \mbox{\hyperlink{main_8cpp_a14bdd148b56c5768f9ceed7a85a28729}{update\+And\+Draw\+Sprites}} (std\+::vector$<$ \mbox{\hyperlink{struct_animated_sprite}{Animated\+Sprite}} $>$ \&sprites, sf\+::\+Render\+Window \&window, float \mbox{\hyperlink{global_8h_a8bc9813debf5b343720efc51f14a8b60}{frame\+Width}}, float \mbox{\hyperlink{global_8h_a501f0ee53c983df6a4f09d92ed610e04}{frame\+Height}}, int \mbox{\hyperlink{global_8h_a9c1e4867b489be9d70195efd02025c24}{frame\+Count}}, float \mbox{\hyperlink{global_8h_af818c6537baf997613b15890e7e11de6}{frame\+Duration}})
+\item 
+void \mbox{\hyperlink{main_8cpp_a0f7aeb779dd700ad498033f64f722afd}{initialize\+Street\+Lights}} (const sf\+::\+Texture \&texture)
+\item 
+int \mbox{\hyperlink{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+auto \mbox{\hyperlink{main_8cpp_a971663cc785c3387ef0ed1d4d26b0657}{color\+Lambda}}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{struct_street_light}{Street\+Light}} $>$ \mbox{\hyperlink{main_8cpp_ab15d08f360fa65285f3af25b919a11c6}{street\+Lights}}
+\item 
+long \mbox{\hyperlink{main_8cpp_a9c260e64dba051e11b1f6a8e47ad21d2}{elapse\+Time}} = -\/1
+\begin{DoxyCompactList}\small\item\em A long variable that tracks the elapsed time in the simulation. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{main_8cpp_ad4e0bbc0cc0ffb91120206fb4de60261}{tick}} = -\/1
+\begin{DoxyCompactList}\small\item\em An integer representing the current simulation tick. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{main_8cpp_a7a829e6fd74e94e0edf10550470d844c}{rate}} = 1
+\begin{DoxyCompactList}\small\item\em An integer representing the rate of change or speed of the simulation. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{main_8cpp_a70c09c32e02c16ab706d0ca3b0e22aa5}{HIGHLIGHT\+\_\+\+MODE}} = false
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{main_8cpp_a34b04bd23b07b485921a728ad0805ac4}\index{main.cpp@{main.cpp}!MAIN@{MAIN}}
+\index{MAIN@{MAIN}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{MAIN}{MAIN}}
+{\footnotesize\ttfamily \label{main_8cpp_a34b04bd23b07b485921a728ad0805ac4} 
+\#define MAIN}
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{main_8cpp_a64e0255d6c3ff76fa6eb63ba6fbe04e4}\index{main.cpp@{main.cpp}!displayBarChart@{displayBarChart}}
+\index{displayBarChart@{displayBarChart}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{displayBarChart()}{displayBarChart()}}
+{\footnotesize\ttfamily \label{main_8cpp_a64e0255d6c3ff76fa6eb63ba6fbe04e4} 
+void display\+Bar\+Chart (\begin{DoxyParamCaption}\item[{std\+::vector$<$ int $>$}]{raw\+Data}{, }\item[{const std\+::string \&}]{day}{, }\item[{long}]{hours\+Elapsed}{}\end{DoxyParamCaption})}
+
+\Hypertarget{main_8cpp_a0bc08f641f4658d1eadb7302120b3f89}\index{main.cpp@{main.cpp}!drawElements@{drawElements}}
+\index{drawElements@{drawElements}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{drawElements()}{drawElements()}}
+{\footnotesize\ttfamily \label{main_8cpp_a0bc08f641f4658d1eadb7302120b3f89} 
+void draw\+Elements (\begin{DoxyParamCaption}\item[{sf\+::\+Render\+Window \&}]{window}{, }\item[{const std\+::vector$<$ sf\+::\+Vector2i $>$ \&}]{positions}{, }\item[{const sf\+::\+Texture \&}]{texture}{, }\item[{float}]{scale}{, }\item[{const sf\+::\+Color \&}]{color}{}\end{DoxyParamCaption})}
+
+\Hypertarget{main_8cpp_a7c7da4e1bdcf0afca2f9efdfa37587fa}\index{main.cpp@{main.cpp}!initializeAnimatedSprites@{initializeAnimatedSprites}}
+\index{initializeAnimatedSprites@{initializeAnimatedSprites}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{initializeAnimatedSprites()}{initializeAnimatedSprites()}}
+{\footnotesize\ttfamily \label{main_8cpp_a7c7da4e1bdcf0afca2f9efdfa37587fa} 
+std\+::vector$<$ \mbox{\hyperlink{struct_animated_sprite}{Animated\+Sprite}} $>$ initialize\+Animated\+Sprites (\begin{DoxyParamCaption}\item[{sf\+::\+Texture \&}]{sprite\+Sheet}{, }\item[{const std\+::vector$<$ sf\+::\+Vector2f $>$ \&}]{positions}{, }\item[{float}]{frame\+Width}{, }\item[{float}]{frame\+Height}{}\end{DoxyParamCaption})}
+
+\Hypertarget{main_8cpp_a0f7aeb779dd700ad498033f64f722afd}\index{main.cpp@{main.cpp}!initializeStreetLights@{initializeStreetLights}}
+\index{initializeStreetLights@{initializeStreetLights}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{initializeStreetLights()}{initializeStreetLights()}}
+{\footnotesize\ttfamily \label{main_8cpp_a0f7aeb779dd700ad498033f64f722afd} 
+void initialize\+Street\+Lights (\begin{DoxyParamCaption}\item[{const sf\+::\+Texture \&}]{texture}{}\end{DoxyParamCaption})}
+
+\Hypertarget{main_8cpp_aa26f0febb24fe9c5770e40537e721a40}\index{main.cpp@{main.cpp}!interpolateColor@{interpolateColor}}
+\index{interpolateColor@{interpolateColor}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{interpolateColor()}{interpolateColor()}}
+{\footnotesize\ttfamily \label{main_8cpp_aa26f0febb24fe9c5770e40537e721a40} 
+sf\+::\+Color interpolate\+Color (\begin{DoxyParamCaption}\item[{const sf\+::\+Color \&}]{color1}{, }\item[{const sf\+::\+Color \&}]{color2}{, }\item[{float}]{factor}{}\end{DoxyParamCaption})}
+
+\Hypertarget{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}\index{main.cpp@{main.cpp}!main@{main}}
+\index{main@{main}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily \label{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4} 
+int main (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Clears the road logs and appends new log data.
+
+This section clears the existing road log file and appends new data for each road to the log file.\Hypertarget{main_8cpp_a14bdd148b56c5768f9ceed7a85a28729}\index{main.cpp@{main.cpp}!updateAndDrawSprites@{updateAndDrawSprites}}
+\index{updateAndDrawSprites@{updateAndDrawSprites}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{updateAndDrawSprites()}{updateAndDrawSprites()}}
+{\footnotesize\ttfamily \label{main_8cpp_a14bdd148b56c5768f9ceed7a85a28729} 
+void update\+And\+Draw\+Sprites (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{struct_animated_sprite}{Animated\+Sprite}} $>$ \&}]{sprites}{, }\item[{sf\+::\+Render\+Window \&}]{window}{, }\item[{float}]{frame\+Width}{, }\item[{float}]{frame\+Height}{, }\item[{int}]{frame\+Count}{, }\item[{float}]{frame\+Duration}{}\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{main_8cpp_a971663cc785c3387ef0ed1d4d26b0657}\index{main.cpp@{main.cpp}!colorLambda@{colorLambda}}
+\index{colorLambda@{colorLambda}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{colorLambda}{colorLambda}}
+{\footnotesize\ttfamily \label{main_8cpp_a971663cc785c3387ef0ed1d4d26b0657} 
+auto color\+Lambda}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ [](\textcolor{keywordtype}{int}\ \mbox{\hyperlink{global_8h_a6150e0515f7202e2fb518f7206ed97dc}{x}})\ -\/>\ sf::Color\ \{}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordtype}{int}\ r\ =\ std::round(-\/0.9256\ *\ \mbox{\hyperlink{global_8h_a6150e0515f7202e2fb518f7206ed97dc}{x}}\ *\ \mbox{\hyperlink{global_8h_a6150e0515f7202e2fb518f7206ed97dc}{x}}\ +\ 20.845\ *\ \mbox{\hyperlink{global_8h_a6150e0515f7202e2fb518f7206ed97dc}{x}}\ +\ 117.0423);}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordtype}{int}\ g\ =\ std::round(-\/1.5265\ *\ \mbox{\hyperlink{global_8h_a6150e0515f7202e2fb518f7206ed97dc}{x}}\ *\ \mbox{\hyperlink{global_8h_a6150e0515f7202e2fb518f7206ed97dc}{x}}\ +\ 34.666\ *\ \mbox{\hyperlink{global_8h_a6150e0515f7202e2fb518f7206ed97dc}{x}}\ +\ 96.8654);}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordtype}{int}\ b\ =\ std::round(-\/0.7558\ *\ \mbox{\hyperlink{global_8h_a6150e0515f7202e2fb518f7206ed97dc}{x}}\ *\ \mbox{\hyperlink{global_8h_a6150e0515f7202e2fb518f7206ed97dc}{x}}\ +\ 16.1568\ *\ \mbox{\hyperlink{global_8h_a6150e0515f7202e2fb518f7206ed97dc}{x}}\ +\ 229.9462);}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ r\ =\ std::clamp(r,\ 0,\ 255);}
+\DoxyCodeLine{\ \ \ \ g\ =\ std::clamp(g,\ 0,\ 255);}
+\DoxyCodeLine{\ \ \ \ b\ =\ std::clamp(b,\ 0,\ 255);}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{return}\ sf::Color(r,\ g,\ b);}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\Hypertarget{main_8cpp_a9c260e64dba051e11b1f6a8e47ad21d2}\index{main.cpp@{main.cpp}!elapseTime@{elapseTime}}
+\index{elapseTime@{elapseTime}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{elapseTime}{elapseTime}}
+{\footnotesize\ttfamily \label{main_8cpp_a9c260e64dba051e11b1f6a8e47ad21d2} 
+long elapse\+Time = -\/1}
+
+
+
+A long variable that tracks the elapsed time in the simulation. 
+
+This variable holds the total time that has passed during the simulation. It is used to manage the progression of time and synchronize various events within the simulation. \Hypertarget{main_8cpp_a70c09c32e02c16ab706d0ca3b0e22aa5}\index{main.cpp@{main.cpp}!HIGHLIGHT\_MODE@{HIGHLIGHT\_MODE}}
+\index{HIGHLIGHT\_MODE@{HIGHLIGHT\_MODE}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{HIGHLIGHT\_MODE}{HIGHLIGHT\_MODE}}
+{\footnotesize\ttfamily \label{main_8cpp_a70c09c32e02c16ab706d0ca3b0e22aa5} 
+bool HIGHLIGHT\+\_\+\+MODE = false}
+
+\Hypertarget{main_8cpp_a7a829e6fd74e94e0edf10550470d844c}\index{main.cpp@{main.cpp}!rate@{rate}}
+\index{rate@{rate}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{rate}{rate}}
+{\footnotesize\ttfamily \label{main_8cpp_a7a829e6fd74e94e0edf10550470d844c} 
+int rate = 1}
+
+
+
+An integer representing the rate of change or speed of the simulation. 
+
+This variable controls how fast the simulation progresses. A higher value could indicate a faster rate of simulation, while a lower value might slow it down. \Hypertarget{main_8cpp_ab15d08f360fa65285f3af25b919a11c6}\index{main.cpp@{main.cpp}!streetLights@{streetLights}}
+\index{streetLights@{streetLights}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{streetLights}{streetLights}}
+{\footnotesize\ttfamily \label{main_8cpp_ab15d08f360fa65285f3af25b919a11c6} 
+std\+::vector$<$\mbox{\hyperlink{struct_street_light}{Street\+Light}}$>$ street\+Lights}
+
+\Hypertarget{main_8cpp_ad4e0bbc0cc0ffb91120206fb4de60261}\index{main.cpp@{main.cpp}!tick@{tick}}
+\index{tick@{tick}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{tick}{tick}}
+{\footnotesize\ttfamily \label{main_8cpp_ad4e0bbc0cc0ffb91120206fb4de60261} 
+int tick = -\/1}
+
+
+
+An integer representing the current simulation tick. 
+
+This variable indicates the current tick in the simulation. It is typically used to control the timing of events or actions within the simulation cycle. 

@@ -1,0 +1,18 @@
+{
+    "configurations": [
+        {
+            "name": "Linux",
+            "includePath": [
+                "${workspaceFolder}/**",                // Include all workspace subdirectories
+                "/opt/homebrew/opt/sfml/include"       // Include path for SFML headers (macOS/Homebrew)
+            ],
+            "defines": [],
+            "compilerPath": "/usr/bin/gcc",            // Path to your compiler
+            "cStandard": "c17",                       // Set the C standard
+            "cppStandard": "gnu++17",                 // Set the C++ standard
+            "intelliSenseMode": "linux-gcc-x64",      // IntelliSense mode
+            "configurationProvider": "ms-vscode.cmake-tools" // Use CMake Tools for configuration
+        }
+    ],
+    "version": 4
+}

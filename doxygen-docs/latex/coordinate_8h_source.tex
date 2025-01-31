@@ -1,0 +1,44 @@
+\doxysection{coordinate.\+h}
+\hypertarget{coordinate_8h_source}{}\label{coordinate_8h_source}\index{src/coordinate.h@{src/coordinate.h}}
+\mbox{\hyperlink{coordinate_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ COORDINATES\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ COORDINATES\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <cmath>}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00010\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_coordinate}{Coordinate}}\ \{}
+\DoxyCodeLine{00011\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{struct_coordinate_a514c8968b1d03f65e76c9cc9566ee4cc}{x}};\ }
+\DoxyCodeLine{00012\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{struct_coordinate_a1a7d11305e68c5bfba2b9d4569d4b6ef}{y}};\ }
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00019\ \ \ \ \ \mbox{\hyperlink{struct_coordinate_a509a700d1b8130b0d41479e9da549a6e}{Coordinate}}(\textcolor{keywordtype}{float}\ xVal\ =\ 0,\ \textcolor{keywordtype}{float}\ yVal\ =\ 0)\ \{}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_coordinate_a514c8968b1d03f65e76c9cc9566ee4cc}{x}}\ =\ xVal;}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_coordinate_a1a7d11305e68c5bfba2b9d4569d4b6ef}{y}}\ =\ yVal;}
+\DoxyCodeLine{00022\ \ \ \ \ \}}
+\DoxyCodeLine{00023\ \};}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00034\ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{coordinate_8h_a838d40d68570f04bcd2847af0061f66b}{operator==}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{struct_coordinate}{Coordinate}}\&\ lhs,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{struct_coordinate}{Coordinate}}\&\ rhs)\ \{}
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keywordtype}{double}\ dx\ =\ rhs.\mbox{\hyperlink{struct_coordinate_a514c8968b1d03f65e76c9cc9566ee4cc}{x}}\ -\/\ lhs.\mbox{\hyperlink{struct_coordinate_a514c8968b1d03f65e76c9cc9566ee4cc}{x}};}
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keywordtype}{double}\ dy\ =\ rhs.\mbox{\hyperlink{struct_coordinate_a1a7d11305e68c5bfba2b9d4569d4b6ef}{y}}\ -\/\ lhs.\mbox{\hyperlink{struct_coordinate_a1a7d11305e68c5bfba2b9d4569d4b6ef}{y}};}
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keywordflow}{return}\ std::sqrt(dx\ *\ dx\ +\ dy\ *\ dy)\ <=\ 0.08;}
+\DoxyCodeLine{00038\ \}}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00048\ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{coordinate_8h_a818c5c7ac59519789e7e0f8574930a77}{operator!=}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{struct_coordinate}{Coordinate}}\&\ lhs,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{struct_coordinate}{Coordinate}}\&\ rhs)\ \{}
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{keywordflow}{return}\ !(lhs\ ==\ rhs);}
+\DoxyCodeLine{00050\ \}}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00061\ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{coordinate_8h_a35e82963807300a704594db9a60b6330}{operator>}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{struct_coordinate}{Coordinate}}\&\ lhs,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{struct_coordinate}{Coordinate}}\&\ rhs)\ \{}
+\DoxyCodeLine{00062\ \ \ \ \ \textcolor{keywordflow}{return}\ (lhs.\mbox{\hyperlink{struct_coordinate_a514c8968b1d03f65e76c9cc9566ee4cc}{x}}\ >\ rhs.\mbox{\hyperlink{struct_coordinate_a514c8968b1d03f65e76c9cc9566ee4cc}{x}})\ \&\&\ (lhs.\mbox{\hyperlink{struct_coordinate_a1a7d11305e68c5bfba2b9d4569d4b6ef}{y}}\ >\ rhs.\mbox{\hyperlink{struct_coordinate_a1a7d11305e68c5bfba2b9d4569d4b6ef}{y}});}
+\DoxyCodeLine{00063\ \}}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00074\ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{coordinate_8h_a4e9c5c3b5aaf36eee4ef4a6a1b7bba0a}{operator<}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{struct_coordinate}{Coordinate}}\&\ lhs,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{struct_coordinate}{Coordinate}}\&\ rhs)\ \{}
+\DoxyCodeLine{00075\ \ \ \ \ \textcolor{keywordflow}{return}\ (lhs.\mbox{\hyperlink{struct_coordinate_a514c8968b1d03f65e76c9cc9566ee4cc}{x}}\ <\ rhs.\mbox{\hyperlink{struct_coordinate_a514c8968b1d03f65e76c9cc9566ee4cc}{x}})\ \&\&\ (lhs.\mbox{\hyperlink{struct_coordinate_a1a7d11305e68c5bfba2b9d4569d4b6ef}{y}}\ <\ rhs.\mbox{\hyperlink{struct_coordinate_a1a7d11305e68c5bfba2b9d4569d4b6ef}{y}});}
+\DoxyCodeLine{00076\ \}}
+\DoxyCodeLine{00077\ }
+\DoxyCodeLine{00086\ \textcolor{keyword}{inline}\ \mbox{\hyperlink{struct_coordinate}{Coordinate}}\ \mbox{\hyperlink{coordinate_8h_a50456bb7073e03781d51ca756e1c4444}{operator*}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{struct_coordinate}{Coordinate}}\&\ lhs,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ rhs)\ \{}
+\DoxyCodeLine{00087\ \ \ \ \ \textcolor{keywordflow}{return}\ \{lhs.\mbox{\hyperlink{struct_coordinate_a514c8968b1d03f65e76c9cc9566ee4cc}{x}}\ *\ rhs,\ lhs.\mbox{\hyperlink{struct_coordinate_a1a7d11305e68c5bfba2b9d4569d4b6ef}{y}}\ *\ rhs\};}
+\DoxyCodeLine{00088\ \}}
+\DoxyCodeLine{00089\ }
+\DoxyCodeLine{00090\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

@@ -1,0 +1,108 @@
+\doxysection{src/person.cpp File Reference}
+\hypertarget{person_8cpp}{}\label{person_8cpp}\index{src/person.cpp@{src/person.cpp}}
+{\ttfamily \#include "{}person.\+hpp"{}}\newline
+{\ttfamily \#include "{}global.\+h"{}}\newline
+{\ttfamily \#include $<$fstream$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{person_8cpp_a64a03f7e79139d203c4be2b8cb795ded}{PERSON\+\_\+\+CPP}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_person}{Person}} $>$ \mbox{\hyperlink{person_8cpp_ae9cc6f841d4b16f02dd14c77cadca505}{from\+\_\+json}} (const nlohmann\+::json \&j, std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_building}{Building}} $>$ $>$ buildings)
+\begin{DoxyCompactList}\small\item\em Creates a \doxylink{class_person}{Person} object from a JSON representation. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{person_8cpp_ad63bfb6400bede0b8f04853093293906}{to\+\_\+json}} (nlohmann\+::json \&j, const \mbox{\hyperlink{class_person}{Person}} \&person)
+\begin{DoxyCompactList}\small\item\em Serializes a \doxylink{class_person}{Person} object to JSON. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{person_8cpp_a8eef4b021c9f2f2452b192e2bf808dec}{write\+Person}} (const std\+::string \&filename, const std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_person}{Person}} $>$ $>$ people)
+\begin{DoxyCompactList}\small\item\em Writes a vector of \doxylink{class_person}{Person} objects to a JSON file. \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_person}{Person}} $>$ $>$ \mbox{\hyperlink{person_8cpp_ac33d0faeb5a93c7669723a1e68397d11}{read\+Person}} (const std\+::string \&filename, std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_building}{Building}} $>$ $>$ buildings)
+\begin{DoxyCompactList}\small\item\em Reads a vector of \doxylink{class_person}{Person} objects from a JSON file. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{person_8cpp_a64a03f7e79139d203c4be2b8cb795ded}\index{person.cpp@{person.cpp}!PERSON\_CPP@{PERSON\_CPP}}
+\index{PERSON\_CPP@{PERSON\_CPP}!person.cpp@{person.cpp}}
+\doxysubsubsection{\texorpdfstring{PERSON\_CPP}{PERSON\_CPP}}
+{\footnotesize\ttfamily \label{person_8cpp_a64a03f7e79139d203c4be2b8cb795ded} 
+\#define PERSON\+\_\+\+CPP}
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{person_8cpp_ae9cc6f841d4b16f02dd14c77cadca505}\index{person.cpp@{person.cpp}!from\_json@{from\_json}}
+\index{from\_json@{from\_json}!person.cpp@{person.cpp}}
+\doxysubsubsection{\texorpdfstring{from\_json()}{from\_json()}}
+{\footnotesize\ttfamily \label{person_8cpp_ae9cc6f841d4b16f02dd14c77cadca505} 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_person}{Person}} $>$ from\+\_\+json (\begin{DoxyParamCaption}\item[{const nlohmann\+::json \&}]{j}{, }\item[{std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_building}{Building}} $>$ $>$}]{buildings}{}\end{DoxyParamCaption})}
+
+
+
+Creates a \doxylink{class_person}{Person} object from a JSON representation. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em j} & The JSON object. \\
+\hline
+{\em buildings} & A vector of shared pointers to buildings. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A shared pointer to the created \doxylink{class_person}{Person} object. 
+\end{DoxyReturn}
+\Hypertarget{person_8cpp_ac33d0faeb5a93c7669723a1e68397d11}\index{person.cpp@{person.cpp}!readPerson@{readPerson}}
+\index{readPerson@{readPerson}!person.cpp@{person.cpp}}
+\doxysubsubsection{\texorpdfstring{readPerson()}{readPerson()}}
+{\footnotesize\ttfamily \label{person_8cpp_ac33d0faeb5a93c7669723a1e68397d11} 
+std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_person}{Person}} $>$ $>$ read\+Person (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{filename}{, }\item[{std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_building}{Building}} $>$ $>$}]{buildings}{}\end{DoxyParamCaption})}
+
+
+
+Reads a vector of \doxylink{class_person}{Person} objects from a JSON file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & The filename to read from. \\
+\hline
+{\em buildings} & A vector of shared pointers to buildings. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A vector of shared pointers to \doxylink{class_person}{Person} objects. 
+\end{DoxyReturn}
+\Hypertarget{person_8cpp_ad63bfb6400bede0b8f04853093293906}\index{person.cpp@{person.cpp}!to\_json@{to\_json}}
+\index{to\_json@{to\_json}!person.cpp@{person.cpp}}
+\doxysubsubsection{\texorpdfstring{to\_json()}{to\_json()}}
+{\footnotesize\ttfamily \label{person_8cpp_ad63bfb6400bede0b8f04853093293906} 
+void to\+\_\+json (\begin{DoxyParamCaption}\item[{nlohmann\+::json \&}]{j}{, }\item[{const \mbox{\hyperlink{class_person}{Person}} \&}]{person}{}\end{DoxyParamCaption})}
+
+
+
+Serializes a \doxylink{class_person}{Person} object to JSON. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em j} & The JSON object to write to. \\
+\hline
+{\em person} & The \doxylink{class_person}{Person} object to serialize. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{person_8cpp_a8eef4b021c9f2f2452b192e2bf808dec}\index{person.cpp@{person.cpp}!writePerson@{writePerson}}
+\index{writePerson@{writePerson}!person.cpp@{person.cpp}}
+\doxysubsubsection{\texorpdfstring{writePerson()}{writePerson()}}
+{\footnotesize\ttfamily \label{person_8cpp_a8eef4b021c9f2f2452b192e2bf808dec} 
+void write\+Person (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{filename}{, }\item[{const std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_person}{Person}} $>$ $>$}]{people}{}\end{DoxyParamCaption})}
+
+
+
+Writes a vector of \doxylink{class_person}{Person} objects to a JSON file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & The filename to write to. \\
+\hline
+{\em people} & A vector of shared pointers to \doxylink{class_person}{Person} objects. \\
+\hline
+\end{DoxyParams}

@@ -1,0 +1,69 @@
+\doxysection{person.\+hpp}
+\hypertarget{person_8hpp_source}{}\label{person_8hpp_source}\index{src/person.hpp@{src/person.hpp}}
+\mbox{\hyperlink{person_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ PERSON\_HPP}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ PERSON\_HPP}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <random>}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}../libs/nlohmann/json.hpp"{}}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{building_8hpp}{building.hpp}}"{}}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{keyword}{enum}\ \mbox{\hyperlink{person_8hpp_a8bb1ef53467e4f61410d12822d922498}{Action}}\ \{}
+\DoxyCodeLine{00012\ \ \ \ \ \mbox{\hyperlink{person_8hpp_a8bb1ef53467e4f61410d12822d922498aa71a10a6bbe3f581d9a2e6f551ec1ef4}{Work}},}
+\DoxyCodeLine{00013\ \ \ \ \ \mbox{\hyperlink{person_8hpp_a8bb1ef53467e4f61410d12822d922498a7f333a8f14b5817b34708afb007c91b8}{Play}},}
+\DoxyCodeLine{00014\ \ \ \ \ \mbox{\hyperlink{person_8hpp_a8bb1ef53467e4f61410d12822d922498a8feb334f9ed9ddb8dbc69cfa4fd6b614}{Home}}}
+\DoxyCodeLine{00015\ \};}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_person}{Person}}\ \{}
+\DoxyCodeLine{00018\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00019\ \ \ \ \ \mbox{\hyperlink{class_person_a2b9b034f052b0509d946e0a3e4e907d9}{Person}}(std::shared\_ptr<Building>\ home,\ std::shared\_ptr<Building>\ work,\ std::shared\_ptr<Building>\ favBuilding);}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_person_a03cabfe90ef1c449f5fe89cc3c870763}{isDriving}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_person_a8580423a56fa41306c7cfbef5a30e064}{setDriving}}(\textcolor{keywordtype}{bool}\ driving);}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \ \ \ \ \mbox{\hyperlink{person_8hpp_a8bb1ef53467e4f61410d12822d922498}{Action}}\ \mbox{\hyperlink{class_person_a3c5b951363ad0632ac72acf3b310862b}{getCurrentAction}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_person_ae49455a0a0e93da11567f35b44ada167}{action}}();\ }
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_person_a5422c3b3c20cb2b4c3be8a022953d396}{decideDailySchedule}}();}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_person_a37dbad71d091edf2e02530f370c00a57}{drive}}(std::shared\_ptr<Building>\ dest);}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_person_add6a407252eb43ea5570ceee7c20635d}{performAction}}();\ }
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ \ \ \ \ std::shared\_ptr<Car>\ \mbox{\hyperlink{class_person_ac46f704641f8b9f746cf1fd3cac7ddb1}{getCar}}();}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00037\ \ \ \ \ std::vector<int>\ \mbox{\hyperlink{class_person_a80ccdfb927fa56eb05d06dcbfd4efe57}{getSchedule}}();}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00039\ \ \ \ \ std::shared\_ptr<Building>\ \mbox{\hyperlink{class_person_a7bf4fb0b5979e83fd2720d6e753f52ea}{getCurrentBuilding}}();}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keyword}{friend}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_person_ad63bfb6400bede0b8f04853093293906}{to\_json}}(nlohmann::json\ \&j,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_person}{Person}}\ \&person);}
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keyword}{friend}\ std::shared\_ptr<Person>\ \mbox{\hyperlink{class_person_acbca3fbd74b1131ee1acec340358da31}{from\_json}}(\textcolor{keyword}{const}\ nlohmann::json\ \&j,\ \mbox{\hyperlink{class_person}{Person}}\ \&person,\ std::vector<std::shared\_ptr<Building>>\ buildings);}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00044\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00045\ \ \ \ \ std::shared\_ptr<Building>\ \mbox{\hyperlink{class_person_afdd776c87a07a85c5121e57f5e34c1ec}{home\_}};}
+\DoxyCodeLine{00046\ \ \ \ \ std::shared\_ptr<Building>\ \mbox{\hyperlink{class_person_ade3ffd7374bbe2d01fce0816a4f84346}{work\_}};}
+\DoxyCodeLine{00047\ \ \ \ \ std::shared\_ptr<Building>\ \mbox{\hyperlink{class_person_a004918b15da91d39db5ffd2da2df7342}{favBuilding\_}};}
+\DoxyCodeLine{00048\ \ \ \ \ std::shared\_ptr<Building>\ \mbox{\hyperlink{class_person_a05ab9827b660f0472cdbd02ce0907d1f}{currentBuilding\_}};}
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_person_abdffbfa3a40366a0852237a8f030c615}{arrived\_}}\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_person_acdce7e3dc2d270f72a863182af78a3cc}{driving\_}};}
+\DoxyCodeLine{00051\ \ \ \ \ \mbox{\hyperlink{person_8hpp_a8bb1ef53467e4f61410d12822d922498}{Action}}\ \mbox{\hyperlink{class_person_a6fc34027a5f3437adc7cd10a7b2b23a4}{currentAction\_}};}
+\DoxyCodeLine{00052\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_person_ab5203e6f02b45d7d301a601658d71ef7}{minuteRemainder\_}};}
+\DoxyCodeLine{00053\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_person_aa109d364068bbe6d813f184f832d59e2}{goToWorkTime\_}};}
+\DoxyCodeLine{00054\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_person_a3a165634934f95643d85d47bc57ba054}{homeFromWorkTime\_}};}
+\DoxyCodeLine{00055\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_person_af49549dd2940da225967fe215dd5cb11}{playTime\_}};}
+\DoxyCodeLine{00056\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_person_a5e94cf32e6315810c76f1cf3d6a2a203}{homeFromPlayTime\_}};}
+\DoxyCodeLine{00057\ \ \ \ \ std::shared\_ptr<Car>\ \mbox{\hyperlink{class_person_a084086027243dc350fc74a96bee5165e}{car\_}}\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00058\ \};}
+\DoxyCodeLine{00059\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{person_8hpp_a8eef4b021c9f2f2452b192e2bf808dec}{writePerson}}(\textcolor{keyword}{const}\ std::string\ \&filename,\ \textcolor{keyword}{const}\ std::vector<std::shared\_ptr<Person>>\ people);}
+\DoxyCodeLine{00060\ std::vector<std::shared\_ptr<Person>>\ \mbox{\hyperlink{person_8hpp_ac33d0faeb5a93c7669723a1e68397d11}{readPerson}}(\textcolor{keyword}{const}\ std::string\ \&filename,\ std::vector<std::shared\_ptr<Building>>\ buildings);}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00062\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00063\ }
+
+\end{DoxyCode}

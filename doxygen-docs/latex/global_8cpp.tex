@@ -1,0 +1,53 @@
+\doxysection{src/global.cpp File Reference}
+\hypertarget{global_8cpp}{}\label{global_8cpp}\index{src/global.cpp@{src/global.cpp}}
+
+
+Defines global variables used throughout the application.  
+
+
+{\ttfamily \#include "{}road.\+hpp"{}}\newline
+{\ttfamily \#include "{}global.\+h"{}}\newline
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{global_8cpp_ac5b72f3a418134da14da6dd8f028d89e}{GLOBAL\+\_\+\+CPP}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_road}{Road}} $>$ $>$ \mbox{\hyperlink{global_8cpp_a20a8f218759ccc3596df3b5bcbbf44fa}{global\+Roads}}
+\begin{DoxyCompactList}\small\item\em A vector holding shared pointers to {\ttfamily \doxylink{class_road}{Road}} objects. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Defines global variables used throughout the application. 
+
+This file contains the definition of global variables, such as {\ttfamily global\+Roads}, which are used to store and manage the application\textquotesingle{}s data, specifically roads in this case. 
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{global_8cpp_ac5b72f3a418134da14da6dd8f028d89e}\index{global.cpp@{global.cpp}!GLOBAL\_CPP@{GLOBAL\_CPP}}
+\index{GLOBAL\_CPP@{GLOBAL\_CPP}!global.cpp@{global.cpp}}
+\doxysubsubsection{\texorpdfstring{GLOBAL\_CPP}{GLOBAL\_CPP}}
+{\footnotesize\ttfamily \label{global_8cpp_ac5b72f3a418134da14da6dd8f028d89e} 
+\#define GLOBAL\+\_\+\+CPP}
+
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{global_8cpp_a20a8f218759ccc3596df3b5bcbbf44fa}\index{global.cpp@{global.cpp}!globalRoads@{globalRoads}}
+\index{globalRoads@{globalRoads}!global.cpp@{global.cpp}}
+\doxysubsubsection{\texorpdfstring{globalRoads}{globalRoads}}
+{\footnotesize\ttfamily \label{global_8cpp_a20a8f218759ccc3596df3b5bcbbf44fa} 
+std\+::vector$<$std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{class_road}{Road}}$>$ $>$ global\+Roads}
+
+
+
+A vector holding shared pointers to {\ttfamily \doxylink{class_road}{Road}} objects. 
+
+A vector of shared pointers to {\ttfamily \doxylink{class_road}{Road}} objects used in the simulation.
+
+This global variable stores a collection of {\ttfamily \doxylink{class_road}{Road}} objects. The roads are managed as shared pointers to ensure proper memory management and to allow for multiple references to a single {\ttfamily \doxylink{class_road}{Road}} object.
+
+It is used throughout the application to keep track of roads and perform operations on them.
+
+This variable holds a collection of roads represented by {\ttfamily \doxylink{class_road}{Road}} objects, stored as shared pointers to ensure proper memory management. It is used throughout the simulation to manage road data and interact with the roads during the simulation. 

@@ -1,0 +1,120 @@
+\doxysection{src/building.cpp File Reference}
+\hypertarget{building_8cpp}{}\label{building_8cpp}\index{src/building.cpp@{src/building.cpp}}
+{\ttfamily \#include $<$fstream$>$}\newline
+{\ttfamily \#include $<$utility$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include "{}building.\+hpp"{}}\newline
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{building_8cpp_a261822b8298429bba07625095f768b0c}{BUILDING\+\_\+\+CPP}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_building}{Building}} $>$ \mbox{\hyperlink{building_8cpp_af9c540719190fffce8a7c3c76a8e64c3}{from\+\_\+json}} (const nlohmann\+::json \&j, int i)
+\begin{DoxyCompactList}\small\item\em Converts a JSON object to a \doxylink{class_building}{Building} object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{building_8cpp_a11cce90c7a22009552dc21cc8d2588b5}{to\+\_\+json}} (nlohmann\+::json \&j, const \mbox{\hyperlink{class_building}{Building}} \&b)
+\begin{DoxyCompactList}\small\item\em Converts a \doxylink{class_building}{Building} object to a JSON object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{building_8cpp_a83bd7e6de7ba7dea0d5726017a14e70d}{write\+Building}} (const std\+::string \&filename, const std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_building}{Building}} $>$ $>$ buildings)
+\begin{DoxyCompactList}\small\item\em Writes a vector of \doxylink{class_building}{Building} objects to a file in JSON format. \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_building}{Building}} $>$ $>$ \mbox{\hyperlink{building_8cpp_ac46dbdc9fcaf26a75b14ecb9c48b30eb}{read\+Building}} (const std\+::string \&filename)
+\begin{DoxyCompactList}\small\item\em Reads a vector of \doxylink{class_building}{Building} objects from a file in JSON format. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{building_8cpp_a261822b8298429bba07625095f768b0c}\index{building.cpp@{building.cpp}!BUILDING\_CPP@{BUILDING\_CPP}}
+\index{BUILDING\_CPP@{BUILDING\_CPP}!building.cpp@{building.cpp}}
+\doxysubsubsection{\texorpdfstring{BUILDING\_CPP}{BUILDING\_CPP}}
+{\footnotesize\ttfamily \label{building_8cpp_a261822b8298429bba07625095f768b0c} 
+\#define BUILDING\+\_\+\+CPP}
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{building_8cpp_af9c540719190fffce8a7c3c76a8e64c3}\index{building.cpp@{building.cpp}!from\_json@{from\_json}}
+\index{from\_json@{from\_json}!building.cpp@{building.cpp}}
+\doxysubsubsection{\texorpdfstring{from\_json()}{from\_json()}}
+{\footnotesize\ttfamily \label{building_8cpp_af9c540719190fffce8a7c3c76a8e64c3} 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_building}{Building}} $>$ from\+\_\+json (\begin{DoxyParamCaption}\item[{const nlohmann\+::json \&}]{j}{, }\item[{int}]{i}{}\end{DoxyParamCaption})}
+
+
+
+Converts a JSON object to a \doxylink{class_building}{Building} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em j} & The JSON object to convert. \\
+\hline
+{\em i} & An index for the building (not used in this function).\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A shared pointer to the newly created \doxylink{class_building}{Building} object. 
+\end{DoxyReturn}
+\Hypertarget{building_8cpp_ac46dbdc9fcaf26a75b14ecb9c48b30eb}\index{building.cpp@{building.cpp}!readBuilding@{readBuilding}}
+\index{readBuilding@{readBuilding}!building.cpp@{building.cpp}}
+\doxysubsubsection{\texorpdfstring{readBuilding()}{readBuilding()}}
+{\footnotesize\ttfamily \label{building_8cpp_ac46dbdc9fcaf26a75b14ecb9c48b30eb} 
+std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_building}{Building}} $>$ $>$ read\+Building (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{filename}{}\end{DoxyParamCaption})}
+
+
+
+Reads a vector of \doxylink{class_building}{Building} objects from a file in JSON format. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & The name of the file to read from.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A vector of shared pointers to \doxylink{class_building}{Building} objects.
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::ios\+\_\+base\+::failure} & If the file cannot be opened for reading. \\
+\hline
+{\em std\+::runtime\+\_\+error} & If the JSON structure is invalid. \\
+\hline
+\end{DoxyExceptions}
+\Hypertarget{building_8cpp_a11cce90c7a22009552dc21cc8d2588b5}\index{building.cpp@{building.cpp}!to\_json@{to\_json}}
+\index{to\_json@{to\_json}!building.cpp@{building.cpp}}
+\doxysubsubsection{\texorpdfstring{to\_json()}{to\_json()}}
+{\footnotesize\ttfamily \label{building_8cpp_a11cce90c7a22009552dc21cc8d2588b5} 
+void to\+\_\+json (\begin{DoxyParamCaption}\item[{nlohmann\+::json \&}]{j}{, }\item[{const \mbox{\hyperlink{class_building}{Building}} \&}]{b}{}\end{DoxyParamCaption})}
+
+
+
+Converts a \doxylink{class_building}{Building} object to a JSON object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em j} & The JSON object to populate. \\
+\hline
+{\em b} & The \doxylink{class_building}{Building} object to convert. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{building_8cpp_a83bd7e6de7ba7dea0d5726017a14e70d}\index{building.cpp@{building.cpp}!writeBuilding@{writeBuilding}}
+\index{writeBuilding@{writeBuilding}!building.cpp@{building.cpp}}
+\doxysubsubsection{\texorpdfstring{writeBuilding()}{writeBuilding()}}
+{\footnotesize\ttfamily \label{building_8cpp_a83bd7e6de7ba7dea0d5726017a14e70d} 
+void write\+Building (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{filename}{, }\item[{const std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_building}{Building}} $>$ $>$}]{buildings}{}\end{DoxyParamCaption})}
+
+
+
+Writes a vector of \doxylink{class_building}{Building} objects to a file in JSON format. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & The name of the file to write to. \\
+\hline
+{\em buildings} & The vector of \doxylink{class_building}{Building} objects to write.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::ios\+\_\+base\+::failure} & If the file cannot be opened for writing. \\
+\hline
+{\em std\+::invalid\+\_\+argument} & If the buildings vector contains a null pointer. \\
+\hline
+\end{DoxyExceptions}

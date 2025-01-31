@@ -1,0 +1,75 @@
+\doxysection{road.\+hpp}
+\hypertarget{road_8hpp_source}{}\label{road_8hpp_source}\index{src/road.hpp@{src/road.hpp}}
+\mbox{\hyperlink{road_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ ROAD\_HPP}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ ROAD\_HPP}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{intersection_8hpp}{intersection.hpp}}"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{car_8hpp}{car.hpp}}"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{direction__enum_8h}{direction\_enum.h}}"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}../libs/nlohmann/json.hpp"{}}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <SFML/Graphics.hpp>}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <queue>}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <utility>}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_car}{Car}};}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_road}{Road}}\ \{}
+\DoxyCodeLine{00016\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00017\ \ \ \ \ \mbox{\hyperlink{class_road_a90bb6be2a5c3b6997849a915e2af0cf0}{Road}}(\textcolor{keywordtype}{int}\ \textcolor{keywordtype}{id},\ std::shared\_ptr<Intersection>\ from,\ std::shared\_ptr<Intersection>\ end,\ \textcolor{keywordtype}{int}\ capacity,\ \mbox{\hyperlink{direction__enum_8h_a224b9163917ac32fc95a60d8c1eec3aa}{Direction}}\ direction1,\ \mbox{\hyperlink{direction__enum_8h_a224b9163917ac32fc95a60d8c1eec3aa}{Direction}}\ direction2);}
+\DoxyCodeLine{00018\ \ \ \ \ \mbox{\hyperlink{class_road_a90bb6be2a5c3b6997849a915e2af0cf0}{Road}}();}
+\DoxyCodeLine{00019\ \ \ \ \ \mbox{\hyperlink{class_road_a7cd2aa6deb4007a78a4642bad2aac149}{\string~Road}}()\ =\ \textcolor{keywordflow}{default};\ }
+\DoxyCodeLine{00020\ \ \ \ \ std::shared\_ptr<Car>\ \mbox{\hyperlink{class_road_ac1a7f004cba0d04b25d993eff88ed2e1}{addCar}}(std::shared\_ptr<Car>\ car,\ \mbox{\hyperlink{direction__enum_8h_a224b9163917ac32fc95a60d8c1eec3aa}{Direction}}\ direction);}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_road_ac8b71a10f5f4c48ff3cada5993ef577d}{getId}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_road_a6fe2244d957f24e7f24e9810fd46a182}{removeCar}}(std::shared\_ptr<Car>\ car);}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_road_aec74f99a6922d4a53cfdd55630ff8544}{getCurrentVehicles}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_road_a4fe1b9abc6feae90de1b184383858edf}{getCapacity}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_road_a62ff5f69c723932c778686b0a10fd942}{getCurrentDensity}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \ \ \ \ std::shared\_ptr<Intersection>\ \mbox{\hyperlink{class_road_ae7128d0165c14f57533500849e2f66f9}{getFrom}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \ \ \ \ std::shared\_ptr<Intersection>\ \mbox{\hyperlink{class_road_ab24ed1b9e575283480fcaba75caa2ef9}{getEnd}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \ \ \ \ std::vector<int>\ \mbox{\hyperlink{class_road_a2f6ba8c5ba4bc6810b2e866d13aa2646}{getLogs}}();}
+\DoxyCodeLine{00037\ \ \ \ \ }
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_road_a639144cbd97941a2a7b423a151344b33}{getLength}}();}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keyword}{const}\ std::vector<std::shared\_ptr<Car>>\&\ \mbox{\hyperlink{class_road_a55e145cca85b68310000b62341010f42}{getLane1}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keyword}{const}\ std::vector<std::shared\_ptr<Car>>\&\ \mbox{\hyperlink{class_road_a9d83007ca5ab3eb55cad58500a18e1fb}{getLane2}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00044\ \ \ \ \ \mbox{\hyperlink{direction__enum_8h_a224b9163917ac32fc95a60d8c1eec3aa}{Direction}}\ \mbox{\hyperlink{class_road_ad592481dc45c79e920485d239ad4fc06}{getDirection1}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00046\ \ \ \ \ \mbox{\hyperlink{direction__enum_8h_a224b9163917ac32fc95a60d8c1eec3aa}{Direction}}\ \mbox{\hyperlink{class_road_ad5bcf97e63bb1400fd1c2e7a086edf5f}{getDirection2}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_road_a9040424a3ff85edeeedc2ad734b4fd47}{appendLogToCSV}}(\textcolor{keyword}{const}\ std::string\ \&filename);}
+\DoxyCodeLine{00049\ \ \ \ \ }
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{keyword}{friend}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_road_ac7ecd60967d978dd037bbbeaf00684e2}{to\_json}}(nlohmann::json\ \&j,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_road}{Road}}\ \&road);}
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{keyword}{friend}\ std::shared\_ptr<Road>\ \mbox{\hyperlink{class_road_a3266a2b02a14488fee7640cc8a7cc820}{from\_json}}(\textcolor{keyword}{const}\ nlohmann::json\ \&j,\ std::vector<std::shared\_ptr<Intersection>>\ intersections);}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00053\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00054\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_road_ad7e8a37f39fc1410a38c897ce34088b3}{id\_}};}
+\DoxyCodeLine{00055\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_road_a2b7af30c9325310ac1a18407528e38a1}{capacity\_}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00056\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_road_a1e484e15ab9c2f604de143c819bf2147}{length\_}}\ =\ 0;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00057\ \ \ \ \ std::vector<int>\ \mbox{\hyperlink{class_road_ad2daf918e1fd543e2b3c36fe4f3e109e}{logs\_}}\ =\ \{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0\};\ \ }
+\DoxyCodeLine{00058\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_road_afa16a2deb696c8cf353527fc418cfd85}{currentVehicles\_}}\ =\ 0;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00059\ \ \ \ \ std::shared\_ptr<Intersection>\ \mbox{\hyperlink{class_road_a7ad6d0e62de7a8ea04cc3b399c4801bc}{from\_}};\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00060\ \ \ \ \ std::shared\_ptr<Intersection>\ \mbox{\hyperlink{class_road_a3fae304ba7059254079b4889a8543d22}{end\_}};\ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00061\ \ \ \ \ std::vector<std::shared\_ptr<Car>>\ \mbox{\hyperlink{class_road_a737fe313159bb32310ce7a53bcc2f2be}{lane1\_}}\ =\ \{\};}
+\DoxyCodeLine{00062\ \ \ \ \ std::vector<std::shared\_ptr<Car>>\ \mbox{\hyperlink{class_road_a5f424b90e01748cc44bc89ee26afa112}{lane2\_}}\ =\ \{\};}
+\DoxyCodeLine{00063\ \ \ \ \ \mbox{\hyperlink{direction__enum_8h_a224b9163917ac32fc95a60d8c1eec3aa}{Direction}}\ \mbox{\hyperlink{class_road_ae7b2cb680aff052f44ee4dafd0e779da}{direction1\_}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00064\ \ \ \ \ \mbox{\hyperlink{direction__enum_8h_a224b9163917ac32fc95a60d8c1eec3aa}{Direction}}\ \mbox{\hyperlink{class_road_a2cace17311d26364febe993647d0dcb0}{direction2\_}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00065\ \};}
+\DoxyCodeLine{00066\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{road_8hpp_a23328635c6d786212a4d1ed344dc5e77}{writeRoad}}(\textcolor{keyword}{const}\ std::string\ \&filename,\ std::vector<std::shared\_ptr<Road>>\ roads);}
+\DoxyCodeLine{00067\ std::vector<std::shared\_ptr<Road>>\ \mbox{\hyperlink{road_8hpp_a387651c5c977c0d51c9ee1025f2918aa}{readRoad}}(\textcolor{keyword}{const}\ std::string\ \&filename,\ std::vector<std::shared\_ptr<Intersection>>\ intersections);}
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00069\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

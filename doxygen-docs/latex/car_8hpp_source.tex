@@ -1,0 +1,44 @@
+\doxysection{car.\+hpp}
+\hypertarget{car_8hpp_source}{}\label{car_8hpp_source}\index{src/car.hpp@{src/car.hpp}}
+\mbox{\hyperlink{car_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ CAR\_HPP}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ CAR\_HPP}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <utility>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <cmath>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{coordinate_8h}{coordinate.h}}"{}}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{road_8hpp}{road.hpp}}"{}}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{building_8hpp}{building.hpp}}"{}}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{intersection_8hpp}{intersection.hpp}}"{}}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{direction__enum_8h}{direction\_enum.h}}"{}}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{entity_8hpp}{entity.hpp}}"{}}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_building}{Building}};}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_car}{Car}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_entity}{Entity}}\ \{\ }
+\DoxyCodeLine{00017\ \ \ \ \ }
+\DoxyCodeLine{00018\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00019\ \ \ \ \ \mbox{\hyperlink{class_car_a9fd248d33f985ea1a994ce504cbbfdcf}{Car}}(\textcolor{keywordtype}{int}\ \textcolor{keywordtype}{id});}
+\DoxyCodeLine{00020\ \ \ \ \ \mbox{\hyperlink{class_car_a9fd248d33f985ea1a994ce504cbbfdcf}{Car}}(\textcolor{keywordtype}{int}\ \textcolor{keywordtype}{id},\ std::shared\_ptr<Building>\ spawnBuilding,\ \textcolor{keywordtype}{float}\ speed\ =\ 0.1f);}
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_car_aa9b80e2b554291ab6127bb1bb7d789e7}{getSpeed}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00022\ \ \ \ \ std::shared\_ptr<Road>\ \mbox{\hyperlink{class_car_aa6254ce3386e85ad3ae67717c510815c}{getCurrentRoad}}();}
+\DoxyCodeLine{00023\ \ \ \ \ \mbox{\hyperlink{direction__enum_8h_a224b9163917ac32fc95a60d8c1eec3aa}{Direction}}\ \mbox{\hyperlink{class_car_a6307182d317e13e717e57d48661a8ae0}{getDirection}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_car_a22ee9a245cf6b72f83bf79d8749f3667}{setPosition}}(\mbox{\hyperlink{struct_coordinate}{Coordinate}}\ newPosition);}
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_car_a10791313644da987f4afd1c355b9d4f8}{setDirection}}(\mbox{\hyperlink{direction__enum_8h_a224b9163917ac32fc95a60d8c1eec3aa}{Direction}}\ newDirection);}
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_car_a7e56c4f6fedf7496a70e57881957aad6}{setCarInfront}}(std::shared\_ptr<Car>\ car);}
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_car_a8e4ee8199396c0b26b913aac2c2e2894}{drive}}(\mbox{\hyperlink{struct_coordinate}{Coordinate}}\ dest);}
+\DoxyCodeLine{00028\ \ \ \ \ }
+\DoxyCodeLine{00029\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_car_aeb313616a12829d4227da5d2055afa79}{speed\_}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00031\ \ \ \ \ std::shared\_ptr<Road>\ \mbox{\hyperlink{class_car_ad3db31930727897578f0c643d1b30d73}{currentRoad\_}};}
+\DoxyCodeLine{00032\ \ \ \ \ std::shared\_ptr<Intersection>\ \mbox{\hyperlink{class_car_ac6a5f5b872a15e357051a413d46a0fe2}{currentIntersection\_}}\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00033\ \ \ \ \ std::shared\_ptr<Car>\ \mbox{\hyperlink{class_car_aab724eaa6ac5d77d2930ed0416d6a96b}{carInfront\_}}\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00034\ \ \ \ \ \mbox{\hyperlink{direction__enum_8h_a224b9163917ac32fc95a60d8c1eec3aa}{Direction}}\ \mbox{\hyperlink{class_car_a9297be21ec4ce7c60aa532f3d208be99}{direction\_}};\ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00035\ \};}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00037\ \textcolor{preprocessor}{\#endif\ }}
+\DoxyCodeLine{00038\ }
+
+\end{DoxyCode}

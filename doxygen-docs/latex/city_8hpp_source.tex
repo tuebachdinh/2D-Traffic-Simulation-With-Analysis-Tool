@@ -1,0 +1,69 @@
+\doxysection{city.\+hpp}
+\hypertarget{city_8hpp_source}{}\label{city_8hpp_source}\index{src/city.hpp@{src/city.hpp}}
+\mbox{\hyperlink{city_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ CITY\_HPP}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ CITY\_HPP}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{building_8hpp}{building.hpp}}"{}}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{car_8hpp}{car.hpp}}"{}}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{person_8hpp}{person.hpp}}"{}}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{road_8hpp}{road.hpp}}"{}}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{bus_8hpp}{bus.hpp}}"{}}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <memory>}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_city}{City}}\ \{}
+\DoxyCodeLine{00015\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00016\ \ \ \ \ \mbox{\hyperlink{class_city_a2b92b8e6b4e8f2abc8670fb16fc77ad7}{City}}(\textcolor{keywordtype}{int}\ width,\ \textcolor{keywordtype}{int}\ length,\ \textcolor{keywordtype}{long}\ population,\ }
+\DoxyCodeLine{00017\ \ \ \ \ \ \textcolor{keyword}{const}\ std::vector<std::shared\_ptr<Building>>\&\ buildings,\ }
+\DoxyCodeLine{00018\ \ \ \ \ \ \textcolor{keyword}{const}\ std::vector<std::shared\_ptr<Car>>\&\ cars,\ }
+\DoxyCodeLine{00019\ \ \ \ \ \ \textcolor{keyword}{const}\ std::vector<std::shared\_ptr<Person>>\&\ residents,\ }
+\DoxyCodeLine{00020\ \ \ \ \ \ \textcolor{keyword}{const}\ std::vector<std::shared\_ptr<Road>>\&\ roads,}
+\DoxyCodeLine{00021\ \ \ \ \ \ \textcolor{keyword}{const}\ std::vector<std::shared\_ptr<Intersection>>\&\ intersections,}
+\DoxyCodeLine{00022\ \ \ \ \ \ \textcolor{keyword}{const}\ std::vector<std::shared\_ptr<Building>>\&\ busStops);}
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_city_a3eaff97b3f7aaa73b54f5334f3b88d79}{advance}}();}
+\DoxyCodeLine{00024\ \ \ \ \ std::string\ \mbox{\hyperlink{class_city_ab6075f60043a7108360b48c1ad6ea2f0}{getState}}();\ }
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_city_aa27cc2a1dd8ab8c1c98d01b87c6e4f86}{getWidth}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_city_a11cad4099bb13f5495cb5723ac15e16e}{getLength}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keywordtype}{long}\ \mbox{\hyperlink{class_city_aeacf07a41ba0715ec9ad6ab99bb24a33}{getPopulation}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keyword}{const}\ std::vector<std::shared\_ptr<Building>>\&\ \mbox{\hyperlink{class_city_a098643ca32ec35d0dfc9715d78a22d6b}{getBuildings}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keyword}{const}\ std::vector<std::shared\_ptr<Car>>\&\ \mbox{\hyperlink{class_city_af5d0e501684455885cf0291a786dfcd2}{getCars}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keyword}{const}\ std::vector<std::shared\_ptr<Person>>\&\ \mbox{\hyperlink{class_city_a78a2fb8cec1b85b2d8561b5387d8aad0}{getResidents}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keyword}{const}\ std::vector<std::shared\_ptr<Road>>\&\ \mbox{\hyperlink{class_city_a72e68051d97a938923100c30e2e43c49}{getRoads}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keyword}{const}\ std::vector<std::shared\_ptr<Intersection>>\&\ \mbox{\hyperlink{class_city_ac55aed87eedb438db1817672670dd425}{getIntersections}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \ \ \ \ std::map<int,\ int>\&\ \mbox{\hyperlink{class_city_a6672bbb6321eb4e61d50cd3a9d073dfd}{getLog}}(\mbox{\hyperlink{struct_coordinate}{Coordinate}}\ coordinate);}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_city_a7a589becf0d983824c564685cf1c51cb}{drawRoads}}(sf::RenderWindow\&\ window,\ sf::Texture\&\ roadTexture,\ std::vector<sf::Texture>\&\ roadHighlightTextures,\ \textcolor{keywordtype}{float}\ scale)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_city_a02b7068bc6b5b422a93da2b2004b05ef}{drawIntersections}}(sf::RenderWindow\&\ window,\ sf::Texture\&\ intersectionTexture,\ \textcolor{keywordtype}{float}\ scale)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_city_a0a184d79f210d7d2fd4ddfa5631c79ea}{drawBuildings}}(sf::RenderWindow\&\ window,\ \textcolor{keyword}{const}\ std::map<char,\ sf::Texture>\&\ buildingTextures,\ \textcolor{keywordtype}{float}\ scale)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_city_a6b376765429b0ad98ebc213203a07d46}{drawCars}}(sf::RenderWindow\&\ window,\ \textcolor{keyword}{const}\ std::vector<sf::Texture>\&\ carTextures,\ \textcolor{keywordtype}{float}\ scale,\ \textcolor{keywordtype}{long}\ timeInHour,\ \textcolor{keywordtype}{long}\ timeInMinutes)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_city_ae32afb17ffff560213fea06073431e9c}{drawBus}}(sf::RenderWindow\&\ window,\ sf::Texture\&\ busTexture,\ \textcolor{keywordtype}{float}\ scale)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keyword}{const}\ std::vector<std::pair<sf::FloatRect,\ std::shared\_ptr<Road>>>\&\ \mbox{\hyperlink{class_city_a2da1672ce1d968958b5f445217ecf410}{getRoadBounds}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00046\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_city_ac366d26b0f47bd50a9deb434432fa440}{width\_}};}
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_city_a900b862d9b7c093fbacdffb302fb1471}{length\_}};}
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{keywordtype}{long}\ \mbox{\hyperlink{class_city_a2486c64f2593b2d6f44274c8a393563f}{population\_}};}
+\DoxyCodeLine{00050\ \ \ \ \ std::vector<std::shared\_ptr<Building>>\ \mbox{\hyperlink{class_city_a43fdebb3cb7432a5201ee890408ead94}{buildings\_}};}
+\DoxyCodeLine{00051\ \ \ \ \ std::vector<std::shared\_ptr<Car>>\ \mbox{\hyperlink{class_city_a78510b75acbce385500a91024a3d4da3}{cars\_}};}
+\DoxyCodeLine{00052\ \ \ \ \ std::vector<std::shared\_ptr<Person>>\ \mbox{\hyperlink{class_city_a4254ecc45fe11f6ca076a7b994419f82}{residents\_}};}
+\DoxyCodeLine{00053\ \ \ \ \ std::vector<std::shared\_ptr<Road>>\ \mbox{\hyperlink{class_city_a322c351f6d29ada0df43527ea2b72ff6}{roads\_}};}
+\DoxyCodeLine{00054\ \ \ \ \ std::vector<std::shared\_ptr<Intersection>>\ \mbox{\hyperlink{class_city_a5a01dc89769ef1e4034088b1465c02aa}{intersections\_}};}
+\DoxyCodeLine{00055\ \ \ \ \ std::shared\_ptr<Bus>\ \mbox{\hyperlink{class_city_a27dffc2e10c697b1fed497ef706f56a2}{bus\_}};}
+\DoxyCodeLine{00056\ \ \ \ \ }
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00058\ \ \ \ \ \textcolor{keyword}{mutable}\ std::vector<std::pair<sf::FloatRect,\ std::shared\_ptr<Road>>>\ \mbox{\hyperlink{class_city_a4f4f3fb217f179fadb09fcff3b7cf328}{roadBounds\_}};}
+\DoxyCodeLine{00059\ \ \ \ \ }
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00061\ \};}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00063\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

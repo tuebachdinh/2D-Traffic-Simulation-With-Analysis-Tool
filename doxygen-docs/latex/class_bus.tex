@@ -1,0 +1,169 @@
+\doxysection{Bus Class Reference}
+\hypertarget{class_bus}{}\label{class_bus}\index{Bus@{Bus}}
+
+
+Represents a bus in the simulation that follows a route with multiple stops.  
+
+
+
+
+{\ttfamily \#include $<$bus.\+hpp$>$}
+
+Inheritance diagram for Bus\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_bus}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_bus_a0e120812b3fa2babc0e8440110ff1532}{Bus}} (int id, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_building}{Building}} $>$ spawn\+Building, std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_building}{Building}} $>$ $>$ stops=\{\}, float speed=0.\+1f)
+\begin{DoxyCompactList}\small\item\em Constructs a \doxylink{class_bus}{Bus} object with specified id, spawn building, stops, and speed. \end{DoxyCompactList}\item 
+const std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_building}{Building}} $>$ $>$ \& \mbox{\hyperlink{class_bus_ae5b3a8d6803b43e1bee07f02afd84986}{get\+Stops}} () const
+\begin{DoxyCompactList}\small\item\em Gets the stops for the bus. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_bus_a74e55cbaf0d513909c610bf5fdd0333e}{visit\+Next\+Stop}} ()
+\begin{DoxyCompactList}\small\item\em Visits the next stop in the bus\textquotesingle{}s route. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_car}{Car}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_car_a9fd248d33f985ea1a994ce504cbbfdcf}{Car}} (int id)
+\begin{DoxyCompactList}\small\item\em Constructs a \doxylink{class_car}{Car} object with a unique id. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_car_ae3b38d85c3bc0c68b09159330dd1eabf}{Car}} (int id, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_building}{Building}} $>$ spawn\+Building, float speed=0.\+1f)
+\begin{DoxyCompactList}\small\item\em Constructs a \doxylink{class_car}{Car} object with a unique id, spawn building, and speed. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_car_aa9b80e2b554291ab6127bb1bb7d789e7}{get\+Speed}} () const
+\begin{DoxyCompactList}\small\item\em Gets the speed of the car. \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_road}{Road}} $>$ \mbox{\hyperlink{class_car_aa6254ce3386e85ad3ae67717c510815c}{get\+Current\+Road}} ()
+\begin{DoxyCompactList}\small\item\em Gets the current road the car is traveling on. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{direction__enum_8h_a224b9163917ac32fc95a60d8c1eec3aa}{Direction}} \mbox{\hyperlink{class_car_a6307182d317e13e717e57d48661a8ae0}{get\+Direction}} () const
+\begin{DoxyCompactList}\small\item\em Gets the direction the car is moving in. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_car_a22ee9a245cf6b72f83bf79d8749f3667}{set\+Position}} (\mbox{\hyperlink{struct_coordinate}{Coordinate}} new\+Position)
+\begin{DoxyCompactList}\small\item\em Sets the position of the car to a new coordinate. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_car_a10791313644da987f4afd1c355b9d4f8}{set\+Direction}} (\mbox{\hyperlink{direction__enum_8h_a224b9163917ac32fc95a60d8c1eec3aa}{Direction}} new\+Direction)
+\begin{DoxyCompactList}\small\item\em Sets the direction of the car to a new direction. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_car_a7e56c4f6fedf7496a70e57881957aad6}{set\+Car\+Infront}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_car}{Car}} $>$ car)
+\begin{DoxyCompactList}\small\item\em Sets the car that is in front of the current car. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_car_a8e4ee8199396c0b26b913aac2c2e2894}{drive}} (\mbox{\hyperlink{struct_coordinate}{Coordinate}} dest)
+\begin{DoxyCompactList}\small\item\em Drives the car towards a destination. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_entity}{Entity}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_entity_a042473fab617205e7a7a5abc5f8717a0}{Entity}} (int id=-\/1, \mbox{\hyperlink{struct_coordinate}{Coordinate}} coordinate=\{-\/1,-\/1\})
+\item 
+virtual \mbox{\hyperlink{class_entity_ac479d009ddde62dfb378ca0a70d81307}{\texorpdfstring{$\sim$}{\string~}\+Entity}} ()=default
+\item 
+virtual int \mbox{\hyperlink{class_entity_a33ce509c7e43ea606ac82b6ce06bc2df}{get\+Id}} () const
+\begin{DoxyCompactList}\small\item\em Gets the ID of the entity. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{struct_coordinate}{Coordinate}} \mbox{\hyperlink{class_entity_aa1c0bb2493b6dbec5dd1a6e2df7219fd}{get\+Coordinate}} () const
+\begin{DoxyCompactList}\small\item\em Gets the coordinate of the entity. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_building}{Building}} $>$ $>$ \mbox{\hyperlink{class_bus_a2cf8814e333d51b5eddec2282f9c236c}{stops\+\_\+}}
+\item 
+int \mbox{\hyperlink{class_bus_ae52dd9fdd029a48db2a20fbf6bd7d393}{current\+Stop\+Index\+\_\+}} = 1
+\item 
+int \mbox{\hyperlink{class_bus_ab1018deecc3db659c7c158e800d7f4f5}{nof\+Stops\+\_\+}} = stops\+\_\+.\+size()
+\item 
+int \mbox{\hyperlink{class_bus_aa58d03c9e167441a59b4e709963443d2}{wait\+Time\+\_\+}} = 0
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_entity}{Entity}}}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_entity_a8042303a7e937e3d760720891a6739e5}{id\+\_\+}}
+\item 
+\mbox{\hyperlink{struct_coordinate}{Coordinate}} \mbox{\hyperlink{class_entity_a5d9ba5b495305e1693c924bfda33d294}{coordinate\+\_\+}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a bus in the simulation that follows a route with multiple stops. 
+
+The {\ttfamily \doxylink{class_bus}{Bus}} class simulates a bus\textquotesingle{}s behavior, including its movement along a route with predefined stops. It extends the {\ttfamily \doxylink{class_car}{Car}} class and supports the functionality to visit the next stop in its route. The bus moves at a defined speed and waits at each stop before moving to the next. The stops are cycled through in a loop, ensuring the bus continuously follows its route. The bus\textquotesingle{}s behavior also includes a waiting period at each stop before continuing. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_bus_a0e120812b3fa2babc0e8440110ff1532}\index{Bus@{Bus}!Bus@{Bus}}
+\index{Bus@{Bus}!Bus@{Bus}}
+\doxysubsubsection{\texorpdfstring{Bus()}{Bus()}}
+{\footnotesize\ttfamily \label{class_bus_a0e120812b3fa2babc0e8440110ff1532} 
+Bus\+::\+Bus (\begin{DoxyParamCaption}\item[{int}]{id}{, }\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_building}{Building}} $>$}]{spawn\+Building}{, }\item[{std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_building}{Building}} $>$ $>$}]{stops}{ = {\ttfamily \{\}}, }\item[{float}]{speed}{ = {\ttfamily 0.1f}}\end{DoxyParamCaption})}
+
+
+
+Constructs a \doxylink{class_bus}{Bus} object with specified id, spawn building, stops, and speed. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & The unique id of the bus. \\
+\hline
+{\em spawn\+Building} & A shared pointer to the building where the bus spawns. \\
+\hline
+{\em stops} & A vector of shared pointers to the buildings that the bus will stop at. \\
+\hline
+{\em speed} & The speed at which the bus moves. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_bus_ae5b3a8d6803b43e1bee07f02afd84986}\index{Bus@{Bus}!getStops@{getStops}}
+\index{getStops@{getStops}!Bus@{Bus}}
+\doxysubsubsection{\texorpdfstring{getStops()}{getStops()}}
+{\footnotesize\ttfamily \label{class_bus_ae5b3a8d6803b43e1bee07f02afd84986} 
+const std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_building}{Building}} $>$ $>$ \& Bus\+::get\+Stops (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Gets the stops for the bus. 
+
+\begin{DoxyReturn}{Returns}
+A constant reference to a vector of shared pointers to \doxylink{class_building}{Building} objects representing the bus stops. 
+\end{DoxyReturn}
+\Hypertarget{class_bus_a74e55cbaf0d513909c610bf5fdd0333e}\index{Bus@{Bus}!visitNextStop@{visitNextStop}}
+\index{visitNextStop@{visitNextStop}!Bus@{Bus}}
+\doxysubsubsection{\texorpdfstring{visitNextStop()}{visitNextStop()}}
+{\footnotesize\ttfamily \label{class_bus_a74e55cbaf0d513909c610bf5fdd0333e} 
+void Bus\+::visit\+Next\+Stop (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Visits the next stop in the bus\textquotesingle{}s route. 
+
+The bus drives to the next stop, waits for a period (controlled by wait\+Time\+\_\+), and then updates the current stop index. The bus loops through the stops cyclically. \texorpdfstring{$<$}{<} The bus waits for 80 units of time after reaching a stop.
+
+\texorpdfstring{$<$}{<} Move to the next stop, looping if necessary.
+
+\texorpdfstring{$<$}{<} Decrement the wait time while the bus is waiting at the stop.
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_bus_ae52dd9fdd029a48db2a20fbf6bd7d393}\index{Bus@{Bus}!currentStopIndex\_@{currentStopIndex\_}}
+\index{currentStopIndex\_@{currentStopIndex\_}!Bus@{Bus}}
+\doxysubsubsection{\texorpdfstring{currentStopIndex\_}{currentStopIndex\_}}
+{\footnotesize\ttfamily \label{class_bus_ae52dd9fdd029a48db2a20fbf6bd7d393} 
+int Bus\+::current\+Stop\+Index\+\_\+ = 1\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_bus_ab1018deecc3db659c7c158e800d7f4f5}\index{Bus@{Bus}!nofStops\_@{nofStops\_}}
+\index{nofStops\_@{nofStops\_}!Bus@{Bus}}
+\doxysubsubsection{\texorpdfstring{nofStops\_}{nofStops\_}}
+{\footnotesize\ttfamily \label{class_bus_ab1018deecc3db659c7c158e800d7f4f5} 
+int Bus\+::nof\+Stops\+\_\+ = stops\+\_\+.\+size()\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_bus_a2cf8814e333d51b5eddec2282f9c236c}\index{Bus@{Bus}!stops\_@{stops\_}}
+\index{stops\_@{stops\_}!Bus@{Bus}}
+\doxysubsubsection{\texorpdfstring{stops\_}{stops\_}}
+{\footnotesize\ttfamily \label{class_bus_a2cf8814e333d51b5eddec2282f9c236c} 
+std\+::vector$<$std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{class_building}{Building}}$>$ $>$ Bus\+::stops\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_bus_aa58d03c9e167441a59b4e709963443d2}\index{Bus@{Bus}!waitTime\_@{waitTime\_}}
+\index{waitTime\_@{waitTime\_}!Bus@{Bus}}
+\doxysubsubsection{\texorpdfstring{waitTime\_}{waitTime\_}}
+{\footnotesize\ttfamily \label{class_bus_aa58d03c9e167441a59b4e709963443d2} 
+int Bus\+::wait\+Time\+\_\+ = 0\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\mbox{\hyperlink{bus_8hpp}{bus.\+hpp}}\item 
+src/\mbox{\hyperlink{bus_8cpp}{bus.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,105 @@
+\doxysection{Entity Class Reference}
+\hypertarget{class_entity}{}\label{class_entity}\index{Entity@{Entity}}
+
+
+Represents an entity with a unique id and a coordinate.  
+
+
+
+
+{\ttfamily \#include $<$entity.\+hpp$>$}
+
+Inheritance diagram for Entity\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_entity}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_entity_a042473fab617205e7a7a5abc5f8717a0}{Entity}} (int id=-\/1, \mbox{\hyperlink{struct_coordinate}{Coordinate}} coordinate=\{-\/1,-\/1\})
+\item 
+virtual \mbox{\hyperlink{class_entity_ac479d009ddde62dfb378ca0a70d81307}{\texorpdfstring{$\sim$}{\string~}\+Entity}} ()=default
+\item 
+virtual int \mbox{\hyperlink{class_entity_a33ce509c7e43ea606ac82b6ce06bc2df}{get\+Id}} () const
+\begin{DoxyCompactList}\small\item\em Gets the ID of the entity. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{struct_coordinate}{Coordinate}} \mbox{\hyperlink{class_entity_aa1c0bb2493b6dbec5dd1a6e2df7219fd}{get\+Coordinate}} () const
+\begin{DoxyCompactList}\small\item\em Gets the coordinate of the entity. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_entity_a8042303a7e937e3d760720891a6739e5}{id\+\_\+}}
+\item 
+\mbox{\hyperlink{struct_coordinate}{Coordinate}} \mbox{\hyperlink{class_entity_a5d9ba5b495305e1693c924bfda33d294}{coordinate\+\_\+}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents an entity with a unique id and a coordinate. 
+
+This class stores information about an entity, including its unique ID and its coordinate. It provides getter methods to access these values. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_entity_a042473fab617205e7a7a5abc5f8717a0}\index{Entity@{Entity}!Entity@{Entity}}
+\index{Entity@{Entity}!Entity@{Entity}}
+\doxysubsubsection{\texorpdfstring{Entity()}{Entity()}}
+{\footnotesize\ttfamily \label{class_entity_a042473fab617205e7a7a5abc5f8717a0} 
+Entity\+::\+Entity (\begin{DoxyParamCaption}\item[{int}]{id}{ = {\ttfamily -\/1}, }\item[{\mbox{\hyperlink{struct_coordinate}{Coordinate}}}]{coordinate}{ = {\ttfamily \{-\/1,-\/1\}}}\end{DoxyParamCaption})}
+
+\Hypertarget{class_entity_ac479d009ddde62dfb378ca0a70d81307}\index{Entity@{Entity}!````~Entity@{\texorpdfstring{$\sim$}{\string~}Entity}}
+\index{````~Entity@{\texorpdfstring{$\sim$}{\string~}Entity}!Entity@{Entity}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Entity()}{\string~Entity()}}
+{\footnotesize\ttfamily \label{class_entity_ac479d009ddde62dfb378ca0a70d81307} 
+virtual Entity\+::\texorpdfstring{$\sim$}{\string~}\+Entity (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_entity_aa1c0bb2493b6dbec5dd1a6e2df7219fd}\index{Entity@{Entity}!getCoordinate@{getCoordinate}}
+\index{getCoordinate@{getCoordinate}!Entity@{Entity}}
+\doxysubsubsection{\texorpdfstring{getCoordinate()}{getCoordinate()}}
+{\footnotesize\ttfamily \label{class_entity_aa1c0bb2493b6dbec5dd1a6e2df7219fd} 
+\mbox{\hyperlink{struct_coordinate}{Coordinate}} Entity\+::get\+Coordinate (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Gets the coordinate of the entity. 
+
+\begin{DoxyReturn}{Returns}
+The coordinate of the entity as a {\ttfamily \doxylink{struct_coordinate}{Coordinate}} object. 
+\end{DoxyReturn}
+\Hypertarget{class_entity_a33ce509c7e43ea606ac82b6ce06bc2df}\index{Entity@{Entity}!getId@{getId}}
+\index{getId@{getId}!Entity@{Entity}}
+\doxysubsubsection{\texorpdfstring{getId()}{getId()}}
+{\footnotesize\ttfamily \label{class_entity_a33ce509c7e43ea606ac82b6ce06bc2df} 
+int Entity\+::get\+Id (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Gets the ID of the entity. 
+
+\begin{DoxyReturn}{Returns}
+The ID of the entity as an integer. 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_entity_a5d9ba5b495305e1693c924bfda33d294}\index{Entity@{Entity}!coordinate\_@{coordinate\_}}
+\index{coordinate\_@{coordinate\_}!Entity@{Entity}}
+\doxysubsubsection{\texorpdfstring{coordinate\_}{coordinate\_}}
+{\footnotesize\ttfamily \label{class_entity_a5d9ba5b495305e1693c924bfda33d294} 
+\mbox{\hyperlink{struct_coordinate}{Coordinate}} Entity\+::coordinate\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_entity_a8042303a7e937e3d760720891a6739e5}\index{Entity@{Entity}!id\_@{id\_}}
+\index{id\_@{id\_}!Entity@{Entity}}
+\doxysubsubsection{\texorpdfstring{id\_}{id\_}}
+{\footnotesize\ttfamily \label{class_entity_a8042303a7e937e3d760720891a6739e5} 
+int Entity\+::id\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\mbox{\hyperlink{entity_8hpp}{entity.\+hpp}}\item 
+src/\mbox{\hyperlink{entity_8cpp}{entity.\+cpp}}\end{DoxyCompactItemize}

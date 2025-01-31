@@ -1,0 +1,441 @@
+\doxysection{Road Class Reference}
+\hypertarget{class_road}{}\label{class_road}\index{Road@{Road}}
+
+
+Represents a road between two intersections with capacity, length, and direction.  
+
+
+
+
+{\ttfamily \#include $<$road.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_road_abf901dbe88c62ce6173e01260ecdb250}{Road}} (int id, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_intersection}{Intersection}} $>$ from, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_intersection}{Intersection}} $>$ end, int capacity, \mbox{\hyperlink{direction__enum_8h_a224b9163917ac32fc95a60d8c1eec3aa}{Direction}} direction1, \mbox{\hyperlink{direction__enum_8h_a224b9163917ac32fc95a60d8c1eec3aa}{Direction}} direction2)
+\item 
+\mbox{\hyperlink{class_road_a90bb6be2a5c3b6997849a915e2af0cf0}{Road}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor for a \doxylink{class_road}{Road}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_road_a7cd2aa6deb4007a78a4642bad2aac149}{\texorpdfstring{$\sim$}{\string~}\+Road}} ()=default
+\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_car}{Car}} $>$ \mbox{\hyperlink{class_road_ac1a7f004cba0d04b25d993eff88ed2e1}{add\+Car}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_car}{Car}} $>$ car, \mbox{\hyperlink{direction__enum_8h_a224b9163917ac32fc95a60d8c1eec3aa}{Direction}} direction)
+\begin{DoxyCompactList}\small\item\em Adds a car to the road in the specified direction. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_road_ac8b71a10f5f4c48ff3cada5993ef577d}{get\+Id}} () const
+\begin{DoxyCompactList}\small\item\em Gets the ID of the road. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_road_a6fe2244d957f24e7f24e9810fd46a182}{remove\+Car}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_car}{Car}} $>$ car)
+\begin{DoxyCompactList}\small\item\em Removes a car from the road. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_road_aec74f99a6922d4a53cfdd55630ff8544}{get\+Current\+Vehicles}} () const
+\begin{DoxyCompactList}\small\item\em Gets the current number of vehicles on the road. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_road_a4fe1b9abc6feae90de1b184383858edf}{get\+Capacity}} () const
+\begin{DoxyCompactList}\small\item\em Gets the capacity of the road. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_road_a62ff5f69c723932c778686b0a10fd942}{get\+Current\+Density}} () const
+\begin{DoxyCompactList}\small\item\em Gets the current vehicle density on the road. \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_intersection}{Intersection}} $>$ \mbox{\hyperlink{class_road_ae7128d0165c14f57533500849e2f66f9}{get\+From}} () const
+\begin{DoxyCompactList}\small\item\em Gets the starting intersection of the road. \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_intersection}{Intersection}} $>$ \mbox{\hyperlink{class_road_ab24ed1b9e575283480fcaba75caa2ef9}{get\+End}} () const
+\begin{DoxyCompactList}\small\item\em Gets the ending intersection of the road. \end{DoxyCompactList}\item 
+std\+::vector$<$ int $>$ \mbox{\hyperlink{class_road_a2f6ba8c5ba4bc6810b2e866d13aa2646}{get\+Logs}} ()
+\begin{DoxyCompactList}\small\item\em Gets the traffic logs for the road. \end{DoxyCompactList}\item 
+const int \mbox{\hyperlink{class_road_a639144cbd97941a2a7b423a151344b33}{get\+Length}} ()
+\begin{DoxyCompactList}\small\item\em Gets the length of the road. \end{DoxyCompactList}\item 
+const std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_car}{Car}} $>$ $>$ \& \mbox{\hyperlink{class_road_a55e145cca85b68310000b62341010f42}{get\+Lane1}} () const
+\begin{DoxyCompactList}\small\item\em Gets the cars on lane 1 of the road. \end{DoxyCompactList}\item 
+const std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_car}{Car}} $>$ $>$ \& \mbox{\hyperlink{class_road_a9d83007ca5ab3eb55cad58500a18e1fb}{get\+Lane2}} () const
+\begin{DoxyCompactList}\small\item\em Gets the cars on lane 2 of the road. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{direction__enum_8h_a224b9163917ac32fc95a60d8c1eec3aa}{Direction}} \mbox{\hyperlink{class_road_ad592481dc45c79e920485d239ad4fc06}{get\+Direction1}} () const
+\begin{DoxyCompactList}\small\item\em Gets the first direction of the road. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{direction__enum_8h_a224b9163917ac32fc95a60d8c1eec3aa}{Direction}} \mbox{\hyperlink{class_road_ad5bcf97e63bb1400fd1c2e7a086edf5f}{get\+Direction2}} () const
+\begin{DoxyCompactList}\small\item\em Gets the second direction of the road. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_road_a9040424a3ff85edeeedc2ad734b4fd47}{append\+Log\+To\+CSV}} (const std\+::string \&filename)
+\begin{DoxyCompactList}\small\item\em Appends the road log data to a CSV file. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_road_ad7e8a37f39fc1410a38c897ce34088b3}{id\+\_\+}}
+\item 
+int \mbox{\hyperlink{class_road_a2b7af30c9325310ac1a18407528e38a1}{capacity\+\_\+}}
+\item 
+int \mbox{\hyperlink{class_road_a1e484e15ab9c2f604de143c819bf2147}{length\+\_\+}} = 0
+\item 
+std\+::vector$<$ int $>$ \mbox{\hyperlink{class_road_ad2daf918e1fd543e2b3c36fe4f3e109e}{logs\+\_\+}} = \{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0\}
+\item 
+int \mbox{\hyperlink{class_road_afa16a2deb696c8cf353527fc418cfd85}{current\+Vehicles\+\_\+}} = 0
+\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_intersection}{Intersection}} $>$ \mbox{\hyperlink{class_road_a7ad6d0e62de7a8ea04cc3b399c4801bc}{from\+\_\+}}
+\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_intersection}{Intersection}} $>$ \mbox{\hyperlink{class_road_a3fae304ba7059254079b4889a8543d22}{end\+\_\+}}
+\item 
+std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_car}{Car}} $>$ $>$ \mbox{\hyperlink{class_road_a737fe313159bb32310ce7a53bcc2f2be}{lane1\+\_\+}} = \{\}
+\item 
+std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_car}{Car}} $>$ $>$ \mbox{\hyperlink{class_road_a5f424b90e01748cc44bc89ee26afa112}{lane2\+\_\+}} = \{\}
+\item 
+\mbox{\hyperlink{direction__enum_8h_a224b9163917ac32fc95a60d8c1eec3aa}{Direction}} \mbox{\hyperlink{class_road_ae7b2cb680aff052f44ee4dafd0e779da}{direction1\+\_\+}}
+\item 
+\mbox{\hyperlink{direction__enum_8h_a224b9163917ac32fc95a60d8c1eec3aa}{Direction}} \mbox{\hyperlink{class_road_a2cace17311d26364febe993647d0dcb0}{direction2\+\_\+}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_road_ac7ecd60967d978dd037bbbeaf00684e2}{to\+\_\+json}} (nlohmann\+::json \&j, const \mbox{\hyperlink{class_road}{Road}} \&road)
+\begin{DoxyCompactList}\small\item\em Serializes a \doxylink{class_road}{Road} object to JSON. \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_road}{Road}} $>$ \mbox{\hyperlink{class_road_a3266a2b02a14488fee7640cc8a7cc820}{from\+\_\+json}} (const nlohmann\+::json \&j, std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_intersection}{Intersection}} $>$ $>$ intersections)
+\begin{DoxyCompactList}\small\item\em Deserializes a \doxylink{class_road}{Road} object from JSON. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a road between two intersections with capacity, length, and direction. 
+
+This class models a road between two intersections. It contains information about the road\textquotesingle{}s capacity, current number of vehicles, length, and direction. It also allows cars to be added or removed from the road, and stores logs of traffic data. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_road_abf901dbe88c62ce6173e01260ecdb250}\index{Road@{Road}!Road@{Road}}
+\index{Road@{Road}!Road@{Road}}
+\doxysubsubsection{\texorpdfstring{Road()}{Road()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_road_abf901dbe88c62ce6173e01260ecdb250} 
+Road\+::\+Road (\begin{DoxyParamCaption}\item[{int}]{id}{, }\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_intersection}{Intersection}} $>$}]{from}{, }\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_intersection}{Intersection}} $>$}]{end}{, }\item[{int}]{capacity}{, }\item[{\mbox{\hyperlink{direction__enum_8h_a224b9163917ac32fc95a60d8c1eec3aa}{Direction}}}]{direction1}{, }\item[{\mbox{\hyperlink{direction__enum_8h_a224b9163917ac32fc95a60d8c1eec3aa}{Direction}}}]{direction2}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_road_a90bb6be2a5c3b6997849a915e2af0cf0}\index{Road@{Road}!Road@{Road}}
+\index{Road@{Road}!Road@{Road}}
+\doxysubsubsection{\texorpdfstring{Road()}{Road()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_road_a90bb6be2a5c3b6997849a915e2af0cf0} 
+Road\+::\+Road (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Default constructor for a \doxylink{class_road}{Road}. 
+
+Creates an empty road object, used for initialize with JSON. \Hypertarget{class_road_a7cd2aa6deb4007a78a4642bad2aac149}\index{Road@{Road}!````~Road@{\texorpdfstring{$\sim$}{\string~}Road}}
+\index{````~Road@{\texorpdfstring{$\sim$}{\string~}Road}!Road@{Road}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Road()}{\string~Road()}}
+{\footnotesize\ttfamily \label{class_road_a7cd2aa6deb4007a78a4642bad2aac149} 
+Road\+::\texorpdfstring{$\sim$}{\string~}\+Road (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_road_ac1a7f004cba0d04b25d993eff88ed2e1}\index{Road@{Road}!addCar@{addCar}}
+\index{addCar@{addCar}!Road@{Road}}
+\doxysubsubsection{\texorpdfstring{addCar()}{addCar()}}
+{\footnotesize\ttfamily \label{class_road_ac1a7f004cba0d04b25d993eff88ed2e1} 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_car}{Car}} $>$ Road\+::add\+Car (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_car}{Car}} $>$}]{car}{, }\item[{\mbox{\hyperlink{direction__enum_8h_a224b9163917ac32fc95a60d8c1eec3aa}{Direction}}}]{direction}{}\end{DoxyParamCaption})}
+
+
+
+Adds a car to the road in the specified direction. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em car} & A shared pointer to the car to be added. \\
+\hline
+{\em direction} & The direction in which the car is traveling. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A shared pointer to the car in front of the added car, or nullptr if the car is the first in line. 
+\end{DoxyReturn}
+\Hypertarget{class_road_a9040424a3ff85edeeedc2ad734b4fd47}\index{Road@{Road}!appendLogToCSV@{appendLogToCSV}}
+\index{appendLogToCSV@{appendLogToCSV}!Road@{Road}}
+\doxysubsubsection{\texorpdfstring{appendLogToCSV()}{appendLogToCSV()}}
+{\footnotesize\ttfamily \label{class_road_a9040424a3ff85edeeedc2ad734b4fd47} 
+void Road\+::append\+Log\+To\+CSV (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{filename}{}\end{DoxyParamCaption})}
+
+
+
+Appends the road log data to a CSV file. 
+
+This function opens the specified CSV file in append mode, writes a header if the file is empty, and appends the road log data for each hour (from 0 to 23). The function first checks if the file is empty, and if so, writes the header with column names. It then appends the log data for the specific road identified by its ID.
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & The name of the CSV file where the log data will be appended.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+The function assumes that the {\ttfamily logs\+\_\+} map contains log data for 24 hours (one for each hour of the day). It writes the log data for each hour as comma-\/separated values. 
+\end{DoxyNote}
+\Hypertarget{class_road_a4fe1b9abc6feae90de1b184383858edf}\index{Road@{Road}!getCapacity@{getCapacity}}
+\index{getCapacity@{getCapacity}!Road@{Road}}
+\doxysubsubsection{\texorpdfstring{getCapacity()}{getCapacity()}}
+{\footnotesize\ttfamily \label{class_road_a4fe1b9abc6feae90de1b184383858edf} 
+int Road\+::get\+Capacity (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Gets the capacity of the road. 
+
+\begin{DoxyReturn}{Returns}
+The capacity of the road. 
+\end{DoxyReturn}
+\Hypertarget{class_road_a62ff5f69c723932c778686b0a10fd942}\index{Road@{Road}!getCurrentDensity@{getCurrentDensity}}
+\index{getCurrentDensity@{getCurrentDensity}!Road@{Road}}
+\doxysubsubsection{\texorpdfstring{getCurrentDensity()}{getCurrentDensity()}}
+{\footnotesize\ttfamily \label{class_road_a62ff5f69c723932c778686b0a10fd942} 
+float Road\+::get\+Current\+Density (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Gets the current vehicle density on the road. 
+
+\begin{DoxyReturn}{Returns}
+A float representing the vehicle density (current\+Vehicles / capacity). 
+\end{DoxyReturn}
+\Hypertarget{class_road_aec74f99a6922d4a53cfdd55630ff8544}\index{Road@{Road}!getCurrentVehicles@{getCurrentVehicles}}
+\index{getCurrentVehicles@{getCurrentVehicles}!Road@{Road}}
+\doxysubsubsection{\texorpdfstring{getCurrentVehicles()}{getCurrentVehicles()}}
+{\footnotesize\ttfamily \label{class_road_aec74f99a6922d4a53cfdd55630ff8544} 
+int Road\+::get\+Current\+Vehicles (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Gets the current number of vehicles on the road. 
+
+\begin{DoxyReturn}{Returns}
+The number of vehicles on the road. 
+\end{DoxyReturn}
+\Hypertarget{class_road_ad592481dc45c79e920485d239ad4fc06}\index{Road@{Road}!getDirection1@{getDirection1}}
+\index{getDirection1@{getDirection1}!Road@{Road}}
+\doxysubsubsection{\texorpdfstring{getDirection1()}{getDirection1()}}
+{\footnotesize\ttfamily \label{class_road_ad592481dc45c79e920485d239ad4fc06} 
+\mbox{\hyperlink{direction__enum_8h_a224b9163917ac32fc95a60d8c1eec3aa}{Direction}} Road\+::get\+Direction1 (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Gets the first direction of the road. 
+
+\begin{DoxyReturn}{Returns}
+The first direction as a {\ttfamily Direction} value. 
+\end{DoxyReturn}
+\Hypertarget{class_road_ad5bcf97e63bb1400fd1c2e7a086edf5f}\index{Road@{Road}!getDirection2@{getDirection2}}
+\index{getDirection2@{getDirection2}!Road@{Road}}
+\doxysubsubsection{\texorpdfstring{getDirection2()}{getDirection2()}}
+{\footnotesize\ttfamily \label{class_road_ad5bcf97e63bb1400fd1c2e7a086edf5f} 
+\mbox{\hyperlink{direction__enum_8h_a224b9163917ac32fc95a60d8c1eec3aa}{Direction}} Road\+::get\+Direction2 (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Gets the second direction of the road. 
+
+\begin{DoxyReturn}{Returns}
+The second direction as a {\ttfamily Direction} value. 
+\end{DoxyReturn}
+\Hypertarget{class_road_ab24ed1b9e575283480fcaba75caa2ef9}\index{Road@{Road}!getEnd@{getEnd}}
+\index{getEnd@{getEnd}!Road@{Road}}
+\doxysubsubsection{\texorpdfstring{getEnd()}{getEnd()}}
+{\footnotesize\ttfamily \label{class_road_ab24ed1b9e575283480fcaba75caa2ef9} 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_intersection}{Intersection}} $>$ Road\+::get\+End (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Gets the ending intersection of the road. 
+
+\begin{DoxyReturn}{Returns}
+A shared pointer to the ending intersection. 
+\end{DoxyReturn}
+\Hypertarget{class_road_ae7128d0165c14f57533500849e2f66f9}\index{Road@{Road}!getFrom@{getFrom}}
+\index{getFrom@{getFrom}!Road@{Road}}
+\doxysubsubsection{\texorpdfstring{getFrom()}{getFrom()}}
+{\footnotesize\ttfamily \label{class_road_ae7128d0165c14f57533500849e2f66f9} 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_intersection}{Intersection}} $>$ Road\+::get\+From (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Gets the starting intersection of the road. 
+
+\begin{DoxyReturn}{Returns}
+A shared pointer to the starting intersection. 
+\end{DoxyReturn}
+\Hypertarget{class_road_ac8b71a10f5f4c48ff3cada5993ef577d}\index{Road@{Road}!getId@{getId}}
+\index{getId@{getId}!Road@{Road}}
+\doxysubsubsection{\texorpdfstring{getId()}{getId()}}
+{\footnotesize\ttfamily \label{class_road_ac8b71a10f5f4c48ff3cada5993ef577d} 
+int Road\+::get\+Id (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Gets the ID of the road. 
+
+\begin{DoxyReturn}{Returns}
+The ID of the road as an integer. 
+\end{DoxyReturn}
+\Hypertarget{class_road_a55e145cca85b68310000b62341010f42}\index{Road@{Road}!getLane1@{getLane1}}
+\index{getLane1@{getLane1}!Road@{Road}}
+\doxysubsubsection{\texorpdfstring{getLane1()}{getLane1()}}
+{\footnotesize\ttfamily \label{class_road_a55e145cca85b68310000b62341010f42} 
+const std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_car}{Car}} $>$ $>$ \& Road\+::get\+Lane1 (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Gets the cars on lane 1 of the road. 
+
+\begin{DoxyReturn}{Returns}
+A constant reference to the vector of cars on lane 1. 
+\end{DoxyReturn}
+\Hypertarget{class_road_a9d83007ca5ab3eb55cad58500a18e1fb}\index{Road@{Road}!getLane2@{getLane2}}
+\index{getLane2@{getLane2}!Road@{Road}}
+\doxysubsubsection{\texorpdfstring{getLane2()}{getLane2()}}
+{\footnotesize\ttfamily \label{class_road_a9d83007ca5ab3eb55cad58500a18e1fb} 
+const std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_car}{Car}} $>$ $>$ \& Road\+::get\+Lane2 (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Gets the cars on lane 2 of the road. 
+
+\begin{DoxyReturn}{Returns}
+A constant reference to the vector of cars on lane 2. 
+\end{DoxyReturn}
+\Hypertarget{class_road_a639144cbd97941a2a7b423a151344b33}\index{Road@{Road}!getLength@{getLength}}
+\index{getLength@{getLength}!Road@{Road}}
+\doxysubsubsection{\texorpdfstring{getLength()}{getLength()}}
+{\footnotesize\ttfamily \label{class_road_a639144cbd97941a2a7b423a151344b33} 
+const int Road\+::get\+Length (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Gets the length of the road. 
+
+\begin{DoxyReturn}{Returns}
+The length of the road. 
+\end{DoxyReturn}
+\Hypertarget{class_road_a2f6ba8c5ba4bc6810b2e866d13aa2646}\index{Road@{Road}!getLogs@{getLogs}}
+\index{getLogs@{getLogs}!Road@{Road}}
+\doxysubsubsection{\texorpdfstring{getLogs()}{getLogs()}}
+{\footnotesize\ttfamily \label{class_road_a2f6ba8c5ba4bc6810b2e866d13aa2646} 
+std\+::vector$<$ int $>$ Road\+::get\+Logs (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Gets the traffic logs for the road. 
+
+\begin{DoxyReturn}{Returns}
+A vector containing the traffic logs for the road. 
+\end{DoxyReturn}
+\Hypertarget{class_road_a6fe2244d957f24e7f24e9810fd46a182}\index{Road@{Road}!removeCar@{removeCar}}
+\index{removeCar@{removeCar}!Road@{Road}}
+\doxysubsubsection{\texorpdfstring{removeCar()}{removeCar()}}
+{\footnotesize\ttfamily \label{class_road_a6fe2244d957f24e7f24e9810fd46a182} 
+void Road\+::remove\+Car (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_car}{Car}} $>$}]{car}{}\end{DoxyParamCaption})}
+
+
+
+Removes a car from the road. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em car} & A shared pointer to the car to be removed.\\
+\hline
+\end{DoxyParams}
+This function removes the specified car from either lane 1 or lane 2. 
+
+\doxysubsection{Friends And Related Symbol Documentation}
+\Hypertarget{class_road_a3266a2b02a14488fee7640cc8a7cc820}\index{Road@{Road}!from\_json@{from\_json}}
+\index{from\_json@{from\_json}!Road@{Road}}
+\doxysubsubsection{\texorpdfstring{from\_json}{from\_json}}
+{\footnotesize\ttfamily \label{class_road_a3266a2b02a14488fee7640cc8a7cc820} 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_road}{Road}} $>$ from\+\_\+json (\begin{DoxyParamCaption}\item[{const nlohmann\+::json \&}]{j}{, }\item[{std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_intersection}{Intersection}} $>$ $>$}]{intersections}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Deserializes a \doxylink{class_road}{Road} object from JSON. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em j} & The JSON object containing the data. \\
+\hline
+{\em intersections} & The list of intersections to associate with the road. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A shared pointer to the deserialized \doxylink{class_road}{Road} object. 
+\end{DoxyReturn}
+\Hypertarget{class_road_ac7ecd60967d978dd037bbbeaf00684e2}\index{Road@{Road}!to\_json@{to\_json}}
+\index{to\_json@{to\_json}!Road@{Road}}
+\doxysubsubsection{\texorpdfstring{to\_json}{to\_json}}
+{\footnotesize\ttfamily \label{class_road_ac7ecd60967d978dd037bbbeaf00684e2} 
+void to\+\_\+json (\begin{DoxyParamCaption}\item[{nlohmann\+::json \&}]{j}{, }\item[{const \mbox{\hyperlink{class_road}{Road}} \&}]{road}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Serializes a \doxylink{class_road}{Road} object to JSON. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em j} & The JSON object to write the serialized data to. \\
+\hline
+{\em road} & The \doxylink{class_road}{Road} object to serialize. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_road_a2b7af30c9325310ac1a18407528e38a1}\index{Road@{Road}!capacity\_@{capacity\_}}
+\index{capacity\_@{capacity\_}!Road@{Road}}
+\doxysubsubsection{\texorpdfstring{capacity\_}{capacity\_}}
+{\footnotesize\ttfamily \label{class_road_a2b7af30c9325310ac1a18407528e38a1} 
+int Road\+::capacity\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_road_afa16a2deb696c8cf353527fc418cfd85}\index{Road@{Road}!currentVehicles\_@{currentVehicles\_}}
+\index{currentVehicles\_@{currentVehicles\_}!Road@{Road}}
+\doxysubsubsection{\texorpdfstring{currentVehicles\_}{currentVehicles\_}}
+{\footnotesize\ttfamily \label{class_road_afa16a2deb696c8cf353527fc418cfd85} 
+int Road\+::current\+Vehicles\+\_\+ = 0\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_road_ae7b2cb680aff052f44ee4dafd0e779da}\index{Road@{Road}!direction1\_@{direction1\_}}
+\index{direction1\_@{direction1\_}!Road@{Road}}
+\doxysubsubsection{\texorpdfstring{direction1\_}{direction1\_}}
+{\footnotesize\ttfamily \label{class_road_ae7b2cb680aff052f44ee4dafd0e779da} 
+\mbox{\hyperlink{direction__enum_8h_a224b9163917ac32fc95a60d8c1eec3aa}{Direction}} Road\+::direction1\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_road_a2cace17311d26364febe993647d0dcb0}\index{Road@{Road}!direction2\_@{direction2\_}}
+\index{direction2\_@{direction2\_}!Road@{Road}}
+\doxysubsubsection{\texorpdfstring{direction2\_}{direction2\_}}
+{\footnotesize\ttfamily \label{class_road_a2cace17311d26364febe993647d0dcb0} 
+\mbox{\hyperlink{direction__enum_8h_a224b9163917ac32fc95a60d8c1eec3aa}{Direction}} Road\+::direction2\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_road_a3fae304ba7059254079b4889a8543d22}\index{Road@{Road}!end\_@{end\_}}
+\index{end\_@{end\_}!Road@{Road}}
+\doxysubsubsection{\texorpdfstring{end\_}{end\_}}
+{\footnotesize\ttfamily \label{class_road_a3fae304ba7059254079b4889a8543d22} 
+std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{class_intersection}{Intersection}}$>$ Road\+::end\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_road_a7ad6d0e62de7a8ea04cc3b399c4801bc}\index{Road@{Road}!from\_@{from\_}}
+\index{from\_@{from\_}!Road@{Road}}
+\doxysubsubsection{\texorpdfstring{from\_}{from\_}}
+{\footnotesize\ttfamily \label{class_road_a7ad6d0e62de7a8ea04cc3b399c4801bc} 
+std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{class_intersection}{Intersection}}$>$ Road\+::from\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_road_ad7e8a37f39fc1410a38c897ce34088b3}\index{Road@{Road}!id\_@{id\_}}
+\index{id\_@{id\_}!Road@{Road}}
+\doxysubsubsection{\texorpdfstring{id\_}{id\_}}
+{\footnotesize\ttfamily \label{class_road_ad7e8a37f39fc1410a38c897ce34088b3} 
+int Road\+::id\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_road_a737fe313159bb32310ce7a53bcc2f2be}\index{Road@{Road}!lane1\_@{lane1\_}}
+\index{lane1\_@{lane1\_}!Road@{Road}}
+\doxysubsubsection{\texorpdfstring{lane1\_}{lane1\_}}
+{\footnotesize\ttfamily \label{class_road_a737fe313159bb32310ce7a53bcc2f2be} 
+std\+::vector$<$std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{class_car}{Car}}$>$ $>$ Road\+::lane1\+\_\+ = \{\}\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_road_a5f424b90e01748cc44bc89ee26afa112}\index{Road@{Road}!lane2\_@{lane2\_}}
+\index{lane2\_@{lane2\_}!Road@{Road}}
+\doxysubsubsection{\texorpdfstring{lane2\_}{lane2\_}}
+{\footnotesize\ttfamily \label{class_road_a5f424b90e01748cc44bc89ee26afa112} 
+std\+::vector$<$std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{class_car}{Car}}$>$ $>$ Road\+::lane2\+\_\+ = \{\}\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_road_a1e484e15ab9c2f604de143c819bf2147}\index{Road@{Road}!length\_@{length\_}}
+\index{length\_@{length\_}!Road@{Road}}
+\doxysubsubsection{\texorpdfstring{length\_}{length\_}}
+{\footnotesize\ttfamily \label{class_road_a1e484e15ab9c2f604de143c819bf2147} 
+int Road\+::length\+\_\+ = 0\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_road_ad2daf918e1fd543e2b3c36fe4f3e109e}\index{Road@{Road}!logs\_@{logs\_}}
+\index{logs\_@{logs\_}!Road@{Road}}
+\doxysubsubsection{\texorpdfstring{logs\_}{logs\_}}
+{\footnotesize\ttfamily \label{class_road_ad2daf918e1fd543e2b3c36fe4f3e109e} 
+std\+::vector$<$int$>$ Road\+::logs\+\_\+ = \{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0\}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\mbox{\hyperlink{road_8hpp}{road.\+hpp}}\item 
+src/\mbox{\hyperlink{road_8cpp}{road.\+cpp}}\end{DoxyCompactItemize}

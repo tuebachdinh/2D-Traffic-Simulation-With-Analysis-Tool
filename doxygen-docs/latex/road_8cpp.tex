@@ -1,0 +1,125 @@
+\doxysection{src/road.cpp File Reference}
+\hypertarget{road_8cpp}{}\label{road_8cpp}\index{src/road.cpp@{src/road.cpp}}
+{\ttfamily \#include "{}road.\+hpp"{}}\newline
+{\ttfamily \#include "{}car.\+hpp"{}}\newline
+{\ttfamily \#include "{}coordinate.\+h"{}}\newline
+{\ttfamily \#include "{}direction\+\_\+enum.\+h"{}}\newline
+{\ttfamily \#include "{}../libs/nlohmann/json.\+hpp"{}}\newline
+{\ttfamily \#include $<$fstream$>$}\newline
+{\ttfamily \#include "{}intersection.\+hpp"{}}\newline
+{\ttfamily \#include "{}global.\+h"{}}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{road_8cpp_a3184539adf053398be3505fbe84b3125}{ROAD\+\_\+\+CPP}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{road_8cpp_ac7ecd60967d978dd037bbbeaf00684e2}{to\+\_\+json}} (nlohmann\+::json \&j, const \mbox{\hyperlink{class_road}{Road}} \&road)
+\begin{DoxyCompactList}\small\item\em Serializes a \doxylink{class_road}{Road} object to JSON. \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_road}{Road}} $>$ \mbox{\hyperlink{road_8cpp_a3266a2b02a14488fee7640cc8a7cc820}{from\+\_\+json}} (const nlohmann\+::json \&j, std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_intersection}{Intersection}} $>$ $>$ intersections)
+\begin{DoxyCompactList}\small\item\em Deserializes a \doxylink{class_road}{Road} object from JSON. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{road_8cpp_a23328635c6d786212a4d1ed344dc5e77}{write\+Road}} (const std\+::string \&filename, std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_road}{Road}} $>$ $>$ roads)
+\begin{DoxyCompactList}\small\item\em Writes a list of roads to a JSON file. \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_road}{Road}} $>$ $>$ \mbox{\hyperlink{road_8cpp_a387651c5c977c0d51c9ee1025f2918aa}{read\+Road}} (const std\+::string \&filename, std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_intersection}{Intersection}} $>$ $>$ intersections)
+\begin{DoxyCompactList}\small\item\em Reads a list of roads from a JSON file. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{road_8cpp_a3184539adf053398be3505fbe84b3125}\index{road.cpp@{road.cpp}!ROAD\_CPP@{ROAD\_CPP}}
+\index{ROAD\_CPP@{ROAD\_CPP}!road.cpp@{road.cpp}}
+\doxysubsubsection{\texorpdfstring{ROAD\_CPP}{ROAD\_CPP}}
+{\footnotesize\ttfamily \label{road_8cpp_a3184539adf053398be3505fbe84b3125} 
+\#define ROAD\+\_\+\+CPP}
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{road_8cpp_a3266a2b02a14488fee7640cc8a7cc820}\index{road.cpp@{road.cpp}!from\_json@{from\_json}}
+\index{from\_json@{from\_json}!road.cpp@{road.cpp}}
+\doxysubsubsection{\texorpdfstring{from\_json()}{from\_json()}}
+{\footnotesize\ttfamily \label{road_8cpp_a3266a2b02a14488fee7640cc8a7cc820} 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_road}{Road}} $>$ from\+\_\+json (\begin{DoxyParamCaption}\item[{const nlohmann\+::json \&}]{j}{, }\item[{std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_intersection}{Intersection}} $>$ $>$}]{intersections}{}\end{DoxyParamCaption})}
+
+
+
+Deserializes a \doxylink{class_road}{Road} object from JSON. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em j} & The JSON object containing the data. \\
+\hline
+{\em intersections} & The list of intersections to associate with the road. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A shared pointer to the deserialized \doxylink{class_road}{Road} object. 
+\end{DoxyReturn}
+\Hypertarget{road_8cpp_a387651c5c977c0d51c9ee1025f2918aa}\index{road.cpp@{road.cpp}!readRoad@{readRoad}}
+\index{readRoad@{readRoad}!road.cpp@{road.cpp}}
+\doxysubsubsection{\texorpdfstring{readRoad()}{readRoad()}}
+{\footnotesize\ttfamily \label{road_8cpp_a387651c5c977c0d51c9ee1025f2918aa} 
+std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_road}{Road}} $>$ $>$ read\+Road (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{filename}{, }\item[{std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_intersection}{Intersection}} $>$ $>$}]{intersections}{}\end{DoxyParamCaption})}
+
+
+
+Reads a list of roads from a JSON file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & The name of the file to read from. \\
+\hline
+{\em intersections} & A vector of shared pointers to intersections to associate with the roads. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A vector of shared pointers to the deserialized \doxylink{class_road}{Road} objects. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::ios\+\_\+base\+::failure} & If the file cannot be opened for reading. \\
+\hline
+\end{DoxyExceptions}
+\Hypertarget{road_8cpp_ac7ecd60967d978dd037bbbeaf00684e2}\index{road.cpp@{road.cpp}!to\_json@{to\_json}}
+\index{to\_json@{to\_json}!road.cpp@{road.cpp}}
+\doxysubsubsection{\texorpdfstring{to\_json()}{to\_json()}}
+{\footnotesize\ttfamily \label{road_8cpp_ac7ecd60967d978dd037bbbeaf00684e2} 
+void to\+\_\+json (\begin{DoxyParamCaption}\item[{nlohmann\+::json \&}]{j}{, }\item[{const \mbox{\hyperlink{class_road}{Road}} \&}]{road}{}\end{DoxyParamCaption})}
+
+
+
+Serializes a \doxylink{class_road}{Road} object to JSON. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em j} & The JSON object to write the serialized data to. \\
+\hline
+{\em road} & The \doxylink{class_road}{Road} object to serialize. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{road_8cpp_a23328635c6d786212a4d1ed344dc5e77}\index{road.cpp@{road.cpp}!writeRoad@{writeRoad}}
+\index{writeRoad@{writeRoad}!road.cpp@{road.cpp}}
+\doxysubsubsection{\texorpdfstring{writeRoad()}{writeRoad()}}
+{\footnotesize\ttfamily \label{road_8cpp_a23328635c6d786212a4d1ed344dc5e77} 
+void write\+Road (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{filename}{, }\item[{std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_road}{Road}} $>$ $>$}]{roads}{}\end{DoxyParamCaption})}
+
+
+
+Writes a list of roads to a JSON file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & The name of the file to write to. \\
+\hline
+{\em roads} & A vector of shared pointers to \doxylink{class_road}{Road} objects to write. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::ios\+\_\+base\+::failure} & If the file cannot be opened for writing. \\
+\hline
+{\em std\+::invalid\+\_\+argument} & If a nullptr is encountered in the roads vector. \\
+\hline
+\end{DoxyExceptions}

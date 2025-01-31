@@ -1,0 +1,73 @@
+\doxysection{src/intersection.hpp File Reference}
+\hypertarget{intersection_8hpp}{}\label{intersection_8hpp}\index{src/intersection.hpp@{src/intersection.hpp}}
+{\ttfamily \#include $<$utility$>$}\newline
+{\ttfamily \#include $<$list$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include "{}direction\+\_\+enum.\+h"{}}\newline
+{\ttfamily \#include "{}road.\+hpp"{}}\newline
+{\ttfamily \#include "{}coordinate.\+h"{}}\newline
+{\ttfamily \#include "{}entity.\+hpp"{}}\newline
+{\ttfamily \#include "{}../libs/nlohmann/json.\+hpp"{}}\newline
+{\ttfamily \#include $<$memory$>$}\newline
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_intersection}{Intersection}}
+\begin{DoxyCompactList}\small\item\em Represents an intersection with roads and coordinates. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{intersection_8hpp_a13f222b71bad989200c38a465e30ad19}{write\+Intersection}} (const std\+::string \&filename, std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_intersection}{Intersection}} $>$ $>$ intersections)
+\begin{DoxyCompactList}\small\item\em Writes a list of intersections to a JSON file. \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_intersection}{Intersection}} $>$ $>$ \mbox{\hyperlink{intersection_8hpp_a4ccd745c7d540b7594e94b12db30d966}{read\+Intersection}} (const std\+::string \&filename)
+\begin{DoxyCompactList}\small\item\em Reads a list of intersections from a JSON file. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{intersection_8hpp_a4ccd745c7d540b7594e94b12db30d966}\index{intersection.hpp@{intersection.hpp}!readIntersection@{readIntersection}}
+\index{readIntersection@{readIntersection}!intersection.hpp@{intersection.hpp}}
+\doxysubsubsection{\texorpdfstring{readIntersection()}{readIntersection()}}
+{\footnotesize\ttfamily \label{intersection_8hpp_a4ccd745c7d540b7594e94b12db30d966} 
+std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_intersection}{Intersection}} $>$ $>$ read\+Intersection (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{filename}{}\end{DoxyParamCaption})}
+
+
+
+Reads a list of intersections from a JSON file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & The name of the file to read from. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A vector of shared pointers to \doxylink{class_intersection}{Intersection} objects. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::ios\+\_\+base\+::failure} & If the file cannot be opened for reading. \\
+\hline
+\end{DoxyExceptions}
+\Hypertarget{intersection_8hpp_a13f222b71bad989200c38a465e30ad19}\index{intersection.hpp@{intersection.hpp}!writeIntersection@{writeIntersection}}
+\index{writeIntersection@{writeIntersection}!intersection.hpp@{intersection.hpp}}
+\doxysubsubsection{\texorpdfstring{writeIntersection()}{writeIntersection()}}
+{\footnotesize\ttfamily \label{intersection_8hpp_a13f222b71bad989200c38a465e30ad19} 
+void write\+Intersection (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{filename}{, }\item[{std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_intersection}{Intersection}} $>$ $>$}]{intersections}{}\end{DoxyParamCaption})}
+
+
+
+Writes a list of intersections to a JSON file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & The name of the file to write to. \\
+\hline
+{\em intersections} & The list of intersections to write. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::ios\+\_\+base\+::failure} & If the file cannot be opened for writing. \\
+\hline
+{\em std\+::invalid\+\_\+argument} & If the intersections vector contains nullptr. \\
+\hline
+\end{DoxyExceptions}

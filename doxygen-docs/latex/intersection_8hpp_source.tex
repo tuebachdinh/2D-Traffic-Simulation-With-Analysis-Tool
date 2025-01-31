@@ -1,0 +1,38 @@
+\doxysection{intersection.\+hpp}
+\hypertarget{intersection_8hpp_source}{}\label{intersection_8hpp_source}\index{src/intersection.hpp@{src/intersection.hpp}}
+\mbox{\hyperlink{intersection_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ INTERSECTION\_HPP}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ INTERSECTION\_HPP}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <utility>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <list>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <vector>}\ \ }
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{direction__enum_8h}{direction\_enum.h}}"{}}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{road_8hpp}{road.hpp}}"{}}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{coordinate_8h}{coordinate.h}}"{}}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{entity_8hpp}{entity.hpp}}"{}}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ "{}../libs/nlohmann/json.hpp"{}}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <memory>}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_road}{Road}};}
+\DoxyCodeLine{00015\ \textcolor{keyword}{class\ }Sign;}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_intersection}{Intersection}}:\textcolor{keyword}{public}\ \mbox{\hyperlink{class_entity}{Entity}}\ \{}
+\DoxyCodeLine{00018\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00019\ \ \ \ \ \mbox{\hyperlink{class_intersection_a700c3de51c153550f9e9e92dc8015b06}{Intersection}}(\textcolor{keywordtype}{int}\ \textcolor{keywordtype}{id},\ \mbox{\hyperlink{struct_coordinate}{Coordinate}}\ coordinate);}
+\DoxyCodeLine{00020\ \ \ \ \ std::shared\_ptr<Road>\ \mbox{\hyperlink{class_intersection_a44612e41042e2b2780215bb1f7affe49}{getRoad}}(\mbox{\hyperlink{direction__enum_8h_a224b9163917ac32fc95a60d8c1eec3aa}{Direction}}\ direction)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_intersection_a8cfbe4d96a4b2b4c9ed5779ca8d2a866}{setRoad}}(\textcolor{keyword}{const}\ std::shared\_ptr<Road>\&\ road,\ \mbox{\hyperlink{direction__enum_8h_a224b9163917ac32fc95a60d8c1eec3aa}{Direction}}\ direction);}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keyword}{friend}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_intersection_a972d9895fd3ab6faa691e0833f17ebd3}{to\_json}}(nlohmann::json\ \&j,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_intersection}{Intersection}}\ \&i);}
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keyword}{friend}\ std::shared\_ptr<Intersection>\ \mbox{\hyperlink{class_intersection_a00e5640846ff7cb788a4cf4773adbb46}{from\_json}}(\textcolor{keyword}{const}\ nlohmann::json\ \&j);}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00027\ \ \ \ \ std::list<std::pair<Direction,\ std::shared\_ptr<Road>>>\ \mbox{\hyperlink{class_intersection_adc19241230fc7dd1b25ae8b143cfe738}{connectedRoads\_}}\ =\ \{\};}
+\DoxyCodeLine{00028\ \};}
+\DoxyCodeLine{00029\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{intersection_8hpp_a13f222b71bad989200c38a465e30ad19}{writeIntersection}}(\textcolor{keyword}{const}\ std::string\ \&filename,\ std::vector<std::shared\_ptr<Intersection>>\ intersections);}
+\DoxyCodeLine{00030\ std::vector<std::shared\_ptr<Intersection>>\ \mbox{\hyperlink{intersection_8hpp_a4ccd745c7d540b7594e94b12db30d966}{readIntersection}}(\textcolor{keyword}{const}\ std::string\ \&filename);}
+\DoxyCodeLine{00031\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00032\ }
+
+\end{DoxyCode}

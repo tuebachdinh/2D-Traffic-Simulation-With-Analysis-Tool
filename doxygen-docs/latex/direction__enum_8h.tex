@@ -1,0 +1,76 @@
+\doxysection{src/direction\+\_\+enum.h File Reference}
+\hypertarget{direction__enum_8h}{}\label{direction__enum_8h}\index{src/direction\_enum.h@{src/direction\_enum.h}}
+\doxysubsubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{direction__enum_8h_a224b9163917ac32fc95a60d8c1eec3aa}{Direction}} \{ \mbox{\hyperlink{direction__enum_8h_a224b9163917ac32fc95a60d8c1eec3aaaaeb9634ef4d4fd4a5297ada06f89c3fe}{North}}
+, \mbox{\hyperlink{direction__enum_8h_a224b9163917ac32fc95a60d8c1eec3aaa66183dce5a3b8d48fbdfe1f8ede7fcc2}{East}}
+, \mbox{\hyperlink{direction__enum_8h_a224b9163917ac32fc95a60d8c1eec3aaac15660611b40cfc69e36003c8607311a}{South}}
+, \mbox{\hyperlink{direction__enum_8h_a224b9163917ac32fc95a60d8c1eec3aaaedd15c5b13ad5525c46d5c9650ddde5f}{West}}
+ \}
+\begin{DoxyCompactList}\small\item\em Represents the four cardinal directions. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{direction__enum_8h_a224b9163917ac32fc95a60d8c1eec3aa}{Direction}} \mbox{\hyperlink{direction__enum_8h_a6b5d85200a3ae7c0b100d3c9d0f8e782}{operator!}} (const \mbox{\hyperlink{direction__enum_8h_a224b9163917ac32fc95a60d8c1eec3aa}{Direction}} \&other)
+\begin{DoxyCompactList}\small\item\em Gets the opposite direction of the given direction. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Enumeration Type Documentation}
+\Hypertarget{direction__enum_8h_a224b9163917ac32fc95a60d8c1eec3aa}\index{direction\_enum.h@{direction\_enum.h}!Direction@{Direction}}
+\index{Direction@{Direction}!direction\_enum.h@{direction\_enum.h}}
+\doxysubsubsection{\texorpdfstring{Direction}{Direction}}
+{\footnotesize\ttfamily \label{direction__enum_8h_a224b9163917ac32fc95a60d8c1eec3aa} 
+enum \mbox{\hyperlink{direction__enum_8h_a224b9163917ac32fc95a60d8c1eec3aa}{Direction}}}
+
+
+
+Represents the four cardinal directions. 
+
+This enum defines the four primary compass directions\+: North, East, South, and West. \begin{DoxyEnumFields}[2]{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{North@{North}!direction\_enum.h@{direction\_enum.h}}\index{direction\_enum.h@{direction\_enum.h}!North@{North}}}\Hypertarget{direction__enum_8h_a224b9163917ac32fc95a60d8c1eec3aaaaeb9634ef4d4fd4a5297ada06f89c3fe}\label{direction__enum_8h_a224b9163917ac32fc95a60d8c1eec3aa} 
+North&Represents the North direction. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{East@{East}!direction\_enum.h@{direction\_enum.h}}\index{direction\_enum.h@{direction\_enum.h}!East@{East}}}\Hypertarget{direction__enum_8h_a224b9163917ac32fc95a60d8c1eec3aaa66183dce5a3b8d48fbdfe1f8ede7fcc2}\label{direction__enum_8h_a224b9163917ac32fc95a60d8c1eec3aa} 
+East&Represents the East direction. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{South@{South}!direction\_enum.h@{direction\_enum.h}}\index{direction\_enum.h@{direction\_enum.h}!South@{South}}}\Hypertarget{direction__enum_8h_a224b9163917ac32fc95a60d8c1eec3aaac15660611b40cfc69e36003c8607311a}\label{direction__enum_8h_a224b9163917ac32fc95a60d8c1eec3aa} 
+South&Represents the South direction. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{West@{West}!direction\_enum.h@{direction\_enum.h}}\index{direction\_enum.h@{direction\_enum.h}!West@{West}}}\Hypertarget{direction__enum_8h_a224b9163917ac32fc95a60d8c1eec3aaaedd15c5b13ad5525c46d5c9650ddde5f}\label{direction__enum_8h_a224b9163917ac32fc95a60d8c1eec3aa} 
+West&Represents the West direction. \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{direction__enum_8h_a6b5d85200a3ae7c0b100d3c9d0f8e782}\index{direction\_enum.h@{direction\_enum.h}!operator"!@{operator"!}}
+\index{operator"!@{operator"!}!direction\_enum.h@{direction\_enum.h}}
+\doxysubsubsection{\texorpdfstring{operator"!()}{operator!()}}
+{\footnotesize\ttfamily \label{direction__enum_8h_a6b5d85200a3ae7c0b100d3c9d0f8e782} 
+\mbox{\hyperlink{direction__enum_8h_a224b9163917ac32fc95a60d8c1eec3aa}{Direction}} operator! (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{direction__enum_8h_a224b9163917ac32fc95a60d8c1eec3aa}{Direction}} \&}]{other}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets the opposite direction of the given direction. 
+
+This operator returns the opposite of the specified direction\+:
+\begin{DoxyItemize}
+\item North -\/\texorpdfstring{$>$}{>} South
+\item East -\/\texorpdfstring{$>$}{>} West
+\item South -\/\texorpdfstring{$>$}{>} North
+\item West -\/\texorpdfstring{$>$}{>} East
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & The {\ttfamily Direction} to find the opposite of. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The opposite {\ttfamily Direction}. 
+\end{DoxyReturn}

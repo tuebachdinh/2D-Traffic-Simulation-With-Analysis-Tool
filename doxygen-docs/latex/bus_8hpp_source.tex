@@ -1,0 +1,29 @@
+\doxysection{bus.\+hpp}
+\hypertarget{bus_8hpp_source}{}\label{bus_8hpp_source}\index{src/bus.hpp@{src/bus.hpp}}
+\mbox{\hyperlink{bus_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ BUS\_HPP}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ BUS\_HPP}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <memory>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{car_8hpp}{car.hpp}}"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{building_8hpp}{building.hpp}}"{}}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_bus}{Bus}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_car}{Car}}\ \{}
+\DoxyCodeLine{00010\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00011\ \ \ \ \ \mbox{\hyperlink{class_bus_a0e120812b3fa2babc0e8440110ff1532}{Bus}}(\textcolor{keywordtype}{int}\ \textcolor{keywordtype}{id},\ std::shared\_ptr<Building>\ spawnBuilding,\ std::vector<std::shared\_ptr<Building>>\ stops\ =\ \{\},\ \textcolor{keywordtype}{float}\ speed\ =\ 0.1f);}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \ \ \ \ \textcolor{keyword}{const}\ std::vector<std::shared\_ptr<Building>>\&\ \mbox{\hyperlink{class_bus_ae5b3a8d6803b43e1bee07f02afd84986}{getStops}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_bus_a74e55cbaf0d513909c610bf5fdd0333e}{visitNextStop}}();}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00017\ \ \ \ \ std::vector<std::shared\_ptr<Building>>\ \mbox{\hyperlink{class_bus_a2cf8814e333d51b5eddec2282f9c236c}{stops\_}};}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_bus_ae52dd9fdd029a48db2a20fbf6bd7d393}{currentStopIndex\_}}\ =\ 1;}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_bus_ab1018deecc3db659c7c158e800d7f4f5}{nofStops\_}}\ =\ \mbox{\hyperlink{class_bus_a2cf8814e333d51b5eddec2282f9c236c}{stops\_}}.size();}
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_bus_aa58d03c9e167441a59b4e709963443d2}{waitTime\_}}\ =\ 0;}
+\DoxyCodeLine{00021\ \};}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

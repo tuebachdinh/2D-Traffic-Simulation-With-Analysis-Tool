@@ -1,0 +1,135 @@
+\doxysection{Street\+Light Struct Reference}
+\hypertarget{struct_street_light}{}\label{struct_street_light}\index{StreetLight@{StreetLight}}
+
+
+Represents a streetlight with dynamic lighting frames based on the time of day.  
+
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_street_light_a59f98341df1fe4200b7b828366ad46a7}{Street\+Light}} (const sf\+::\+Texture \&texture, sf\+::\+Vector2f position)
+\begin{DoxyCompactList}\small\item\em Constructs a \doxylink{struct_street_light}{Street\+Light} object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{struct_street_light_a0eaa3d6ed5c232d6cb1fd66fcf7dda59}{update}} (int time\+In\+Hour)
+\begin{DoxyCompactList}\small\item\em Updates the lighting frame of the streetlight based on the time of day. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{struct_street_light_a723d68aeccd212e9073b9a71dc344473}{draw}} (sf\+::\+Render\+Window \&window)
+\begin{DoxyCompactList}\small\item\em Renders the streetlight sprite onto the specified window. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+sf\+::\+Sprite \mbox{\hyperlink{struct_street_light_a68c5bb12bf182480d6710be29da29a57}{sprite}}
+\begin{DoxyCompactList}\small\item\em Sprite object representing the streetlight. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{struct_street_light_afc21b23847ed7519fc8111d64ff3e216}{frame\+Count}} = 6
+\begin{DoxyCompactList}\small\item\em Total number of frames in the streetlight texture. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{struct_street_light_ad983e114345020fa4b4ad9e3dd8124d0}{frame\+Width}} = 9
+\begin{DoxyCompactList}\small\item\em Width of each individual frame in the streetlight texture. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{struct_street_light_ad3aa9a4d071143a2c230e041ccdbaec1}{frame\+Height}} = 16
+\begin{DoxyCompactList}\small\item\em Height of each individual frame in the streetlight texture. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a streetlight with dynamic lighting frames based on the time of day. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{struct_street_light_a59f98341df1fe4200b7b828366ad46a7}\index{StreetLight@{StreetLight}!StreetLight@{StreetLight}}
+\index{StreetLight@{StreetLight}!StreetLight@{StreetLight}}
+\doxysubsubsection{\texorpdfstring{StreetLight()}{StreetLight()}}
+{\footnotesize\ttfamily \label{struct_street_light_a59f98341df1fe4200b7b828366ad46a7} 
+Street\+Light\+::\+Street\+Light (\begin{DoxyParamCaption}\item[{const sf\+::\+Texture \&}]{texture}{, }\item[{sf\+::\+Vector2f}]{position}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructs a \doxylink{struct_street_light}{Street\+Light} object. 
+
+Initializes the streetlight sprite with the specified texture and position. Centers the sprite based on its frame dimensions.
+
+
+\begin{DoxyParams}{Parameters}
+{\em texture} & The texture containing the streetlight frames. \\
+\hline
+{\em position} & The position to place the streetlight on the screen. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{struct_street_light_a723d68aeccd212e9073b9a71dc344473}\index{StreetLight@{StreetLight}!draw@{draw}}
+\index{draw@{draw}!StreetLight@{StreetLight}}
+\doxysubsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily \label{struct_street_light_a723d68aeccd212e9073b9a71dc344473} 
+void Street\+Light\+::draw (\begin{DoxyParamCaption}\item[{sf\+::\+Render\+Window \&}]{window}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Renders the streetlight sprite onto the specified window. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em window} & The render window where the streetlight will be drawn. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{struct_street_light_a0eaa3d6ed5c232d6cb1fd66fcf7dda59}\index{StreetLight@{StreetLight}!update@{update}}
+\index{update@{update}!StreetLight@{StreetLight}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily \label{struct_street_light_a0eaa3d6ed5c232d6cb1fd66fcf7dda59} 
+void Street\+Light\+::update (\begin{DoxyParamCaption}\item[{int}]{time\+In\+Hour}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Updates the lighting frame of the streetlight based on the time of day. 
+
+Determines the appropriate frame index to represent the brightness of the streetlight.
+
+
+\begin{DoxyParams}{Parameters}
+{\em time\+In\+Hour} & The current hour (0-\/23) of the day. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{struct_street_light_afc21b23847ed7519fc8111d64ff3e216}\index{StreetLight@{StreetLight}!frameCount@{frameCount}}
+\index{frameCount@{frameCount}!StreetLight@{StreetLight}}
+\doxysubsubsection{\texorpdfstring{frameCount}{frameCount}}
+{\footnotesize\ttfamily \label{struct_street_light_afc21b23847ed7519fc8111d64ff3e216} 
+int Street\+Light\+::frame\+Count = 6}
+
+
+
+Total number of frames in the streetlight texture. 
+
+\Hypertarget{struct_street_light_ad3aa9a4d071143a2c230e041ccdbaec1}\index{StreetLight@{StreetLight}!frameHeight@{frameHeight}}
+\index{frameHeight@{frameHeight}!StreetLight@{StreetLight}}
+\doxysubsubsection{\texorpdfstring{frameHeight}{frameHeight}}
+{\footnotesize\ttfamily \label{struct_street_light_ad3aa9a4d071143a2c230e041ccdbaec1} 
+int Street\+Light\+::frame\+Height = 16}
+
+
+
+Height of each individual frame in the streetlight texture. 
+
+\Hypertarget{struct_street_light_ad983e114345020fa4b4ad9e3dd8124d0}\index{StreetLight@{StreetLight}!frameWidth@{frameWidth}}
+\index{frameWidth@{frameWidth}!StreetLight@{StreetLight}}
+\doxysubsubsection{\texorpdfstring{frameWidth}{frameWidth}}
+{\footnotesize\ttfamily \label{struct_street_light_ad983e114345020fa4b4ad9e3dd8124d0} 
+int Street\+Light\+::frame\+Width = 9}
+
+
+
+Width of each individual frame in the streetlight texture. 
+
+\Hypertarget{struct_street_light_a68c5bb12bf182480d6710be29da29a57}\index{StreetLight@{StreetLight}!sprite@{sprite}}
+\index{sprite@{sprite}!StreetLight@{StreetLight}}
+\doxysubsubsection{\texorpdfstring{sprite}{sprite}}
+{\footnotesize\ttfamily \label{struct_street_light_a68c5bb12bf182480d6710be29da29a57} 
+sf\+::\+Sprite Street\+Light\+::sprite}
+
+
+
+Sprite object representing the streetlight. 
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\mbox{\hyperlink{main_8cpp}{main.\+cpp}}\end{DoxyCompactItemize}

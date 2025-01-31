@@ -1,0 +1,124 @@
+\doxysection{src/coordinate.h File Reference}
+\hypertarget{coordinate_8h}{}\label{coordinate_8h}\index{src/coordinate.h@{src/coordinate.h}}
+{\ttfamily \#include $<$cmath$>$}\newline
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_coordinate}{Coordinate}}
+\begin{DoxyCompactList}\small\item\em Represents a 2D coordinate with x and y values. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{coordinate_8h_a838d40d68570f04bcd2847af0061f66b}{operator==}} (const \mbox{\hyperlink{struct_coordinate}{Coordinate}} \&lhs, const \mbox{\hyperlink{struct_coordinate}{Coordinate}} \&rhs)
+\begin{DoxyCompactList}\small\item\em Compares two Coordinates for equality. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{coordinate_8h_a818c5c7ac59519789e7e0f8574930a77}{operator!=}} (const \mbox{\hyperlink{struct_coordinate}{Coordinate}} \&lhs, const \mbox{\hyperlink{struct_coordinate}{Coordinate}} \&rhs)
+\begin{DoxyCompactList}\small\item\em Compares two Coordinates for inequality. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{coordinate_8h_a35e82963807300a704594db9a60b6330}{operator$>$}} (const \mbox{\hyperlink{struct_coordinate}{Coordinate}} \&lhs, const \mbox{\hyperlink{struct_coordinate}{Coordinate}} \&rhs)
+\begin{DoxyCompactList}\small\item\em Compares two Coordinates to check if the left-\/hand side is greater. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{coordinate_8h_a4e9c5c3b5aaf36eee4ef4a6a1b7bba0a}{operator$<$}} (const \mbox{\hyperlink{struct_coordinate}{Coordinate}} \&lhs, const \mbox{\hyperlink{struct_coordinate}{Coordinate}} \&rhs)
+\begin{DoxyCompactList}\small\item\em Compares two Coordinates to check if the left-\/hand side is smaller. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_coordinate}{Coordinate}} \mbox{\hyperlink{coordinate_8h_a50456bb7073e03781d51ca756e1c4444}{operator\texorpdfstring{$\ast$}{*}}} (const \mbox{\hyperlink{struct_coordinate}{Coordinate}} \&lhs, const int rhs)
+\begin{DoxyCompactList}\small\item\em Multiplies a {\ttfamily \doxylink{struct_coordinate}{Coordinate}} by an integer scalar. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{coordinate_8h_a818c5c7ac59519789e7e0f8574930a77}\index{coordinate.h@{coordinate.h}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!coordinate.h@{coordinate.h}}
+\doxysubsubsection{\texorpdfstring{operator"!=()}{operator!=()}}
+{\footnotesize\ttfamily \label{coordinate_8h_a818c5c7ac59519789e7e0f8574930a77} 
+bool \mbox{\hyperlink{direction__enum_8h_a6b5d85200a3ae7c0b100d3c9d0f8e782}{operator!}}= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_coordinate}{Coordinate}} \&}]{lhs}{, }\item[{const \mbox{\hyperlink{struct_coordinate}{Coordinate}} \&}]{rhs}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Compares two Coordinates for inequality. 
+
+This operator compares two {\ttfamily \doxylink{struct_coordinate}{Coordinate}} objects and returns true if they are not equal. 
+\begin{DoxyParams}{Parameters}
+{\em lhs} & The left-\/hand side {\ttfamily \doxylink{struct_coordinate}{Coordinate}}. \\
+\hline
+{\em rhs} & The right-\/hand side {\ttfamily \doxylink{struct_coordinate}{Coordinate}}. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the coordinates are not equal, false otherwise. 
+\end{DoxyReturn}
+\Hypertarget{coordinate_8h_a50456bb7073e03781d51ca756e1c4444}\index{coordinate.h@{coordinate.h}!operator\texorpdfstring{$\ast$}{*}@{operator\texorpdfstring{$\ast$}{*}}}
+\index{operator\texorpdfstring{$\ast$}{*}@{operator\texorpdfstring{$\ast$}{*}}!coordinate.h@{coordinate.h}}
+\doxysubsubsection{\texorpdfstring{operator\texorpdfstring{$\ast$}{*}()}{operator*()}}
+{\footnotesize\ttfamily \label{coordinate_8h_a50456bb7073e03781d51ca756e1c4444} 
+\mbox{\hyperlink{struct_coordinate}{Coordinate}} operator\texorpdfstring{$\ast$}{*} (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_coordinate}{Coordinate}} \&}]{lhs}{, }\item[{const int}]{rhs}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Multiplies a {\ttfamily \doxylink{struct_coordinate}{Coordinate}} by an integer scalar. 
+
+This operator multiplies both the x and y components of the {\ttfamily \doxylink{struct_coordinate}{Coordinate}} by the given integer value. 
+\begin{DoxyParams}{Parameters}
+{\em lhs} & The {\ttfamily \doxylink{struct_coordinate}{Coordinate}} to be multiplied. \\
+\hline
+{\em rhs} & The integer scalar by which the coordinate is multiplied. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A new {\ttfamily \doxylink{struct_coordinate}{Coordinate}} with the x and y components multiplied by {\ttfamily rhs}. 
+\end{DoxyReturn}
+\Hypertarget{coordinate_8h_a4e9c5c3b5aaf36eee4ef4a6a1b7bba0a}\index{coordinate.h@{coordinate.h}!operator$<$@{operator$<$}}
+\index{operator$<$@{operator$<$}!coordinate.h@{coordinate.h}}
+\doxysubsubsection{\texorpdfstring{operator$<$()}{operator<()}}
+{\footnotesize\ttfamily \label{coordinate_8h_a4e9c5c3b5aaf36eee4ef4a6a1b7bba0a} 
+bool operator$<$ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_coordinate}{Coordinate}} \&}]{lhs}{, }\item[{const \mbox{\hyperlink{struct_coordinate}{Coordinate}} \&}]{rhs}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Compares two Coordinates to check if the left-\/hand side is smaller. 
+
+This operator checks if both the x and y values of the left-\/hand side {\ttfamily \doxylink{struct_coordinate}{Coordinate}} are smaller than the corresponding values in the right-\/hand side {\ttfamily \doxylink{struct_coordinate}{Coordinate}}. 
+\begin{DoxyParams}{Parameters}
+{\em lhs} & The left-\/hand side {\ttfamily \doxylink{struct_coordinate}{Coordinate}}. \\
+\hline
+{\em rhs} & The right-\/hand side {\ttfamily \doxylink{struct_coordinate}{Coordinate}}. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if both x and y of {\ttfamily lhs} are smaller than those of {\ttfamily rhs}. 
+\end{DoxyReturn}
+\Hypertarget{coordinate_8h_a838d40d68570f04bcd2847af0061f66b}\index{coordinate.h@{coordinate.h}!operator==@{operator==}}
+\index{operator==@{operator==}!coordinate.h@{coordinate.h}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily \label{coordinate_8h_a838d40d68570f04bcd2847af0061f66b} 
+bool operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_coordinate}{Coordinate}} \&}]{lhs}{, }\item[{const \mbox{\hyperlink{struct_coordinate}{Coordinate}} \&}]{rhs}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Compares two Coordinates for equality. 
+
+This operator compares two {\ttfamily \doxylink{struct_coordinate}{Coordinate}} objects to check if they are equal by calculating the Euclidean distance and checking if it is below a threshold of 0.\+08. 
+\begin{DoxyParams}{Parameters}
+{\em lhs} & The left-\/hand side {\ttfamily \doxylink{struct_coordinate}{Coordinate}}. \\
+\hline
+{\em rhs} & The right-\/hand side {\ttfamily \doxylink{struct_coordinate}{Coordinate}}. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the coordinates are equal, false otherwise. 
+\end{DoxyReturn}
+\Hypertarget{coordinate_8h_a35e82963807300a704594db9a60b6330}\index{coordinate.h@{coordinate.h}!operator$>$@{operator$>$}}
+\index{operator$>$@{operator$>$}!coordinate.h@{coordinate.h}}
+\doxysubsubsection{\texorpdfstring{operator$>$()}{operator>()}}
+{\footnotesize\ttfamily \label{coordinate_8h_a35e82963807300a704594db9a60b6330} 
+bool operator$>$ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_coordinate}{Coordinate}} \&}]{lhs}{, }\item[{const \mbox{\hyperlink{struct_coordinate}{Coordinate}} \&}]{rhs}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Compares two Coordinates to check if the left-\/hand side is greater. 
+
+This operator checks if both the x and y values of the left-\/hand side {\ttfamily \doxylink{struct_coordinate}{Coordinate}} are greater than the corresponding values in the right-\/hand side {\ttfamily \doxylink{struct_coordinate}{Coordinate}}. 
+\begin{DoxyParams}{Parameters}
+{\em lhs} & The left-\/hand side {\ttfamily \doxylink{struct_coordinate}{Coordinate}}. \\
+\hline
+{\em rhs} & The right-\/hand side {\ttfamily \doxylink{struct_coordinate}{Coordinate}}. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if both x and y of {\ttfamily lhs} are greater than those of {\ttfamily rhs}. 
+\end{DoxyReturn}

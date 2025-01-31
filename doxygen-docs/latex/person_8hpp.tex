@@ -1,0 +1,91 @@
+\doxysection{src/person.hpp File Reference}
+\hypertarget{person_8hpp}{}\label{person_8hpp}\index{src/person.hpp@{src/person.hpp}}
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$random$>$}\newline
+{\ttfamily \#include "{}../libs/nlohmann/json.\+hpp"{}}\newline
+{\ttfamily \#include "{}building.\+hpp"{}}\newline
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_person}{Person}}
+\begin{DoxyCompactList}\small\item\em Represents a person in the simulation. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{person_8hpp_a8bb1ef53467e4f61410d12822d922498}{Action}} \{ \mbox{\hyperlink{person_8hpp_a8bb1ef53467e4f61410d12822d922498aa71a10a6bbe3f581d9a2e6f551ec1ef4}{Work}}
+, \mbox{\hyperlink{person_8hpp_a8bb1ef53467e4f61410d12822d922498a7f333a8f14b5817b34708afb007c91b8}{Play}}
+, \mbox{\hyperlink{person_8hpp_a8bb1ef53467e4f61410d12822d922498a8feb334f9ed9ddb8dbc69cfa4fd6b614}{Home}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{person_8hpp_a8eef4b021c9f2f2452b192e2bf808dec}{write\+Person}} (const std\+::string \&filename, const std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_person}{Person}} $>$ $>$ people)
+\begin{DoxyCompactList}\small\item\em Writes a vector of \doxylink{class_person}{Person} objects to a JSON file. \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_person}{Person}} $>$ $>$ \mbox{\hyperlink{person_8hpp_ac33d0faeb5a93c7669723a1e68397d11}{read\+Person}} (const std\+::string \&filename, std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_building}{Building}} $>$ $>$ buildings)
+\begin{DoxyCompactList}\small\item\em Reads a vector of \doxylink{class_person}{Person} objects from a JSON file. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Enumeration Type Documentation}
+\Hypertarget{person_8hpp_a8bb1ef53467e4f61410d12822d922498}\index{person.hpp@{person.hpp}!Action@{Action}}
+\index{Action@{Action}!person.hpp@{person.hpp}}
+\doxysubsubsection{\texorpdfstring{Action}{Action}}
+{\footnotesize\ttfamily \label{person_8hpp_a8bb1ef53467e4f61410d12822d922498} 
+enum \mbox{\hyperlink{person_8hpp_a8bb1ef53467e4f61410d12822d922498}{Action}}}
+
+\begin{DoxyEnumFields}[2]{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Work@{Work}!person.hpp@{person.hpp}}\index{person.hpp@{person.hpp}!Work@{Work}}}\Hypertarget{person_8hpp_a8bb1ef53467e4f61410d12822d922498aa71a10a6bbe3f581d9a2e6f551ec1ef4}\label{person_8hpp_a8bb1ef53467e4f61410d12822d922498} 
+Work&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Play@{Play}!person.hpp@{person.hpp}}\index{person.hpp@{person.hpp}!Play@{Play}}}\Hypertarget{person_8hpp_a8bb1ef53467e4f61410d12822d922498a7f333a8f14b5817b34708afb007c91b8}\label{person_8hpp_a8bb1ef53467e4f61410d12822d922498} 
+Play&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Home@{Home}!person.hpp@{person.hpp}}\index{person.hpp@{person.hpp}!Home@{Home}}}\Hypertarget{person_8hpp_a8bb1ef53467e4f61410d12822d922498a8feb334f9ed9ddb8dbc69cfa4fd6b614}\label{person_8hpp_a8bb1ef53467e4f61410d12822d922498} 
+Home&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{person_8hpp_ac33d0faeb5a93c7669723a1e68397d11}\index{person.hpp@{person.hpp}!readPerson@{readPerson}}
+\index{readPerson@{readPerson}!person.hpp@{person.hpp}}
+\doxysubsubsection{\texorpdfstring{readPerson()}{readPerson()}}
+{\footnotesize\ttfamily \label{person_8hpp_ac33d0faeb5a93c7669723a1e68397d11} 
+std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_person}{Person}} $>$ $>$ read\+Person (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{filename}{, }\item[{std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_building}{Building}} $>$ $>$}]{buildings}{}\end{DoxyParamCaption})}
+
+
+
+Reads a vector of \doxylink{class_person}{Person} objects from a JSON file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & The filename to read from. \\
+\hline
+{\em buildings} & A vector of shared pointers to buildings. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A vector of shared pointers to \doxylink{class_person}{Person} objects. 
+\end{DoxyReturn}
+\Hypertarget{person_8hpp_a8eef4b021c9f2f2452b192e2bf808dec}\index{person.hpp@{person.hpp}!writePerson@{writePerson}}
+\index{writePerson@{writePerson}!person.hpp@{person.hpp}}
+\doxysubsubsection{\texorpdfstring{writePerson()}{writePerson()}}
+{\footnotesize\ttfamily \label{person_8hpp_a8eef4b021c9f2f2452b192e2bf808dec} 
+void write\+Person (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{filename}{, }\item[{const std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_person}{Person}} $>$ $>$}]{people}{}\end{DoxyParamCaption})}
+
+
+
+Writes a vector of \doxylink{class_person}{Person} objects to a JSON file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & The filename to write to. \\
+\hline
+{\em people} & A vector of shared pointers to \doxylink{class_person}{Person} objects. \\
+\hline
+\end{DoxyParams}

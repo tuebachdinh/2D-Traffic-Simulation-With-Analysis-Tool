@@ -1,0 +1,42 @@
+\doxysection{building.\+hpp}
+\hypertarget{building_8hpp_source}{}\label{building_8hpp_source}\index{src/building.hpp@{src/building.hpp}}
+\mbox{\hyperlink{building_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ BUILDING\_HPP}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ BUILDING\_HPP}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}../libs/nlohmann/json.hpp"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{road_8hpp}{road.hpp}}"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{entity_8hpp}{entity.hpp}}"{}}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_building}{Building}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_entity}{Entity}}\ \{}
+\DoxyCodeLine{00009\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00010\ \ \ \ \ \mbox{\hyperlink{class_building_ab570ec0a203ee621f9f522c678a147d9}{Building}}(\textcolor{keywordtype}{int}\ \textcolor{keywordtype}{id},\ \mbox{\hyperlink{struct_coordinate}{Coordinate}}\ coordinate\ ,\ \textcolor{keywordtype}{int}\ capacity\ =\ -\/1,\ \textcolor{keywordtype}{char}\ type\ =\ \textcolor{charliteral}{'N'});}
+\DoxyCodeLine{00011\ \ \ \ \ \mbox{\hyperlink{class_building_ab570ec0a203ee621f9f522c678a147d9}{Building}}();}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_building_a4cba9476f01375994ac9200b02fac80c}{getCapacity}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{class_building_aa131e7bc2ab4346289028132ed063ba1}{getType}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_building_a7aff05d2f33a7d0ef9d3b76a1c0f101a}{getNofResidents}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keyword}{const}\ std::shared\_ptr<Road>\ \mbox{\hyperlink{class_building_ad8929096757f86f33e018a4bba86b684}{getAdjacentRoad}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_building_a06bc560971ae8c2f054e3cc77e28c7e4}{setAdjacentRoad}}(std::shared\_ptr<Road>\ road);}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{struct_coordinate}{Coordinate}}\ \mbox{\hyperlink{class_building_a54c33e96371aade9e8bee5e2091f5084}{getAdjacentCell}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_building_ac11ce5f421114de87eaa9ba78ab75c38}{setAdjacentCell}}(\mbox{\hyperlink{struct_coordinate}{Coordinate}}\ coordinate);}
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_building_a2ae8b5a1674fded6437d4163310cd8f2}{setNofResidents}}(\textcolor{keywordtype}{int}\ nofResidents);}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keyword}{friend}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_building_a11cce90c7a22009552dc21cc8d2588b5}{to\_json}}(nlohmann::json\ \&j,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_building}{Building}}\ \&b);}
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keyword}{friend}\ std::shared\_ptr<Building>\ \mbox{\hyperlink{class_building_af9c540719190fffce8a7c3c76a8e64c3}{from\_json}}(\textcolor{keyword}{const}\ nlohmann::json\ \&j,\ \textcolor{keywordtype}{int}\ i);}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ private\ :}
+\DoxyCodeLine{00026\ \ \ \ \ std::shared\_ptr<Road>\ \mbox{\hyperlink{class_building_ae03bf1c6cec7033aa51e772416f9c8d3}{adjacentRoad\_}};}
+\DoxyCodeLine{00027\ \ \ \ \ \mbox{\hyperlink{struct_coordinate}{Coordinate}}\ \mbox{\hyperlink{class_building_a6fc7c1d4a4ae1af55331724d83868a09}{adjacentCell\_}};}
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_building_a1eeafe8c9b9988a54124f5c84acedfae}{capacity\_}};}
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{class_building_a25121fd1e8bc4140efaa448e9f724487}{type\_}};}
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_building_a8fba017b8ce21bb2822e301ba14f7f05}{nofResidents\_}};}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \};}
+\DoxyCodeLine{00033\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{building_8hpp_aa37df07b3bf0c8038b330ef28980344d}{writeBuilding}}(\textcolor{keyword}{const}\ std::string\ \&filename,\ std::vector<std::shared\_ptr<Building>>\ b);}
+\DoxyCodeLine{00034\ std::vector<std::shared\_ptr<Building>>\ \mbox{\hyperlink{building_8hpp_ac46dbdc9fcaf26a75b14ecb9c48b30eb}{readBuilding}}(\textcolor{keyword}{const}\ std::string\ \&filename);}
+\DoxyCodeLine{00035\ \textcolor{preprocessor}{\#endif\ }}
+\DoxyCodeLine{00036\ }
+
+\end{DoxyCode}

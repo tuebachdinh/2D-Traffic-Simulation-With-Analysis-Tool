@@ -1,0 +1,218 @@
+[
+    {
+        "capacity": 1000,
+        "coordinate": {
+            "x": 5.0,
+            "y": 5.0
+        },
+        "id": 0,
+        "type": 67
+    },
+    {
+        "capacity": 1000,
+        "coordinate": {
+            "x": 7.0,
+            "y": 5.0
+        },
+        "id": 1,
+        "type": 67
+    },
+    {
+        "capacity": 1000,
+        "coordinate": {
+            "x": 7.0,
+            "y": 13.0
+        },
+        "id": 2,
+        "type": 70
+    },
+    {
+        "capacity": 1000,
+        "coordinate": {
+            "x": 5.0,
+            "y": 15.0
+        },
+        "id": 3,
+        "type": 70
+    },
+    {
+        "capacity": 1000,
+        "coordinate": {
+            "x": 6.0,
+            "y": 18.0
+        },
+        "id": 4,
+        "type": 70
+    },
+    {
+        "capacity": 1000,
+        "coordinate": {
+            "x": 13.0,
+            "y": 6.0
+        },
+        "id": 5,
+        "type": 77
+    },
+    {
+        "capacity": 1000,
+        "coordinate": {
+            "x": 15.0,
+            "y": 8.0
+        },
+        "id": 6,
+        "type": 71
+    },
+    {
+        "capacity": 1000,
+        "coordinate": {
+            "x": 21.0,
+            "y": 5.0
+        },
+        "id": 7,
+        "type": 72
+    },
+    {
+        "capacity": 1000,
+        "coordinate": {
+            "x": 23.0,
+            "y": 8.0
+        },
+        "id": 8,
+        "type": 72
+    },
+    {
+        "capacity": 1000,
+        "coordinate": {
+            "x": 25.0,
+            "y": 5.0
+        },
+        "id": 9,
+        "type": 72
+    },
+    {
+        "capacity": 1000,
+        "coordinate": {
+            "x": 27.0,
+            "y": 8.0
+        },
+        "id": 10,
+        "type": 72
+    },
+    {
+        "capacity": 1000,
+        "coordinate": {
+            "x": 21.0,
+            "y": 10.0
+        },
+        "id": 11,
+        "type": 72
+    },
+    {
+        "capacity": 1000,
+        "coordinate": {
+            "x": 23.0,
+            "y": 13.0
+        },
+        "id": 12,
+        "type": 72
+    },
+    {
+        "capacity": 1000,
+        "coordinate": {
+            "x": 25.0,
+            "y": 10.0
+        },
+        "id": 13,
+        "type": 72
+    },
+    {
+        "capacity": 1000,
+        "coordinate": {
+            "x": 27.0,
+            "y": 13.0
+        },
+        "id": 14,
+        "type": 72
+    },
+    {
+        "capacity": 1000,
+        "coordinate": {
+            "x": 21.0,
+            "y": 15.0
+        },
+        "id": 15,
+        "type": 72
+    },
+    {
+        "capacity": 1000,
+        "coordinate": {
+            "x": 23.0,
+            "y": 18.0
+        },
+        "id": 16,
+        "type": 72
+    },
+    {
+        "capacity": 1000,
+        "coordinate": {
+            "x": 25.0,
+            "y": 15.0
+        },
+        "id": 17,
+        "type": 72
+    },
+    {
+        "capacity": 1000,
+        "coordinate": {
+            "x": 27.0,
+            "y": 18.0
+        },
+        "id": 18,
+        "type": 72
+    },
+    {
+        "capacity": 100,
+        "coordinate": {
+            "x": 4.0,
+            "y": 10.0
+        },
+        "id": 19,
+        "type": 66
+    },
+    {
+        "capacity": 100,
+        "coordinate": {
+            "x": 13.0,
+            "y": 3.0
+        },
+        "id": 20,
+        "type": 66
+    },
+    {
+        "capacity": 100,
+        "coordinate": {
+            "x": 19.0,
+            "y": 6.0
+        },
+        "id": 21,
+        "type": 66
+    },
+    {
+        "capacity": 100,
+        "coordinate": {
+            "x": 29.0,
+            "y": 11.0
+        },
+        "id": 22,
+        "type": 66
+    },
+    {
+        "capacity": 100,
+        "coordinate": {
+            "x": 15.0,
+            "y": 20.0
+        },
+        "id": 23,
+        "type": 66
+    }
+]

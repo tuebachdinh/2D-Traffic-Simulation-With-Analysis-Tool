@@ -1,0 +1,344 @@
+\doxysection{Person Class Reference}
+\hypertarget{class_person}{}\label{class_person}\index{Person@{Person}}
+
+
+Represents a person in the simulation.  
+
+
+
+
+{\ttfamily \#include $<$person.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_person_a2b9b034f052b0509d946e0a3e4e907d9}{Person}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_building}{Building}} $>$ home, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_building}{Building}} $>$ work, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_building}{Building}} $>$ fav\+Building)
+\begin{DoxyCompactList}\small\item\em Constructs a \doxylink{class_person}{Person} object with home, work, and favorite building information. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_person_a03cabfe90ef1c449f5fe89cc3c870763}{is\+Driving}} () const
+\begin{DoxyCompactList}\small\item\em Checks if the person is currently driving. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_person_a8580423a56fa41306c7cfbef5a30e064}{set\+Driving}} (bool driving)
+\begin{DoxyCompactList}\small\item\em Sets whether the person is driving. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{person_8hpp_a8bb1ef53467e4f61410d12822d922498}{Action}} \mbox{\hyperlink{class_person_a3c5b951363ad0632ac72acf3b310862b}{get\+Current\+Action}} () const
+\begin{DoxyCompactList}\small\item\em Gets the current action of the person. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_person_ae49455a0a0e93da11567f35b44ada167}{action}} ()
+\begin{DoxyCompactList}\small\item\em Decides and performs the person\textquotesingle{}s action based on the current time. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_person_a5422c3b3c20cb2b4c3be8a022953d396}{decide\+Daily\+Schedule}} ()
+\begin{DoxyCompactList}\small\item\em Decides the daily schedule for the person based on random distributions. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_person_a37dbad71d091edf2e02530f370c00a57}{drive}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_building}{Building}} $>$ dest)
+\begin{DoxyCompactList}\small\item\em Simulates the driving of the person to a specified destination. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_person_add6a407252eb43ea5570ceee7c20635d}{perform\+Action}} ()
+\begin{DoxyCompactList}\small\item\em Performs the action based on the current action state (Work, Home, Play). \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_car}{Car}} $>$ \mbox{\hyperlink{class_person_ac46f704641f8b9f746cf1fd3cac7ddb1}{get\+Car}} ()
+\begin{DoxyCompactList}\small\item\em Gets the car associated with the person. \end{DoxyCompactList}\item 
+std\+::vector$<$ int $>$ \mbox{\hyperlink{class_person_a80ccdfb927fa56eb05d06dcbfd4efe57}{get\+Schedule}} ()
+\begin{DoxyCompactList}\small\item\em Gets the daily schedule of the person. \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_building}{Building}} $>$ \mbox{\hyperlink{class_person_a7bf4fb0b5979e83fd2720d6e753f52ea}{get\+Current\+Building}} ()
+\begin{DoxyCompactList}\small\item\em Gets the current building the person is located in. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_building}{Building}} $>$ \mbox{\hyperlink{class_person_afdd776c87a07a85c5121e57f5e34c1ec}{home\+\_\+}}
+\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_building}{Building}} $>$ \mbox{\hyperlink{class_person_ade3ffd7374bbe2d01fce0816a4f84346}{work\+\_\+}}
+\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_building}{Building}} $>$ \mbox{\hyperlink{class_person_a004918b15da91d39db5ffd2da2df7342}{fav\+Building\+\_\+}}
+\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_building}{Building}} $>$ \mbox{\hyperlink{class_person_a05ab9827b660f0472cdbd02ce0907d1f}{current\+Building\+\_\+}}
+\item 
+bool \mbox{\hyperlink{class_person_abdffbfa3a40366a0852237a8f030c615}{arrived\+\_\+}} = false
+\item 
+bool \mbox{\hyperlink{class_person_acdce7e3dc2d270f72a863182af78a3cc}{driving\+\_\+}}
+\item 
+\mbox{\hyperlink{person_8hpp_a8bb1ef53467e4f61410d12822d922498}{Action}} \mbox{\hyperlink{class_person_a6fc34027a5f3437adc7cd10a7b2b23a4}{current\+Action\+\_\+}}
+\item 
+int \mbox{\hyperlink{class_person_ab5203e6f02b45d7d301a601658d71ef7}{minute\+Remainder\+\_\+}}
+\item 
+int \mbox{\hyperlink{class_person_aa109d364068bbe6d813f184f832d59e2}{go\+To\+Work\+Time\+\_\+}}
+\item 
+int \mbox{\hyperlink{class_person_a3a165634934f95643d85d47bc57ba054}{home\+From\+Work\+Time\+\_\+}}
+\item 
+int \mbox{\hyperlink{class_person_af49549dd2940da225967fe215dd5cb11}{play\+Time\+\_\+}}
+\item 
+int \mbox{\hyperlink{class_person_a5e94cf32e6315810c76f1cf3d6a2a203}{home\+From\+Play\+Time\+\_\+}}
+\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_car}{Car}} $>$ \mbox{\hyperlink{class_person_a084086027243dc350fc74a96bee5165e}{car\+\_\+}} = nullptr
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_person_ad63bfb6400bede0b8f04853093293906}{to\+\_\+json}} (nlohmann\+::json \&j, const \mbox{\hyperlink{class_person}{Person}} \&person)
+\begin{DoxyCompactList}\small\item\em Serializes a \doxylink{class_person}{Person} object to JSON. \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_person}{Person}} $>$ \mbox{\hyperlink{class_person_acbca3fbd74b1131ee1acec340358da31}{from\+\_\+json}} (const nlohmann\+::json \&j, \mbox{\hyperlink{class_person}{Person}} \&person, std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_building}{Building}} $>$ $>$ buildings)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a person in the simulation. 
+
+The {\ttfamily \doxylink{class_person}{Person}} class simulates a person\textquotesingle{}s daily routine, including their activities such as going to work, going home, and going to their favorite building (e.\+g., a recreational spot). The class handles scheduling these activities based on random distributions for timings, and simulates the movement between buildings. It manages the person\textquotesingle{}s transportation, which involves driving a car to different destinations.
+
+Attributes include the person\textquotesingle{}s home, work, and favorite building, as well as the current action and state (e.\+g., driving or not). The class updates the person\textquotesingle{}s current action depending on the time of day and performs the corresponding action (e.\+g., going to work, returning home). 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_person_a2b9b034f052b0509d946e0a3e4e907d9}\index{Person@{Person}!Person@{Person}}
+\index{Person@{Person}!Person@{Person}}
+\doxysubsubsection{\texorpdfstring{Person()}{Person()}}
+{\footnotesize\ttfamily \label{class_person_a2b9b034f052b0509d946e0a3e4e907d9} 
+Person\+::\+Person (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_building}{Building}} $>$}]{home}{, }\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_building}{Building}} $>$}]{work}{, }\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_building}{Building}} $>$}]{fav\+Building}{}\end{DoxyParamCaption})}
+
+
+
+Constructs a \doxylink{class_person}{Person} object with home, work, and favorite building information. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em home} & A shared pointer to the home building. \\
+\hline
+{\em work} & A shared pointer to the work building. \\
+\hline
+{\em fav\+Building} & A shared pointer to the favorite building. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_person_ae49455a0a0e93da11567f35b44ada167}\index{Person@{Person}!action@{action}}
+\index{action@{action}!Person@{Person}}
+\doxysubsubsection{\texorpdfstring{action()}{action()}}
+{\footnotesize\ttfamily \label{class_person_ae49455a0a0e93da11567f35b44ada167} 
+void Person\+::action (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Decides and performs the person\textquotesingle{}s action based on the current time. 
+
+\Hypertarget{class_person_a5422c3b3c20cb2b4c3be8a022953d396}\index{Person@{Person}!decideDailySchedule@{decideDailySchedule}}
+\index{decideDailySchedule@{decideDailySchedule}!Person@{Person}}
+\doxysubsubsection{\texorpdfstring{decideDailySchedule()}{decideDailySchedule()}}
+{\footnotesize\ttfamily \label{class_person_a5422c3b3c20cb2b4c3be8a022953d396} 
+void Person\+::decide\+Daily\+Schedule (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Decides the daily schedule for the person based on random distributions. 
+
+\Hypertarget{class_person_a37dbad71d091edf2e02530f370c00a57}\index{Person@{Person}!drive@{drive}}
+\index{drive@{drive}!Person@{Person}}
+\doxysubsubsection{\texorpdfstring{drive()}{drive()}}
+{\footnotesize\ttfamily \label{class_person_a37dbad71d091edf2e02530f370c00a57} 
+void Person\+::drive (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_building}{Building}} $>$}]{dest}{}\end{DoxyParamCaption})}
+
+
+
+Simulates the driving of the person to a specified destination. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dest} & A shared pointer to the destination building. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_person_ac46f704641f8b9f746cf1fd3cac7ddb1}\index{Person@{Person}!getCar@{getCar}}
+\index{getCar@{getCar}!Person@{Person}}
+\doxysubsubsection{\texorpdfstring{getCar()}{getCar()}}
+{\footnotesize\ttfamily \label{class_person_ac46f704641f8b9f746cf1fd3cac7ddb1} 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_car}{Car}} $>$ Person\+::get\+Car (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Gets the car associated with the person. 
+
+\begin{DoxyReturn}{Returns}
+A shared pointer to the car. 
+\end{DoxyReturn}
+\Hypertarget{class_person_a3c5b951363ad0632ac72acf3b310862b}\index{Person@{Person}!getCurrentAction@{getCurrentAction}}
+\index{getCurrentAction@{getCurrentAction}!Person@{Person}}
+\doxysubsubsection{\texorpdfstring{getCurrentAction()}{getCurrentAction()}}
+{\footnotesize\ttfamily \label{class_person_a3c5b951363ad0632ac72acf3b310862b} 
+\mbox{\hyperlink{person_8hpp_a8bb1ef53467e4f61410d12822d922498}{Action}} Person\+::get\+Current\+Action (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Gets the current action of the person. 
+
+\begin{DoxyReturn}{Returns}
+The current action (Work, Home, Play). 
+\end{DoxyReturn}
+\Hypertarget{class_person_a7bf4fb0b5979e83fd2720d6e753f52ea}\index{Person@{Person}!getCurrentBuilding@{getCurrentBuilding}}
+\index{getCurrentBuilding@{getCurrentBuilding}!Person@{Person}}
+\doxysubsubsection{\texorpdfstring{getCurrentBuilding()}{getCurrentBuilding()}}
+{\footnotesize\ttfamily \label{class_person_a7bf4fb0b5979e83fd2720d6e753f52ea} 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_building}{Building}} $>$ Person\+::get\+Current\+Building (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Gets the current building the person is located in. 
+
+\begin{DoxyReturn}{Returns}
+A shared pointer to the current building. 
+\end{DoxyReturn}
+\Hypertarget{class_person_a80ccdfb927fa56eb05d06dcbfd4efe57}\index{Person@{Person}!getSchedule@{getSchedule}}
+\index{getSchedule@{getSchedule}!Person@{Person}}
+\doxysubsubsection{\texorpdfstring{getSchedule()}{getSchedule()}}
+{\footnotesize\ttfamily \label{class_person_a80ccdfb927fa56eb05d06dcbfd4efe57} 
+std\+::vector$<$ int $>$ Person\+::get\+Schedule (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Gets the daily schedule of the person. 
+
+\begin{DoxyReturn}{Returns}
+A vector containing the times for work, home, and play activities. 
+\end{DoxyReturn}
+\Hypertarget{class_person_a03cabfe90ef1c449f5fe89cc3c870763}\index{Person@{Person}!isDriving@{isDriving}}
+\index{isDriving@{isDriving}!Person@{Person}}
+\doxysubsubsection{\texorpdfstring{isDriving()}{isDriving()}}
+{\footnotesize\ttfamily \label{class_person_a03cabfe90ef1c449f5fe89cc3c870763} 
+bool Person\+::is\+Driving (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Checks if the person is currently driving. 
+
+\begin{DoxyReturn}{Returns}
+true If the person is driving. 
+
+false If the person is not driving. 
+\end{DoxyReturn}
+\Hypertarget{class_person_add6a407252eb43ea5570ceee7c20635d}\index{Person@{Person}!performAction@{performAction}}
+\index{performAction@{performAction}!Person@{Person}}
+\doxysubsubsection{\texorpdfstring{performAction()}{performAction()}}
+{\footnotesize\ttfamily \label{class_person_add6a407252eb43ea5570ceee7c20635d} 
+void Person\+::perform\+Action (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Performs the action based on the current action state (Work, Home, Play). 
+
+\Hypertarget{class_person_a8580423a56fa41306c7cfbef5a30e064}\index{Person@{Person}!setDriving@{setDriving}}
+\index{setDriving@{setDriving}!Person@{Person}}
+\doxysubsubsection{\texorpdfstring{setDriving()}{setDriving()}}
+{\footnotesize\ttfamily \label{class_person_a8580423a56fa41306c7cfbef5a30e064} 
+void Person\+::set\+Driving (\begin{DoxyParamCaption}\item[{bool}]{driving}{}\end{DoxyParamCaption})}
+
+
+
+Sets whether the person is driving. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em driving} & The driving state to set. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Friends And Related Symbol Documentation}
+\Hypertarget{class_person_acbca3fbd74b1131ee1acec340358da31}\index{Person@{Person}!from\_json@{from\_json}}
+\index{from\_json@{from\_json}!Person@{Person}}
+\doxysubsubsection{\texorpdfstring{from\_json}{from\_json}}
+{\footnotesize\ttfamily \label{class_person_acbca3fbd74b1131ee1acec340358da31} 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_person}{Person}} $>$ from\+\_\+json (\begin{DoxyParamCaption}\item[{const nlohmann\+::json \&}]{j}{, }\item[{\mbox{\hyperlink{class_person}{Person}} \&}]{person}{, }\item[{std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_building}{Building}} $>$ $>$}]{buildings}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+\Hypertarget{class_person_ad63bfb6400bede0b8f04853093293906}\index{Person@{Person}!to\_json@{to\_json}}
+\index{to\_json@{to\_json}!Person@{Person}}
+\doxysubsubsection{\texorpdfstring{to\_json}{to\_json}}
+{\footnotesize\ttfamily \label{class_person_ad63bfb6400bede0b8f04853093293906} 
+void to\+\_\+json (\begin{DoxyParamCaption}\item[{nlohmann\+::json \&}]{j}{, }\item[{const \mbox{\hyperlink{class_person}{Person}} \&}]{person}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Serializes a \doxylink{class_person}{Person} object to JSON. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em j} & The JSON object to write to. \\
+\hline
+{\em person} & The \doxylink{class_person}{Person} object to serialize. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_person_abdffbfa3a40366a0852237a8f030c615}\index{Person@{Person}!arrived\_@{arrived\_}}
+\index{arrived\_@{arrived\_}!Person@{Person}}
+\doxysubsubsection{\texorpdfstring{arrived\_}{arrived\_}}
+{\footnotesize\ttfamily \label{class_person_abdffbfa3a40366a0852237a8f030c615} 
+bool Person\+::arrived\+\_\+ = false\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_person_a084086027243dc350fc74a96bee5165e}\index{Person@{Person}!car\_@{car\_}}
+\index{car\_@{car\_}!Person@{Person}}
+\doxysubsubsection{\texorpdfstring{car\_}{car\_}}
+{\footnotesize\ttfamily \label{class_person_a084086027243dc350fc74a96bee5165e} 
+std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{class_car}{Car}}$>$ Person\+::car\+\_\+ = nullptr\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_person_a6fc34027a5f3437adc7cd10a7b2b23a4}\index{Person@{Person}!currentAction\_@{currentAction\_}}
+\index{currentAction\_@{currentAction\_}!Person@{Person}}
+\doxysubsubsection{\texorpdfstring{currentAction\_}{currentAction\_}}
+{\footnotesize\ttfamily \label{class_person_a6fc34027a5f3437adc7cd10a7b2b23a4} 
+\mbox{\hyperlink{person_8hpp_a8bb1ef53467e4f61410d12822d922498}{Action}} Person\+::current\+Action\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_person_a05ab9827b660f0472cdbd02ce0907d1f}\index{Person@{Person}!currentBuilding\_@{currentBuilding\_}}
+\index{currentBuilding\_@{currentBuilding\_}!Person@{Person}}
+\doxysubsubsection{\texorpdfstring{currentBuilding\_}{currentBuilding\_}}
+{\footnotesize\ttfamily \label{class_person_a05ab9827b660f0472cdbd02ce0907d1f} 
+std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{class_building}{Building}}$>$ Person\+::current\+Building\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_person_acdce7e3dc2d270f72a863182af78a3cc}\index{Person@{Person}!driving\_@{driving\_}}
+\index{driving\_@{driving\_}!Person@{Person}}
+\doxysubsubsection{\texorpdfstring{driving\_}{driving\_}}
+{\footnotesize\ttfamily \label{class_person_acdce7e3dc2d270f72a863182af78a3cc} 
+bool Person\+::driving\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_person_a004918b15da91d39db5ffd2da2df7342}\index{Person@{Person}!favBuilding\_@{favBuilding\_}}
+\index{favBuilding\_@{favBuilding\_}!Person@{Person}}
+\doxysubsubsection{\texorpdfstring{favBuilding\_}{favBuilding\_}}
+{\footnotesize\ttfamily \label{class_person_a004918b15da91d39db5ffd2da2df7342} 
+std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{class_building}{Building}}$>$ Person\+::fav\+Building\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_person_aa109d364068bbe6d813f184f832d59e2}\index{Person@{Person}!goToWorkTime\_@{goToWorkTime\_}}
+\index{goToWorkTime\_@{goToWorkTime\_}!Person@{Person}}
+\doxysubsubsection{\texorpdfstring{goToWorkTime\_}{goToWorkTime\_}}
+{\footnotesize\ttfamily \label{class_person_aa109d364068bbe6d813f184f832d59e2} 
+int Person\+::go\+To\+Work\+Time\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_person_afdd776c87a07a85c5121e57f5e34c1ec}\index{Person@{Person}!home\_@{home\_}}
+\index{home\_@{home\_}!Person@{Person}}
+\doxysubsubsection{\texorpdfstring{home\_}{home\_}}
+{\footnotesize\ttfamily \label{class_person_afdd776c87a07a85c5121e57f5e34c1ec} 
+std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{class_building}{Building}}$>$ Person\+::home\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_person_a5e94cf32e6315810c76f1cf3d6a2a203}\index{Person@{Person}!homeFromPlayTime\_@{homeFromPlayTime\_}}
+\index{homeFromPlayTime\_@{homeFromPlayTime\_}!Person@{Person}}
+\doxysubsubsection{\texorpdfstring{homeFromPlayTime\_}{homeFromPlayTime\_}}
+{\footnotesize\ttfamily \label{class_person_a5e94cf32e6315810c76f1cf3d6a2a203} 
+int Person\+::home\+From\+Play\+Time\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_person_a3a165634934f95643d85d47bc57ba054}\index{Person@{Person}!homeFromWorkTime\_@{homeFromWorkTime\_}}
+\index{homeFromWorkTime\_@{homeFromWorkTime\_}!Person@{Person}}
+\doxysubsubsection{\texorpdfstring{homeFromWorkTime\_}{homeFromWorkTime\_}}
+{\footnotesize\ttfamily \label{class_person_a3a165634934f95643d85d47bc57ba054} 
+int Person\+::home\+From\+Work\+Time\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_person_ab5203e6f02b45d7d301a601658d71ef7}\index{Person@{Person}!minuteRemainder\_@{minuteRemainder\_}}
+\index{minuteRemainder\_@{minuteRemainder\_}!Person@{Person}}
+\doxysubsubsection{\texorpdfstring{minuteRemainder\_}{minuteRemainder\_}}
+{\footnotesize\ttfamily \label{class_person_ab5203e6f02b45d7d301a601658d71ef7} 
+int Person\+::minute\+Remainder\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_person_af49549dd2940da225967fe215dd5cb11}\index{Person@{Person}!playTime\_@{playTime\_}}
+\index{playTime\_@{playTime\_}!Person@{Person}}
+\doxysubsubsection{\texorpdfstring{playTime\_}{playTime\_}}
+{\footnotesize\ttfamily \label{class_person_af49549dd2940da225967fe215dd5cb11} 
+int Person\+::play\+Time\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_person_ade3ffd7374bbe2d01fce0816a4f84346}\index{Person@{Person}!work\_@{work\_}}
+\index{work\_@{work\_}!Person@{Person}}
+\doxysubsubsection{\texorpdfstring{work\_}{work\_}}
+{\footnotesize\ttfamily \label{class_person_ade3ffd7374bbe2d01fce0816a4f84346} 
+std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{class_building}{Building}}$>$ Person\+::work\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\mbox{\hyperlink{person_8hpp}{person.\+hpp}}\item 
+src/\mbox{\hyperlink{person_8cpp}{person.\+cpp}}\end{DoxyCompactItemize}

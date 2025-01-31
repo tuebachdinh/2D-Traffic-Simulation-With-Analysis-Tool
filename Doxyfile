@@ -1,0 +1,42 @@
+Doxyfile 1.9.5
+
+PROJECT_NAME           = "Traffic Simulator"
+OUTPUT_DIRECTORY       = "doxygen-docs"  
+
+INPUT                  = src 
+FILE_PATTERNS          = *.cpp *.h *.hpp
+RECURSIVE              = YES
+
+EXTRACT_ALL            = YES
+EXTRACT_PRIVATE        = YES
+EXTRACT_STATIC         = YES
+
+GENERATE_HTML          = YES
+GENERATE_LATEX         = YES
+
+HTML_OUTPUT            = html
+HTML_HEADER            = ""
+HTML_FOOTER            = ""
+
+LATEX_OUTPUT           = latex
+LATEX_CMD_NAME         = pdflatex
+
+QUIET                  = NO
+WARNINGS               = YES
+WARN_IF_UNDOCUMENTED   = YES
+
+TEMPLATE_RELATIONS     = YES
+TEMPLATE_PROPERTIES    = YES
+SORT_MEMBER_DOCS       = YES
+
+ALPHABETICAL_INDEX     = YES
+CALL_GRAPH             = YES
+CALLER_GRAPH           = YES
+DEPENDENCY_GRAPH       = YES
+
+INLINE_INHERITED_MEMBERS = YES
+SHOW_USED_FILES        = YES
+
+DOT_PATH               = ""
+DOT_GRAPH_MAX_NODES    = 50
+DOT_TRANSPARENT        = YES

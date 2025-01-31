@@ -1,0 +1,397 @@
+\doxysection{City Class Reference}
+\hypertarget{class_city}{}\label{class_city}\index{City@{City}}
+
+
+Represents a city with buildings, cars, residents, roads, intersections, and a bus.  
+
+
+
+
+{\ttfamily \#include $<$city.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_city_a2b92b8e6b4e8f2abc8670fb16fc77ad7}{City}} (int width, int length, long population, const std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_building}{Building}} $>$ $>$ \&buildings, const std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_car}{Car}} $>$ $>$ \&cars, const std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_person}{Person}} $>$ $>$ \&residents, const std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_road}{Road}} $>$ $>$ \&roads, const std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_intersection}{Intersection}} $>$ $>$ \&intersections, const std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_building}{Building}} $>$ $>$ \&bus\+Stops)
+\item 
+void \mbox{\hyperlink{class_city_a3eaff97b3f7aaa73b54f5334f3b88d79}{advance}} ()
+\begin{DoxyCompactList}\small\item\em Advances the simulation by one time tick. Updates the time and calls actions for each resident and the bus. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_city_ab6075f60043a7108360b48c1ad6ea2f0}{get\+State}} ()
+\item 
+int \mbox{\hyperlink{class_city_aa27cc2a1dd8ab8c1c98d01b87c6e4f86}{get\+Width}} () const
+\begin{DoxyCompactList}\small\item\em Gets the width of the city. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_city_a11cad4099bb13f5495cb5723ac15e16e}{get\+Length}} () const
+\begin{DoxyCompactList}\small\item\em Gets the length of the city. \end{DoxyCompactList}\item 
+long \mbox{\hyperlink{class_city_aeacf07a41ba0715ec9ad6ab99bb24a33}{get\+Population}} () const
+\begin{DoxyCompactList}\small\item\em Gets the population of the city. \end{DoxyCompactList}\item 
+const std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_building}{Building}} $>$ $>$ \& \mbox{\hyperlink{class_city_a098643ca32ec35d0dfc9715d78a22d6b}{get\+Buildings}} () const
+\begin{DoxyCompactList}\small\item\em Gets the list of buildings in the city. \end{DoxyCompactList}\item 
+const std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_car}{Car}} $>$ $>$ \& \mbox{\hyperlink{class_city_af5d0e501684455885cf0291a786dfcd2}{get\+Cars}} () const
+\begin{DoxyCompactList}\small\item\em Gets the list of cars in the city. \end{DoxyCompactList}\item 
+const std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_person}{Person}} $>$ $>$ \& \mbox{\hyperlink{class_city_a78a2fb8cec1b85b2d8561b5387d8aad0}{get\+Residents}} () const
+\begin{DoxyCompactList}\small\item\em Gets the list of residents in the city. \end{DoxyCompactList}\item 
+const std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_road}{Road}} $>$ $>$ \& \mbox{\hyperlink{class_city_a72e68051d97a938923100c30e2e43c49}{get\+Roads}} () const
+\begin{DoxyCompactList}\small\item\em Gets the list of roads in the city. \end{DoxyCompactList}\item 
+const std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_intersection}{Intersection}} $>$ $>$ \& \mbox{\hyperlink{class_city_ac55aed87eedb438db1817672670dd425}{get\+Intersections}} () const
+\begin{DoxyCompactList}\small\item\em Gets the list of intersections in the city. \end{DoxyCompactList}\item 
+std\+::map$<$ int, int $>$ \& \mbox{\hyperlink{class_city_a6672bbb6321eb4e61d50cd3a9d073dfd}{get\+Log}} (\mbox{\hyperlink{struct_coordinate}{Coordinate}} coordinate)
+\item 
+void \mbox{\hyperlink{class_city_a7a589becf0d983824c564685cf1c51cb}{draw\+Roads}} (sf\+::\+Render\+Window \&window, sf\+::\+Texture \&road\+Texture, std\+::vector$<$ sf\+::\+Texture $>$ \&road\+Highlight\+Textures, float scale) const
+\begin{DoxyCompactList}\small\item\em Draws all the roads in the city. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_city_a02b7068bc6b5b422a93da2b2004b05ef}{draw\+Intersections}} (sf\+::\+Render\+Window \&window, sf\+::\+Texture \&intersection\+Texture, float scale) const
+\begin{DoxyCompactList}\small\item\em Draws all the intersections in the city. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_city_a0a184d79f210d7d2fd4ddfa5631c79ea}{draw\+Buildings}} (sf\+::\+Render\+Window \&window, const std\+::map$<$ char, sf\+::\+Texture $>$ \&building\+Textures, float scale) const
+\begin{DoxyCompactList}\small\item\em Draws all the buildings in the city. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_city_a6b376765429b0ad98ebc213203a07d46}{draw\+Cars}} (sf\+::\+Render\+Window \&window, const std\+::vector$<$ sf\+::\+Texture $>$ \&car\+Textures, float scale, long time\+In\+Hour, long time\+In\+Minutes) const
+\begin{DoxyCompactList}\small\item\em Draws all the cars in the city. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_city_ae32afb17ffff560213fea06073431e9c}{draw\+Bus}} (sf\+::\+Render\+Window \&window, sf\+::\+Texture \&bus\+Texture, float scale) const
+\begin{DoxyCompactList}\small\item\em Draws the bus in the city. \end{DoxyCompactList}\item 
+const std\+::vector$<$ std\+::pair$<$ sf\+::\+Float\+Rect, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_road}{Road}} $>$ $>$ $>$ \& \mbox{\hyperlink{class_city_a2da1672ce1d968958b5f445217ecf410}{get\+Road\+Bounds}} () const
+\begin{DoxyCompactList}\small\item\em Gets the road bounds for rendering. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_city_ac366d26b0f47bd50a9deb434432fa440}{width\+\_\+}}
+\item 
+int \mbox{\hyperlink{class_city_a900b862d9b7c093fbacdffb302fb1471}{length\+\_\+}}
+\item 
+long \mbox{\hyperlink{class_city_a2486c64f2593b2d6f44274c8a393563f}{population\+\_\+}}
+\item 
+std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_building}{Building}} $>$ $>$ \mbox{\hyperlink{class_city_a43fdebb3cb7432a5201ee890408ead94}{buildings\+\_\+}}
+\item 
+std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_car}{Car}} $>$ $>$ \mbox{\hyperlink{class_city_a78510b75acbce385500a91024a3d4da3}{cars\+\_\+}}
+\item 
+std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_person}{Person}} $>$ $>$ \mbox{\hyperlink{class_city_a4254ecc45fe11f6ca076a7b994419f82}{residents\+\_\+}}
+\item 
+std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_road}{Road}} $>$ $>$ \mbox{\hyperlink{class_city_a322c351f6d29ada0df43527ea2b72ff6}{roads\+\_\+}}
+\item 
+std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_intersection}{Intersection}} $>$ $>$ \mbox{\hyperlink{class_city_a5a01dc89769ef1e4034088b1465c02aa}{intersections\+\_\+}}
+\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_bus}{Bus}} $>$ \mbox{\hyperlink{class_city_a27dffc2e10c697b1fed497ef706f56a2}{bus\+\_\+}}
+\item 
+std\+::vector$<$ std\+::pair$<$ sf\+::\+Float\+Rect, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_road}{Road}} $>$ $>$ $>$ \mbox{\hyperlink{class_city_a4f4f3fb217f179fadb09fcff3b7cf328}{road\+Bounds\+\_\+}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a city with buildings, cars, residents, roads, intersections, and a bus. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_city_a2b92b8e6b4e8f2abc8670fb16fc77ad7}\index{City@{City}!City@{City}}
+\index{City@{City}!City@{City}}
+\doxysubsubsection{\texorpdfstring{City()}{City()}}
+{\footnotesize\ttfamily \label{class_city_a2b92b8e6b4e8f2abc8670fb16fc77ad7} 
+City\+::\+City (\begin{DoxyParamCaption}\item[{int}]{width}{, }\item[{int}]{length}{, }\item[{long}]{population}{, }\item[{const std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_building}{Building}} $>$ $>$ \&}]{buildings}{, }\item[{const std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_car}{Car}} $>$ $>$ \&}]{cars}{, }\item[{const std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_person}{Person}} $>$ $>$ \&}]{residents}{, }\item[{const std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_road}{Road}} $>$ $>$ \&}]{roads}{, }\item[{const std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_intersection}{Intersection}} $>$ $>$ \&}]{intersections}{, }\item[{const std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_building}{Building}} $>$ $>$ \&}]{bus\+Stops}{}\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_city_a3eaff97b3f7aaa73b54f5334f3b88d79}\index{City@{City}!advance@{advance}}
+\index{advance@{advance}!City@{City}}
+\doxysubsubsection{\texorpdfstring{advance()}{advance()}}
+{\footnotesize\ttfamily \label{class_city_a3eaff97b3f7aaa73b54f5334f3b88d79} 
+void City\+::advance (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Advances the simulation by one time tick. Updates the time and calls actions for each resident and the bus. 
+
+\Hypertarget{class_city_a0a184d79f210d7d2fd4ddfa5631c79ea}\index{City@{City}!drawBuildings@{drawBuildings}}
+\index{drawBuildings@{drawBuildings}!City@{City}}
+\doxysubsubsection{\texorpdfstring{drawBuildings()}{drawBuildings()}}
+{\footnotesize\ttfamily \label{class_city_a0a184d79f210d7d2fd4ddfa5631c79ea} 
+void City\+::draw\+Buildings (\begin{DoxyParamCaption}\item[{sf\+::\+Render\+Window \&}]{window}{, }\item[{const std\+::map$<$ char, sf\+::\+Texture $>$ \&}]{building\+Textures}{, }\item[{float}]{scale}{}\end{DoxyParamCaption}) const}
+
+
+
+Draws all the buildings in the city. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em window} & The SFML window to render to. \\
+\hline
+{\em building\+Textures} & A map of building textures by type. \\
+\hline
+{\em scale} & The scale factor for rendering. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_city_ae32afb17ffff560213fea06073431e9c}\index{City@{City}!drawBus@{drawBus}}
+\index{drawBus@{drawBus}!City@{City}}
+\doxysubsubsection{\texorpdfstring{drawBus()}{drawBus()}}
+{\footnotesize\ttfamily \label{class_city_ae32afb17ffff560213fea06073431e9c} 
+void City\+::draw\+Bus (\begin{DoxyParamCaption}\item[{sf\+::\+Render\+Window \&}]{window}{, }\item[{sf\+::\+Texture \&}]{bus\+Texture}{, }\item[{float}]{scale}{}\end{DoxyParamCaption}) const}
+
+
+
+Draws the bus in the city. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em window} & The SFML window to render to. \\
+\hline
+{\em bus\+Texture} & The texture for the bus. \\
+\hline
+{\em scale} & The scale factor for rendering. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_city_a6b376765429b0ad98ebc213203a07d46}\index{City@{City}!drawCars@{drawCars}}
+\index{drawCars@{drawCars}!City@{City}}
+\doxysubsubsection{\texorpdfstring{drawCars()}{drawCars()}}
+{\footnotesize\ttfamily \label{class_city_a6b376765429b0ad98ebc213203a07d46} 
+void City\+::draw\+Cars (\begin{DoxyParamCaption}\item[{sf\+::\+Render\+Window \&}]{window}{, }\item[{const std\+::vector$<$ sf\+::\+Texture $>$ \&}]{car\+Textures}{, }\item[{float}]{scale}{, }\item[{long}]{time\+In\+Hour}{, }\item[{long}]{time\+In\+Minutes}{}\end{DoxyParamCaption}) const}
+
+
+
+Draws all the cars in the city. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em window} & The SFML window to render to. \\
+\hline
+{\em car\+Textures} & The textures for the car. \\
+\hline
+{\em scale} & The scale factor for rendering. \\
+\hline
+{\em time\+In\+Hour} & The current time in hours. \\
+\hline
+{\em time\+In\+Minutes} & The current time in minutes. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_city_a02b7068bc6b5b422a93da2b2004b05ef}\index{City@{City}!drawIntersections@{drawIntersections}}
+\index{drawIntersections@{drawIntersections}!City@{City}}
+\doxysubsubsection{\texorpdfstring{drawIntersections()}{drawIntersections()}}
+{\footnotesize\ttfamily \label{class_city_a02b7068bc6b5b422a93da2b2004b05ef} 
+void City\+::draw\+Intersections (\begin{DoxyParamCaption}\item[{sf\+::\+Render\+Window \&}]{window}{, }\item[{sf\+::\+Texture \&}]{intersection\+Texture}{, }\item[{float}]{scale}{}\end{DoxyParamCaption}) const}
+
+
+
+Draws all the intersections in the city. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em window} & The SFML window to render to. \\
+\hline
+{\em intersection\+Texture} & The texture for the intersection. \\
+\hline
+{\em scale} & The scale factor for rendering. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_city_a7a589becf0d983824c564685cf1c51cb}\index{City@{City}!drawRoads@{drawRoads}}
+\index{drawRoads@{drawRoads}!City@{City}}
+\doxysubsubsection{\texorpdfstring{drawRoads()}{drawRoads()}}
+{\footnotesize\ttfamily \label{class_city_a7a589becf0d983824c564685cf1c51cb} 
+void City\+::draw\+Roads (\begin{DoxyParamCaption}\item[{sf\+::\+Render\+Window \&}]{window}{, }\item[{sf\+::\+Texture \&}]{road\+Texture}{, }\item[{std\+::vector$<$ sf\+::\+Texture $>$ \&}]{road\+Highlight\+Textures}{, }\item[{float}]{scale}{}\end{DoxyParamCaption}) const}
+
+
+
+Draws all the roads in the city. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em window} & The SFML window to render to. \\
+\hline
+{\em road\+Texture} & The texture for the road. \\
+\hline
+{\em road\+Highlight\+Textures} & Textures for highlighted roads. \\
+\hline
+{\em scale} & The scale factor for rendering. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_city_a098643ca32ec35d0dfc9715d78a22d6b}\index{City@{City}!getBuildings@{getBuildings}}
+\index{getBuildings@{getBuildings}!City@{City}}
+\doxysubsubsection{\texorpdfstring{getBuildings()}{getBuildings()}}
+{\footnotesize\ttfamily \label{class_city_a098643ca32ec35d0dfc9715d78a22d6b} 
+const std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_building}{Building}} $>$ $>$ \& City\+::get\+Buildings (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Gets the list of buildings in the city. 
+
+\begin{DoxyReturn}{Returns}
+A reference to the vector of building shared pointers. 
+\end{DoxyReturn}
+\Hypertarget{class_city_af5d0e501684455885cf0291a786dfcd2}\index{City@{City}!getCars@{getCars}}
+\index{getCars@{getCars}!City@{City}}
+\doxysubsubsection{\texorpdfstring{getCars()}{getCars()}}
+{\footnotesize\ttfamily \label{class_city_af5d0e501684455885cf0291a786dfcd2} 
+const std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_car}{Car}} $>$ $>$ \& City\+::get\+Cars (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Gets the list of cars in the city. 
+
+\begin{DoxyReturn}{Returns}
+A reference to the vector of car shared pointers. 
+\end{DoxyReturn}
+\Hypertarget{class_city_ac55aed87eedb438db1817672670dd425}\index{City@{City}!getIntersections@{getIntersections}}
+\index{getIntersections@{getIntersections}!City@{City}}
+\doxysubsubsection{\texorpdfstring{getIntersections()}{getIntersections()}}
+{\footnotesize\ttfamily \label{class_city_ac55aed87eedb438db1817672670dd425} 
+const std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_intersection}{Intersection}} $>$ $>$ \& City\+::get\+Intersections (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Gets the list of intersections in the city. 
+
+\begin{DoxyReturn}{Returns}
+A reference to the vector of intersection shared pointers. 
+\end{DoxyReturn}
+\Hypertarget{class_city_a11cad4099bb13f5495cb5723ac15e16e}\index{City@{City}!getLength@{getLength}}
+\index{getLength@{getLength}!City@{City}}
+\doxysubsubsection{\texorpdfstring{getLength()}{getLength()}}
+{\footnotesize\ttfamily \label{class_city_a11cad4099bb13f5495cb5723ac15e16e} 
+int City\+::get\+Length (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Gets the length of the city. 
+
+\begin{DoxyReturn}{Returns}
+The length of the city. 
+\end{DoxyReturn}
+\Hypertarget{class_city_a6672bbb6321eb4e61d50cd3a9d073dfd}\index{City@{City}!getLog@{getLog}}
+\index{getLog@{getLog}!City@{City}}
+\doxysubsubsection{\texorpdfstring{getLog()}{getLog()}}
+{\footnotesize\ttfamily \label{class_city_a6672bbb6321eb4e61d50cd3a9d073dfd} 
+std\+::map$<$ int, int $>$ \& City\+::get\+Log (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_coordinate}{Coordinate}}}]{coordinate}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_city_aeacf07a41ba0715ec9ad6ab99bb24a33}\index{City@{City}!getPopulation@{getPopulation}}
+\index{getPopulation@{getPopulation}!City@{City}}
+\doxysubsubsection{\texorpdfstring{getPopulation()}{getPopulation()}}
+{\footnotesize\ttfamily \label{class_city_aeacf07a41ba0715ec9ad6ab99bb24a33} 
+long City\+::get\+Population (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Gets the population of the city. 
+
+\begin{DoxyReturn}{Returns}
+The population of the city. 
+\end{DoxyReturn}
+\Hypertarget{class_city_a78a2fb8cec1b85b2d8561b5387d8aad0}\index{City@{City}!getResidents@{getResidents}}
+\index{getResidents@{getResidents}!City@{City}}
+\doxysubsubsection{\texorpdfstring{getResidents()}{getResidents()}}
+{\footnotesize\ttfamily \label{class_city_a78a2fb8cec1b85b2d8561b5387d8aad0} 
+const std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_person}{Person}} $>$ $>$ \& City\+::get\+Residents (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Gets the list of residents in the city. 
+
+\begin{DoxyReturn}{Returns}
+A reference to the vector of resident shared pointers. 
+\end{DoxyReturn}
+\Hypertarget{class_city_a2da1672ce1d968958b5f445217ecf410}\index{City@{City}!getRoadBounds@{getRoadBounds}}
+\index{getRoadBounds@{getRoadBounds}!City@{City}}
+\doxysubsubsection{\texorpdfstring{getRoadBounds()}{getRoadBounds()}}
+{\footnotesize\ttfamily \label{class_city_a2da1672ce1d968958b5f445217ecf410} 
+const std\+::vector$<$ std\+::pair$<$ sf\+::\+Float\+Rect, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_road}{Road}} $>$ $>$ $>$ \& City\+::get\+Road\+Bounds (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Gets the road bounds for rendering. 
+
+\begin{DoxyReturn}{Returns}
+A reference to the vector of road bounds and associated roads. 
+\end{DoxyReturn}
+\Hypertarget{class_city_a72e68051d97a938923100c30e2e43c49}\index{City@{City}!getRoads@{getRoads}}
+\index{getRoads@{getRoads}!City@{City}}
+\doxysubsubsection{\texorpdfstring{getRoads()}{getRoads()}}
+{\footnotesize\ttfamily \label{class_city_a72e68051d97a938923100c30e2e43c49} 
+const std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_road}{Road}} $>$ $>$ \& City\+::get\+Roads (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Gets the list of roads in the city. 
+
+\begin{DoxyReturn}{Returns}
+A reference to the vector of road shared pointers. 
+\end{DoxyReturn}
+\Hypertarget{class_city_ab6075f60043a7108360b48c1ad6ea2f0}\index{City@{City}!getState@{getState}}
+\index{getState@{getState}!City@{City}}
+\doxysubsubsection{\texorpdfstring{getState()}{getState()}}
+{\footnotesize\ttfamily \label{class_city_ab6075f60043a7108360b48c1ad6ea2f0} 
+std\+::string City\+::get\+State (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_city_aa27cc2a1dd8ab8c1c98d01b87c6e4f86}\index{City@{City}!getWidth@{getWidth}}
+\index{getWidth@{getWidth}!City@{City}}
+\doxysubsubsection{\texorpdfstring{getWidth()}{getWidth()}}
+{\footnotesize\ttfamily \label{class_city_aa27cc2a1dd8ab8c1c98d01b87c6e4f86} 
+int City\+::get\+Width (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Gets the width of the city. 
+
+\begin{DoxyReturn}{Returns}
+The width of the city. 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_city_a43fdebb3cb7432a5201ee890408ead94}\index{City@{City}!buildings\_@{buildings\_}}
+\index{buildings\_@{buildings\_}!City@{City}}
+\doxysubsubsection{\texorpdfstring{buildings\_}{buildings\_}}
+{\footnotesize\ttfamily \label{class_city_a43fdebb3cb7432a5201ee890408ead94} 
+std\+::vector$<$std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{class_building}{Building}}$>$ $>$ City\+::buildings\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_city_a27dffc2e10c697b1fed497ef706f56a2}\index{City@{City}!bus\_@{bus\_}}
+\index{bus\_@{bus\_}!City@{City}}
+\doxysubsubsection{\texorpdfstring{bus\_}{bus\_}}
+{\footnotesize\ttfamily \label{class_city_a27dffc2e10c697b1fed497ef706f56a2} 
+std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{class_bus}{Bus}}$>$ City\+::bus\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_city_a78510b75acbce385500a91024a3d4da3}\index{City@{City}!cars\_@{cars\_}}
+\index{cars\_@{cars\_}!City@{City}}
+\doxysubsubsection{\texorpdfstring{cars\_}{cars\_}}
+{\footnotesize\ttfamily \label{class_city_a78510b75acbce385500a91024a3d4da3} 
+std\+::vector$<$std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{class_car}{Car}}$>$ $>$ City\+::cars\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_city_a5a01dc89769ef1e4034088b1465c02aa}\index{City@{City}!intersections\_@{intersections\_}}
+\index{intersections\_@{intersections\_}!City@{City}}
+\doxysubsubsection{\texorpdfstring{intersections\_}{intersections\_}}
+{\footnotesize\ttfamily \label{class_city_a5a01dc89769ef1e4034088b1465c02aa} 
+std\+::vector$<$std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{class_intersection}{Intersection}}$>$ $>$ City\+::intersections\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_city_a900b862d9b7c093fbacdffb302fb1471}\index{City@{City}!length\_@{length\_}}
+\index{length\_@{length\_}!City@{City}}
+\doxysubsubsection{\texorpdfstring{length\_}{length\_}}
+{\footnotesize\ttfamily \label{class_city_a900b862d9b7c093fbacdffb302fb1471} 
+int City\+::length\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_city_a2486c64f2593b2d6f44274c8a393563f}\index{City@{City}!population\_@{population\_}}
+\index{population\_@{population\_}!City@{City}}
+\doxysubsubsection{\texorpdfstring{population\_}{population\_}}
+{\footnotesize\ttfamily \label{class_city_a2486c64f2593b2d6f44274c8a393563f} 
+long City\+::population\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_city_a4254ecc45fe11f6ca076a7b994419f82}\index{City@{City}!residents\_@{residents\_}}
+\index{residents\_@{residents\_}!City@{City}}
+\doxysubsubsection{\texorpdfstring{residents\_}{residents\_}}
+{\footnotesize\ttfamily \label{class_city_a4254ecc45fe11f6ca076a7b994419f82} 
+std\+::vector$<$std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{class_person}{Person}}$>$ $>$ City\+::residents\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_city_a4f4f3fb217f179fadb09fcff3b7cf328}\index{City@{City}!roadBounds\_@{roadBounds\_}}
+\index{roadBounds\_@{roadBounds\_}!City@{City}}
+\doxysubsubsection{\texorpdfstring{roadBounds\_}{roadBounds\_}}
+{\footnotesize\ttfamily \label{class_city_a4f4f3fb217f179fadb09fcff3b7cf328} 
+std\+::vector$<$std\+::pair$<$sf\+::\+Float\+Rect, std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{class_road}{Road}}$>$ $>$ $>$ City\+::road\+Bounds\+\_\+\hspace{0.3cm}{\ttfamily [mutable]}, {\ttfamily [private]}}
+
+\Hypertarget{class_city_a322c351f6d29ada0df43527ea2b72ff6}\index{City@{City}!roads\_@{roads\_}}
+\index{roads\_@{roads\_}!City@{City}}
+\doxysubsubsection{\texorpdfstring{roads\_}{roads\_}}
+{\footnotesize\ttfamily \label{class_city_a322c351f6d29ada0df43527ea2b72ff6} 
+std\+::vector$<$std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{class_road}{Road}}$>$ $>$ City\+::roads\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_city_ac366d26b0f47bd50a9deb434432fa440}\index{City@{City}!width\_@{width\_}}
+\index{width\_@{width\_}!City@{City}}
+\doxysubsubsection{\texorpdfstring{width\_}{width\_}}
+{\footnotesize\ttfamily \label{class_city_ac366d26b0f47bd50a9deb434432fa440} 
+int City\+::width\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\mbox{\hyperlink{city_8hpp}{city.\+hpp}}\item 
+src/\mbox{\hyperlink{city_8cpp}{city.\+cpp}}\end{DoxyCompactItemize}
