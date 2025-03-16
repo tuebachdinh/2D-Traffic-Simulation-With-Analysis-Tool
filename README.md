@@ -10,9 +10,13 @@ The goal is to make analysis software capable of processing potentially large ci
 - Nam Khanh Thieu
 - Bach Tue Dinh
 
-# Repository organization
-Your project implementation should follow the skeleton organization in this repository.
-See readme.md files in each folder.
+
+
+<!-- Two images side by side -->
+<p align="center">
+  <img src="analysis-tool.png" alt="Histogram for Data Analysis" width="300">
+  <img src="map.png" alt="Congestion Hightlight for Real Time Visualization" width="300">
+</p>
 
 # Project Implementation 
 You must use git repository for the work on the project, making frequent enough commits so 
