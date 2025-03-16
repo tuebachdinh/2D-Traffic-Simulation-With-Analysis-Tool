@@ -10,6 +10,8 @@ The goal is to make analysis software capable of processing potentially large ci
 - Nam Khanh Thieu
 - Bach Tue Dinh
 
+# Analysis Tool and Map Visualization
+![Stroke Prediction Overview](images/overview.png)
 
 
 <!-- Two images side by side -->
