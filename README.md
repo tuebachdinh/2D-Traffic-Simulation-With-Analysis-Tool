@@ -11,13 +11,11 @@ The goal is to make analysis software capable of processing potentially large ci
 - Bach Tue Dinh
 
 # Analysis Tool and Map Visualization
-![Stroke Prediction Overview](map.png)
-
 
 <!-- Two images side by side -->
 <p align="left">
   <img src="analysis-tool.png" alt="Histogram for Data Analysis" width="450">
-  <img src="map.png" alt="Congestion Hightlight for Real Time Visualization" width="450">
+  <img src="map.png" alt="Congestion Hightlight for Real Time Visualization" width="430">
 </p>
 
 # Project Implementation 
