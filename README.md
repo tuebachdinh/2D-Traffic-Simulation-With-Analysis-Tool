@@ -11,7 +11,7 @@ The goal is to make analysis software capable of processing potentially large ci
 - Bach Tue Dinh
 
 # Analysis Tool and Map Visualization
-![Stroke Prediction Overview](images/overview.png)
+![Stroke Prediction Overview](map.png)
 
 
 <!-- Two images side by side -->
