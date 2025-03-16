@@ -14,8 +14,8 @@ The goal is to make analysis software capable of processing potentially large ci
 
 <!-- Two images side by side -->
 <p align="left">
-  <img src="analysis-tool.png" alt="Histogram for Data Analysis" width="450">
-  <img src="map.png" alt="Congestion Hightlight for Real Time Visualization" width="430">
+  <img src="analysis-tool.png" alt="Histogram for Data Analysis" width="350">
+  <img src="map.png" alt="Congestion Hightlight for Real Time Visualization" width="350">
 </p>
 
 # Project Implementation 
