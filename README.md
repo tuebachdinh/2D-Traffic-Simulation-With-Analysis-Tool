@@ -4,12 +4,6 @@ Simulating and analyzing city traffic can be useful for example when one wants t
 
 The goal is to make analysis software capable of processing potentially large cities, so implementing an GUI is optional as it would cause unnecessary bottlenecking. If you wish to implement a GUI, try to implement your software in such a way that simulation and visualization remain decoupled. (Simulation can be run without a GUI)
 
-# Group 3
-- Duc Tung Nguyen
-- Vu Minh Nguyen
-- Nam Khanh Thieu
-- Bach Tue Dinh
-
 # Analysis Tool and Map Visualization
 
 <!-- Two images side by side -->
